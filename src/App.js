@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import './assets/css/veriables.css';
 import './assets/css/app.css';
 import './assets/css/buy.css';
-import './assets/css/responsive.css';
 import './assets/css/navbar.css';
 import 'antd/dist/antd.css';
+import './assets/css/responsive.css';
 import Navbar from './Components/Layout/Navbar';
 import Footer from './Components/Layout/Footer';
 import Home from './Pages/Home';

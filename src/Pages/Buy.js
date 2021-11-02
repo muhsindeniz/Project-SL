@@ -77,29 +77,33 @@ const Buy = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-4">
+                                <div className="mt-3">
                                     <b>
                                         <span className="text-secondary">Highest bid </span>
                                         <span className="color-ping">0.066 wETH</span>
                                     </b>
                                 </div>
 
-                                <p className="mt-5" style={{fontSize: "18px", fontFamily: "AvertaStd-Regular"}}>
+                                <p className="mt-4">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br /> sed do eiusmod tempor incididunt ut labore et dolore <br /> magna aliqua.
                                 </p>
 
-                                <div className="w-100 d-flex mt-5">
+                                <div className="w-100 d-flex mt-5 heading-text">
                                     <div className="d-flex flex-column">
                                         <b className="text-secondary">Creator</b>
                                         <div className="mt-3">
-                                            <img src={userTick} width="36" alt="" />
+                                            <span className="user-img">
+                                                <img src={userTick} width="36" alt="" />
+                                            </span>
                                             <span className="ml-3"><b>Courtney</b></span>
                                         </div>
                                     </div>
-                                    <div className="ml-5">
+                                    <div className="ml-5 d-flex flex-column">
                                         <b className="text-secondary">Creator</b>
                                         <div className="mt-3">
-                                            <img src={logo} width="36" alt="" />
+                                            <span className="user-img">
+                                                <img src={logo} width="36" alt="" />
+                                            </span>
                                             <span className="ml-3"><b>EdenSwap</b></span>
                                         </div>
                                     </div>
@@ -127,7 +131,9 @@ const Buy = () => {
                                         <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img">
+                                                        <img src={userTick} width="36" alt="" />
+                                                    </div>
                                                     <div className="ml-4">
                                                         <div><span className="color-gray">Listed 1 edition for</span> <b> 0.024 ETH</b></div>
                                                         <div><span className="color-gray">By </span><b>Mad Scientist</b> <span className="color-gray"> 1 hour ago</span></div>
@@ -139,7 +145,9 @@ const Buy = () => {
 
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img">
+                                                        <img src={userTick} width="36" alt="" />
+                                                    </div>
                                                     <div className="ml-4">
                                                         <div><span className="color-gray">Listed 1 edition for</span> <b> 0.024 ETH</b></div>
                                                         <div><span className="color-gray">1 edition </span><b>not for sale</b></div>
@@ -151,7 +159,7 @@ const Buy = () => {
                                         <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img"><img src={userTick} width="36" alt="" /></div>
                                                     <div className="ml-4">
                                                         <div><b>0.0002 ETH </b><span className="color-gray">by </span><b>tanelen tivan </b><span className="color-gray">for 10 editions</span></div>
                                                         <div><span className="color-gray">26/072021, 16:28</span></div>
@@ -162,7 +170,7 @@ const Buy = () => {
                                         <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img"><img src={userTick} width="36" alt="" /></div>
                                                     <div className="ml-4">
                                                         <div><span className="color-gray">Listen 1 edition for </span><b>0.024 ETH</b></div>
                                                         <div><span className="color-gray">By </span><b>Mad Scientist</b><span className="color-gray"> 1 hour ago</span></div>
@@ -171,7 +179,7 @@ const Buy = () => {
                                             </div>
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img"><img src={userTick} width="36" alt="" /></div>
                                                     <div className="ml-4">
                                                         <div><span className="color-gray">Listen 1 edition for </span><b>0.024 ETH</b></div>
                                                         <div><span className="color-gray">By </span><b>Mad Scientist</b><span className="color-gray"> 1 hour ago</span></div>
@@ -180,7 +188,7 @@ const Buy = () => {
                                             </div>
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img"><img src={userTick} width="36" alt="" /></div>
                                                     <div className="ml-4">
                                                         <div><span className="color-gray">Listen 1 edition for </span><b>0.024 ETH</b></div>
                                                         <div><span className="color-gray">By </span><b>Mad Scientist</b><span className="color-gray"> 1 hour ago</span></div>
@@ -189,7 +197,7 @@ const Buy = () => {
                                             </div>
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img"><img src={userTick} width="36" alt="" /></div>
                                                     <div className="ml-4">
                                                         <div><span className="color-gray">Listen 1 edition for </span><b>0.024 ETH</b></div>
                                                         <div><span className="color-gray">By </span><b>Mad Scientist</b><span className="color-gray"> 1 hour ago</span></div>
@@ -198,7 +206,7 @@ const Buy = () => {
                                             </div>
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img"><img src={userTick} width="36" alt="" /></div>
                                                     <div className="ml-4">
                                                         <div><span className="color-gray">Listen 1 edition for </span><b>0.024 ETH</b></div>
                                                         <div><span className="color-gray">By </span><b>Mad Scientist</b><span className="color-gray"> 1 hour ago</span></div>
@@ -207,7 +215,7 @@ const Buy = () => {
                                             </div>
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img"><img src={userTick} width="36" alt="" /></div>
                                                     <div className="ml-4">
                                                         <div><span className="color-gray">Listen 1 edition for </span><b>0.024 ETH</b></div>
                                                         <div><span className="color-gray">By </span><b>Mad Scientist</b><span className="color-gray"> 1 hour ago</span></div>
@@ -216,7 +224,7 @@ const Buy = () => {
                                             </div>
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img"><img src={userTick} width="36" alt="" /></div>
                                                     <div className="ml-4">
                                                         <div><span className="color-gray">Listen 1 edition for </span><b>0.024 ETH</b></div>
                                                         <div><span className="color-gray">By </span><b>Mad Scientist</b><span className="color-gray"> 1 hour ago</span></div>
@@ -225,7 +233,7 @@ const Buy = () => {
                                             </div>
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
-                                                    <div><img src={userTick} width="36" alt="" /></div>
+                                                    <div className="user-img"><img src={userTick} width="36" alt="" /></div>
                                                     <div className="ml-4">
                                                         <div><span className="color-gray">Listen 1 edition for </span><b>0.024 ETH</b></div>
                                                         <div><span className="color-gray">By </span><b>Mad Scientist</b><span className="color-gray"> 1 hour ago</span></div>
@@ -243,7 +251,7 @@ const Buy = () => {
                                     <div className="pr-3 border-right">
                                         <span className="text-secondary">Highest bid by </span><span><b>The first of art</b></span>
                                         <div className="d-flex mt-2">
-                                            <div>
+                                            <div className="user-img">
                                                 <img src={topSellerUser4} width="42" alt="" />
                                             </div>
                                             <div className="ml-3">
@@ -279,7 +287,7 @@ const Buy = () => {
                                     </div>
                                 </div>
 
-                                <div className="row d-flex justify-content-center mt-5">
+                                <div className="row d-flex justify-content-center mt-5 action-btn">
                                     <div className="col-sm-12 col-lg-8 d-flex">
                                         <button className="btn-ping  w-100" onClick={() => setSingleCollectionPopup(true)}>
                                             Buy for 1.25 ETH

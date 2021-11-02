@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
+import ArtWork from '../Components/ArtWork';
 import SwiperCore, { Keyboard, Pagination, Navigation, Autoplay } from "swiper/core";
 import artWorkWeekOne from "../assets/img/custom/artWorkWeekOne.png";
 import artWorkWeek1 from "../assets/img/custom/artWorkWeek1.png";
@@ -33,6 +35,9 @@ import { Menu, Dropdown, Select } from 'antd';
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"
 import { Tabs } from 'antd';
+import TopCard from '../Components/TopCard';
+import LiveAuctions from '../Components/LiveAuctions';
+import HotBids from '../Components/HotBids';
 
 const { TabPane } = Tabs;
 const { Option } = Select;
@@ -77,7 +82,7 @@ const Home = () => {
                 variants={variants} className="nft-start">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="col-sm-12 col-lg-6 home-nft-slider-section margin-50">
+                        <div className="col-sm-12 col-lg-5 home-nft-slider-section margin-50">
                             <div className="d-flex align-items-start flex-column w-100">
                                 <div className="d-flex align-items-end w-100 home-banner-description">
                                     <h1 className="section-title mb-0 ml-0" style={{ fontSize: "72px" }}>
@@ -117,7 +122,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="col-sm-12 col-lg-5 margin-50 ">
+                        <div className="col-sm-12 col-lg-6  home-nft-slider margin-50 ">
                             <div className="bg-lines"></div>
 
                             <Swiper
@@ -239,7 +244,7 @@ const Home = () => {
                 variants={variants} className="artWorkWeekSection">
                 <div className="container-fluid">
                     <div className="w-100 d-flex justify-content-between align-items-center">
-                        <h3 className="mb-2"><b>Artwork of the week</b></h3>
+                        <h3 className="main-title"><b>Artwork of the week</b></h3>
                         <button className="btn-primary-outline">View All</button>
                     </div>
 
@@ -253,57 +258,18 @@ const Home = () => {
                         </div>
 
                         <div className="col-sm-12 col-md-7 col-lg-7 home-artwork-week-day position-relative d-flex flex-column align-items-stretch justify-content-between">
-                            {/*artWork-of-the-week-overflow*/}
                             <div className="d-flex overflow-auto justify-content-between w-100 justify-content-between">
-                                <div className="position-relative mr-3">
-                                    <img src={artWorkWeek1} className="cursor-pointer" width="230" alt="" onClick={() => {setOpenImage(true); document.body.style.overflow = "hidden";}} />
-                                    <div className="art-work-description-container">
-                                        <small><b>Butterfly</b></small>
-                                    </div>
-                                </div>
-                                <div className="position-relative mr-3">
-                                    <img src={artWorkWeek2} className="cursor-pointer" width="230" alt="" onClick={() => {setOpenImage(true); document.body.style.overflow = "hidden";}} />
-                                    <div className="art-work-description-container">
-                                        <small><b>Butterfly</b></small>
-                                    </div>
-                                </div>
-                                <div className="position-relative mr-3">
-                                    <img src={artWorkWeek3} className="cursor-pointer" width="230" alt="" onClick={() => {setOpenImage(true); document.body.style.overflow = "hidden";}} />
-                                    <div className="art-work-description-container">
-                                        <small><b>Butterfly</b></small>
-                                    </div>
-                                </div>
-                            </div>
-                            {/*artWork-of-the-week-overflow*/}
-                            <div className="d-flex overflow-auto justify-content-between w-100 justify-content-between">
-                                <div className="position-relative mr-3 mt-3">
-                                    <img src={artWorkWeek4} className="cursor-pointer" width="230" alt="" onClick={() => {setOpenImage(true); document.body.style.overflow = "hidden";}} />
-                                    <div className="art-work-description-container">
-                                        <small><b>Butterfly</b></small>
-                                    </div>
-                                </div>
-                                <div className="position-relative mr-3 mt-3">
-                                    <img src={artWorkWeek5} className="cursor-pointer" width="230" alt="" onClick={() => {setOpenImage(true); document.body.style.overflow = "hidden";}} />
-                                    <div className="art-work-description-container">
-                                        <small><b>Butterfly</b></small>
-                                    </div>
-                                </div>
-                                <div className="position-relative mr-3 mt-3">
-                                    <img src={artWorkWeek6} className="cursor-pointer" width="230" alt="" onClick={() => {setOpenImage(true); document.body.style.overflow = "hidden";}} />
-                                    <div className="art-work-description-container">
-                                        <small><b>Butterfly</b></small>
-                                    </div>
-                                </div>
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek1} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek2} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek3} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek4} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek5} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek6} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
                             </div>
                         </div>
                     </div>
                 </div>
             </motion.section>
-
-
-
-
-
 
 
             <motion.section
@@ -323,173 +289,17 @@ const Home = () => {
                     </div>
 
                     <div className="topSellerContent mt-5">
-                        <div className="d-flex justify-content-between overflow-auto mb-4 w-100">
-                            <div className="topSellerCard mr-3">
-
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller3} width="240" alt="" />
-                                </div>
-
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser1} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller2} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser2} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller3} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser3} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller4} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser4} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller5} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser5} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div className="d-flex overflow-auto justify-content-between w-100">
-                            <div className="d-flex overflow-auto justify-content-between w-100">
-                                <div className="topSellerCard mr-3">
-                                    <div className="w-100 topSellerCardImageover">
-                                        <img className="seller-banner-image" src={topSeller6} width="240" alt="" />
-                                    </div>
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser6} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-
-                                <div className="topSellerCard mr-3">
-                                    <div className="w-100 topSellerCardImageover">
-                                        <img className="seller-banner-image" src={topSeller7} width="240" alt="" />
-                                    </div>
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser7} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-
-                                <div className="topSellerCard mr-3">
-                                    <div className="w-100 topSellerCardImageover">
-                                        <img className="seller-banner-image" src={topSeller8} width="240" alt="" />
-                                    </div>
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser8} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-
-                                <div className="topSellerCard mr-3">
-                                    <div className="w-100 topSellerCardImageover">
-                                        <img className="seller-banner-image" src={topSeller9} width="240" alt="" />
-                                    </div>
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser9} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-
-                                <div className="topSellerCard mr-3">
-                                    <div className="w-100 topSellerCardImageover">
-                                        <img className="seller-banner-image" src={topSeller10} width="240" alt="" />
-                                    </div>
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser10} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="d-flex">
+                            <TopCard topcoverimg={topSeller2} topuserimg={topSellerUser1} title="Courtney Henry" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller3} topuserimg={topSellerUser2} title="Eleanor Pena" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller4} topuserimg={topSellerUser3} title="Darlene Robertson" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller5} topuserimg={topSellerUser4} title="Robert Fox" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller6} topuserimg={topSellerUser5} title="Savannah Nguyen" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller7} topuserimg={topSellerUser6} title="Devon Lane" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller8} topuserimg={topSellerUser7} title="Arlene McCoy" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller9} topuserimg={topSellerUser8} title="Albert Flores" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller10} topuserimg={topSellerUser9} title="Kristin Watson" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller2} topuserimg={topSellerUser10} title="Cody Fisher" Price="$1,403"  />
                         </div>
                     </div>
                 </div>
@@ -515,171 +325,17 @@ const Home = () => {
                     </div>
 
                     <div className="topSellerContent mt-5">
-                        <div className="d-flex justify-content-between overflow-auto mb-4 w-100">
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller4} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser1} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller2} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser2} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller3} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser3} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller4} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser4} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller5} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser5} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div className="d-flex overflow-auto justify-content-between w-100">
-                            <div className="d-flex overflow-auto justify-content-between w-100">
-                                <div className="topSellerCard mr-3">
-                                    <div className="w-100 topSellerCardImageover">
-                                        <img className="seller-banner-image" src={topSeller6} width="240" alt="" />
-                                    </div>
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser6} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-
-                                <div className="topSellerCard mr-3">
-                                    <div className="w-100 topSellerCardImageover">
-                                        <img className="seller-banner-image" src={topSeller7} width="240" alt="" />
-                                    </div>
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser7} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-
-                                <div className="topSellerCard mr-3">
-                                    <div className="w-100 topSellerCardImageover">
-                                        <img className="seller-banner-image" src={topSeller8} width="240" alt="" />
-                                    </div>
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser8} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-
-                                <div className="topSellerCard mr-3">
-                                    <div className="w-100 topSellerCardImageover">
-                                        <img className="seller-banner-image" src={topSeller9} width="240" alt="" />
-                                    </div>
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser9} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-
-                                <div className="topSellerCard mr-3">
-                                    <div className="w-100 topSellerCardImageover">
-                                        <img className="seller-banner-image" src={topSeller10} width="240" alt="" />
-                                    </div>
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser10} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="d-flex">
+                            <TopCard topcoverimg={topSeller2} topuserimg={topSellerUser1} title="Courtney Henry" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller3} topuserimg={topSellerUser2} title="Eleanor Pena" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller2} topuserimg={topSellerUser3} title="Darlene Robertson" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller4} topuserimg={topSellerUser4} title="Robert Fox" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller5} topuserimg={topSellerUser5} title="Savannah Nguyen" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller6} topuserimg={topSellerUser6} title="Devon Lane" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller7} topuserimg={topSellerUser7} title="Arlene McCoy" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller8} topuserimg={topSellerUser8} title="Albert Flores" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller9} topuserimg={topSellerUser9} title="Kristin Watson" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller10} topuserimg={topSellerUser10} title="Cody Fisher" Price="$1,403"  />
                         </div>
                     </div>
                 </div>
@@ -696,125 +352,10 @@ const Home = () => {
                     </div>
 
                     <div className="row mt-5">
-                        <div className="col-sm-12 col-lg-3">
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek1} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser1} width="36px" alt="" />
-                                        <img src={topSellerUser2} width="36px" alt="" />
-                                        <img src={topSellerUser3} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-12 col-lg-3">
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek1} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser1} width="36px" alt="" />
-                                        <img src={topSellerUser2} width="36px" alt="" />
-                                        <img src={topSellerUser3} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-12 col-lg-3">
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek1} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser1} width="36px" alt="" />
-                                        <img src={topSellerUser2} width="36px" alt="" />
-                                        <img src={topSellerUser3} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-12 col-lg-3">
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek1} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser1} width="36px" alt="" />
-                                        <img src={topSellerUser2} width="36px" alt="" />
-                                        <img src={topSellerUser3} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <LiveAuctions Coverimg={artWorkWeek1} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        <LiveAuctions Coverimg={artWorkWeek1} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        <LiveAuctions Coverimg={artWorkWeek1} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        <LiveAuctions Coverimg={artWorkWeek1} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                     </div>
                 </div>
             </motion.section>
@@ -835,124 +376,18 @@ const Home = () => {
                         navigation={true}
                     >
                         <SwiperSlide>
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek1} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser1} width="36px" alt="" />
-                                        <img src={topSellerUser2} width="36px" alt="" />
-                                        <img src={topSellerUser3} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
+                            <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                         </SwiperSlide>
-
                         <SwiperSlide>
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek1} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser1} width="36px" alt="" />
-                                        <img src={topSellerUser2} width="36px" alt="" />
-                                        <img src={topSellerUser3} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
+                            <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                         </SwiperSlide>
-
                         <SwiperSlide>
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek1} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser1} width="36px" alt="" />
-                                        <img src={topSellerUser2} width="36px" alt="" />
-                                        <img src={topSellerUser3} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
+                            <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                         </SwiperSlide>
-
                         <SwiperSlide>
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek1} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser1} width="36px" alt="" />
-                                        <img src={topSellerUser2} width="36px" alt="" />
-                                        <img src={topSellerUser3} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
+                            <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                         </SwiperSlide>
+
                     </Swiper>
                 </div>
             </motion.section>
@@ -968,129 +403,10 @@ const Home = () => {
                     </div>
 
                     <div className="row  mt-5">
-                        <div className="col-sm-12 col-lg-3">
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek2} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                    <div className="card-time-hours"><small><i className="far fa-clock"></i> 3H : 15M : 50S left</small></div>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser4} width="36px" alt="" />
-                                        <img src={topSellerUser5} width="36px" alt="" />
-                                        <img src={topSellerUser6} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-12 col-lg-3">
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek2} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                    <div className="card-time-hours"><small><i className="far fa-clock"></i> 3H : 15M : 50S left</small></div>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser4} width="36px" alt="" />
-                                        <img src={topSellerUser5} width="36px" alt="" />
-                                        <img src={topSellerUser6} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-12 col-lg-3">
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek2} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                    <div className="card-time-hours"><small><i className="far fa-clock"></i> 3H : 15M : 50S left</small></div>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser4} width="36px" alt="" />
-                                        <img src={topSellerUser5} width="36px" alt="" />
-                                        <img src={topSellerUser6} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-sm-12 col-lg-3">
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek2} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                    <div className="card-time-hours"><small><i className="far fa-clock"></i> 3H : 15M : 50S left</small></div>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser4} width="36px" alt="" />
-                                        <img src={topSellerUser5} width="36px" alt="" />
-                                        <img src={topSellerUser6} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                    <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                    <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                    <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
                     </div>
                 </div>
             </motion.section>
@@ -1112,128 +428,17 @@ const Home = () => {
                         navigation={true}
                     >
                         <SwiperSlide>
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek2} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                    <div className="card-time-hours"><small><i className="far fa-clock"></i> 3H : 15M : 50S left</small></div>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser4} width="36px" alt="" />
-                                        <img src={topSellerUser5} width="36px" alt="" />
-                                        <img src={topSellerUser6} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
+                            <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek2} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                    <div className="card-time-hours"><small><i className="far fa-clock"></i> 3H : 15M : 50S left</small></div>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser4} width="36px" alt="" />
-                                        <img src={topSellerUser5} width="36px" alt="" />
-                                        <img src={topSellerUser6} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
+                            <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek2} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                    <div className="card-time-hours"><small><i className="far fa-clock"></i> 3H : 15M : 50S left</small></div>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser4} width="36px" alt="" />
-                                        <img src={topSellerUser5} width="36px" alt="" />
-                                        <img src={topSellerUser6} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
                         </SwiperSlide>
-
                         <SwiperSlide>
-                            <div className="liveAuction-card-container">
-                                <div className="live-image">
-                                    <img src={artWorkWeek2} width="100%" alt="" />
-                                    <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                    <Dropdown overlay={menu}>
-                                        <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                            <i className="fas fa-ellipsis-h"></i>
-                                        </div>
-                                    </Dropdown>
-                                    <div className="card-time-hours"><small><i className="far fa-clock"></i> 3H : 15M : 50S left</small></div>
-                                </div>
-
-                                <div className="bg-white p-4">
-                                    <div className="position-relative live-user-list">
-                                        <img src={topSellerUser4} width="36px" alt="" />
-                                        <img src={topSellerUser5} width="36px" alt="" />
-                                        <img src={topSellerUser6} width="36px" alt="" />
-                                        <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                    </div>
-
-                                    <h6>Memescalf#782021</h6>
-
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="text-danger"><b>1.2 WETH</b></div>
-                                        <small className="text-secondary">Highest bid 1/1</small>
-                                    </div>
-                                </div>
-                            </div>
+                            <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
                         </SwiperSlide>
-
                     </Swiper>
                 </div>
             </motion.section>
@@ -1251,85 +456,11 @@ const Home = () => {
 
                     <div className="topSellerContent mt-5">
                         <div className="d-flex overflow-auto justify-content-between w-100 mb-4">
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller4} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser3} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller2} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser2} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller3} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser3} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller4} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser4} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
-
-                            <div className="topSellerCard mr-3">
-                                <div className="w-100 topSellerCardImageover">
-                                    <img className="seller-banner-image" src={topSeller5} width="240" alt="" />
-                                </div>
-                                <div className="topSellectProfilePicture">
-                                    <img src={topSellerUser5} width="100%" alt="" />
-                                    <div className="confirmation">
-                                        <i className="fas fa-check"></i>
-                                    </div>
-                                </div>
-                                <div className="topSellerUserInfo">
-                                    <h5><b>Courtney Henry</b></h5>
-                                    <small>$1,403</small>
-                                </div>
-                            </div>
+                            <TopCard topcoverimg={topSeller4} topuserimg={topSellerUser3} title="Courtney Henry" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller2} topuserimg={topSellerUser2} title="Courtney Henry" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller3} topuserimg={topSellerUser3} title="Courtney Henry" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller4} topuserimg={topSellerUser4} title="Courtney Henry" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller5} topuserimg={topSellerUser5} title="Courtney Henry" Price="$1,403"  />
                         </div>
                     </div>
                 </div>
@@ -1356,98 +487,26 @@ const Home = () => {
                             navigation={true}
                         >
                             <SwiperSlide>
-                                <div className="topSellerCard mr-3">
-                                    <img className="seller-banner-image" src={topSeller4} width="100%" alt="" />
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser3} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-
-
-                            <SwiperSlide>
-                                <div className="topSellerCard mr-3">
-                                    <img className="seller-banner-image" src={topSeller2} width="100%" alt="" />
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser2} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-
-
-                            <SwiperSlide>
-                                <div className="topSellerCard mr-3">
-                                    <img className="seller-banner-image" src={topSeller3} width="100%" alt="" />
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser3} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-
-
-                            <SwiperSlide>
-                                <div className="topSellerCard mr-3">
-                                    <img className="seller-banner-image" src={topSeller4} width="100%" alt="" />
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser4} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
+                                <TopCard topcoverimg={topSeller4} topuserimg={topSellerUser3} title="Courtney Henry" Price="$1,403"  />
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <div className="topSellerCard mr-3">
-                                    <img className="seller-banner-image" src={topSeller5} width="100%" alt="" />
-                                    <div className="topSellectProfilePicture">
-                                        <img src={topSellerUser5} width="100%" alt="" />
-                                        <div className="confirmation">
-                                            <i className="fas fa-check"></i>
-                                        </div>
-                                    </div>
-                                    <div className="topSellerUserInfo">
-                                        <h5><b>Courtney Henry</b></h5>
-                                        <small>$1,403</small>
-                                    </div>
-                                </div>
+                                <TopCard topcoverimg={topSeller2} topuserimg={topSellerUser2} title="Courtney Henry" Price="$1,403"  />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <TopCard topcoverimg={topSeller3} topuserimg={topSellerUser3} title="Courtney Henry" Price="$1,403"  />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <TopCard topcoverimg={topSeller4} topuserimg={topSellerUser4} title="Courtney Henry" Price="$1,403"  />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <TopCard topcoverimg={topSeller5} topuserimg={topSellerUser5} title="Courtney Henry" Price="$1,403"  />
                             </SwiperSlide>
                         </Swiper>
                     </div>
                 </div>
             </motion.section>
-
-
-
-
-
-
-
+            
 
             <motion.section
                 initial="hidden"
@@ -1457,10 +516,11 @@ const Home = () => {
                     <div className="mb-3 row">
                         <div className="col-sm-6 col-lg-4 order-1 order-sm-1 d-flex justify-content-between">
                             <h3><b>Quick Explore</b></h3>
-                            <button className="m-0 p-0 btn-primary-outline-responsive d-lg-none" style={{ width: "48px", height: "48px", borderRadius: "50%" }}>
-                                <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <button className="m-0 btn-primary-outline-responsive d-lg-none">
+                                {/* <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fillRule="evenodd" clipRule="evenodd" d="M0 0V1.66667H15V0H0ZM5.83333 10H9.16667V8.33333H5.83333V10ZM12.5 5.83333H2.5V4.16667H12.5V5.83333Z" fill="black" />
-                                </svg>
+                                </svg> */}
+                                view all
                             </button>
                         </div>
 
@@ -1500,10 +560,10 @@ const Home = () => {
                                 </li>
                             </ul>
                             <button className="btn-primary-outline-big mt-0 d-mobile-none quick-explore-filter-buton">
-                                <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                {/* <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fillRule="evenodd" clipRule="evenodd" d="M0 0V1.66667H15V0H0ZM5.83333 10H9.16667V8.33333H5.83333V10ZM12.5 5.83333H2.5V4.16667H12.5V5.83333Z" fill="black" />
-                                </svg>
-                                Filter
+                                </svg> */}
+                                view all
                             </button>
                         </div>
                     </div>
@@ -1511,1710 +571,92 @@ const Home = () => {
                     <div className="tab-content w-100 d-flex justify-content-center flex-column align-items-center mt-5" id="myTabContent">
                         <div className="tab-pane w-100 fade" id="all" role="tabpanel" aria-labelledby="all-tab">
                             <div className="row">
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek2} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek3} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek2} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek3} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek4} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <HotBids Coverimg={artWorkWeek3} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <HotBids Coverimg={artWorkWeek1} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <HotBids Coverimg={artWorkWeek4} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                
                             </div>
                         </div>
                         <div className="tab-pane w-100 fade" id="art" role="tabpanel" aria-labelledby="art-tab">
                             <div className="row">
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek6} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek5} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek3} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek2} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek5} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <LiveAuctions Coverimg={artWorkWeek4} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek5} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek4} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek3} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek4} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek5} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                             </div>
                         </div>
+
                         <div className="tab-pane w-100 fade" id="photo" role="tabpanel" aria-labelledby="photo-tab">
                             <div className="row">
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek6} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek5} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek2} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek5} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek6} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek2} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <LiveAuctions Coverimg={artWorkWeek6} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek4} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek5} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek5} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek6} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                             </div>
                         </div>
+
+
                         <div className="tab-pane w-100 fade" id="games" role="tabpanel" aria-labelledby="games-tab">
                             <div className="row">
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek3} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek2} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek3} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <LiveAuctions Coverimg={artWorkWeek4} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek3} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek4} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek3} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek5} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                             </div>
                         </div>
+
                         <div className="tab-pane w-100 fade" id="metaverses" role="tabpanel" aria-labelledby="metaverses-tab">
                             <div className="row">
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek2} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek5} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek6} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek2} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek4} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek3} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek5} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                             </div>
                         </div>
-                        <div className="tab-pane w-100 fade show active" id="music" role="tabpanel" aria-labelledby="music-tab">
+                        <div className="tab-pane w-100 fade" id="music" role="tabpanel" aria-labelledby="music-tab">
                             <div className="row">
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek5} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek6} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek3} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek6} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek5} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <LiveAuctions Coverimg={artWorkWeek5} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek4} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek3} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek6} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek5} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                             </div>
                         </div>
-                        <div className="tab-pane w-100 fade show active" id="memes" role="tabpanel" aria-labelledby="memes-tab">
+
+                        <div className="tab-pane w-100 fade" id="memes" role="tabpanel" aria-labelledby="memes-tab">
                             <div className="row">
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek3} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek6} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek4} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek2} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek3} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek1} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-sm-12 col-lg-3">
-                                    <div className="liveAuction-card-container mb-4">
-                                        <div className="live-image">
-                                            <img src={artWorkWeek5} width="100%" alt="" />
-                                            <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                            <Dropdown overlay={menu}>
-                                                <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                    <i className="fas fa-ellipsis-h"></i>
-                                                </div>
-                                            </Dropdown>
-                                        </div>
-
-                                        <div className="bg-white p-4">
-                                            <div className="position-relative live-user-list">
-                                                <img src={topSellerUser1} width="36px" alt="" />
-                                                <img src={topSellerUser2} width="36px" alt="" />
-                                                <img src={topSellerUser3} width="36px" alt="" />
-                                                <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                            </div>
-
-                                            <h6>Memescalf#782021</h6>
-
-                                            <div className="d-flex justify-content-between align-items-center">
-                                                <div className="text-danger"><b>1.2 WETH</b></div>
-                                                <small className="text-secondary">Highest bid 1/1</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek3} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek4} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek5} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek6} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek1} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek2} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                                <LiveAuctions Coverimg={artWorkWeek3} heartcount="24" title="Memescalf#782021" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                             </div>
                         </div>
                     </div>

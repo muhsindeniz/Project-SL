@@ -299,29 +299,54 @@
 }
 
 @font-face {
-    font-family: "AvertaStd-Semibold";
-    src: url("aef2da2daa6e15be44ff1a2706cc61a1.eot"); /* IE9*/
-    src: url("aef2da2daa6e15be44ff1a2706cc61a1.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("aef2da2daa6e15be44ff1a2706cc61a1.woff2") format("woff2"), /* chrome、firefox */
-    url("aef2da2daa6e15be44ff1a2706cc61a1.woff") format("woff"), /* chrome、firefox */
-    url("aef2da2daa6e15be44ff1a2706cc61a1.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("aef2da2daa6e15be44ff1a2706cc61a1.svg#AvertaStd-Semibold") format("svg"); /* iOS 4.1- */
-    font-weight: normal;
+    font-family: 'AvertaStd';
+    src: url('AvertaStd-Bold.eot');
+    src: url('AvertaStd-Bold.eot?#iefix') format('embedded-opentype'),
+        url('AvertaStd-Bold.woff2') format('woff2'),
+        url('AvertaStd-Bold.woff') format('woff'),
+        url('AvertaStd-Bold.ttf') format('truetype'),
+        url('AvertaStd-Bold.svg#AvertaStd-Bold') format('svg');
+    font-weight: bold;
     font-style: normal;
-  }
+    font-display: swap;
+}
 
-  @font-face {
-    font-family: "AvertaStd-Regular";
-    src: url("AvertaStd-Regular.ttf"), /* IE9*/
-    url("AvertaStd-Regular.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    font-weight: normal;
+@font-face {
+    font-family: 'AvertaStd';
+    src: url('AvertaStd-Semibold.eot');
+    src: url('AvertaStd-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('AvertaStd-Semibold.woff2') format('woff2'),
+        url('AvertaStd-Semibold.woff') format('woff'),
+        url('AvertaStd-Semibold.ttf') format('truetype'),
+        url('AvertaStd-Semibold.svg#AvertaStd-Semibold') format('svg');
+    font-weight: 600;
     font-style: normal;
-  }
+    font-display: swap;
+}
 
-  @font-face {
-    font-family: "siliom-Regular";
-    src: url("silom.ttf"), /* IE9*/
-    url("silom.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+@font-face {
+    font-family: 'AvertaStd';
+    src: url('AvertaStd-Light.eot');
+    src: url('AvertaStd-Light.eot?#iefix') format('embedded-opentype'),
+        url('AvertaStd-Light.woff2') format('woff2'),
+        url('AvertaStd-Light.woff') format('woff'),
+        url('AvertaStd-Light.ttf') format('truetype'),
+        url('AvertaStd-Light.svg#AvertaStd-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AvertaStd';
+    src: url('AvertaStd-Regular.eot');
+    src: url('AvertaStd-Regular.eot?#iefix') format('embedded-opentype'),
+        url('AvertaStd-Regular.woff2') format('woff2'),
+        url('AvertaStd-Regular.woff') format('woff'),
+        url('AvertaStd-Regular.ttf') format('truetype'),
+        url('AvertaStd-Regular.svg#AvertaStd-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
-  }
+    font-display: swap;
+}
+

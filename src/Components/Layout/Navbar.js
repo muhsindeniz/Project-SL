@@ -121,7 +121,7 @@ const Navbar = () => {
                 <nav className="navbar navbar-light navbar-expand-lg" id="myNavbar">
                     <div className="container-fluid menu-reverse container-fluid menu-reverse">
 
-                        <div className="d-flex align-items-center">
+                        <div className="d-flex d-lg-none align-items-center">
 
                             <div className="d-lg-none d-sm-block mr-1">
                                 <a className="nav-link nav-dark-button">

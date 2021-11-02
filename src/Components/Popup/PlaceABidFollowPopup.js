@@ -15,7 +15,7 @@ const PlaceABidFollowPopup = (props) => {
             initial="hidden"
             animate="visible"
             variants={variants} className="place-a-bid-popup-container">
-            <div className="border-radius bg-white popup-width" style={{padding: "48px"}}>
+            <div className="follow-step border-radius bg-white popup-width">
 
                 <div className="d-flex justify-content-between cursor-pointer">
                     <h3>Follow steps</h3>
@@ -31,7 +31,7 @@ const PlaceABidFollowPopup = (props) => {
                         <div className="ml-3">
                             <h6 className="mb-1"><b>Deposit wETH</b></h6>
                             <p className="color-gray">
-                                <small>Send transaction to convert ETH to wETH</small>
+                                <small>Send transaction to convert <b>ETH to wETH</b></small>
                             </p>
                         </div>
                     </div>

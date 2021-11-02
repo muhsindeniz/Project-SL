@@ -134,9 +134,8 @@
         }
         pre {
             display: block;
-            position: relative;
             padding: 9px;
-            margin: 0 0 10px;
+            margin: 0 0 12px;
             font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
             font-size: 13px;
             line-height: 1.428571429;
@@ -147,23 +146,6 @@
             border: 1px solid #ccc;
             overflow-x: auto;
             border-radius: 4px;
-        }
-        pre:after {
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-            content: 'Usage';
-            line-height: 1;
-            padding: 5px 8px;
-            font-size: 12px;
-            color: #767676;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-right: none;
-            border-top: none;
-            border-radius: 0 4px 0 4px;
-            z-index: 10;
         }
         /* responsive */
         @media (max-width: 959px) {
@@ -177,69 +159,19 @@
 <body>
 <div class="page">
     <div class="demo">
-        <h1 style="font-family: 'LoRes 12 OT Narrow'; font-weight: normal; font-style: normal;">LoRes 12 OT Narrow Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 12 OT Narrow';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 12 OT Narrow'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 OT Wide'; font-weight: normal; font-style: normal;">LoRes 9 OT Wide Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 OT Wide';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 OT Wide'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 OT Wide Alt Oakland'; font-weight: bold; font-style: normal;">LoRes 9 OT Wide Alt Oakland Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 OT Wide Alt Oakland';
+        <h1 style="font-family: 'AvertaStd'; font-weight: bold; font-style: normal;">☞AvertaStd-Bold</h1>
+        <pre title="Usage">.your-style {
+    font-family: 'AvertaStd';
     font-weight: bold;
     font-style: normal;
 }</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 OT Wide Alt Oakland'; font-weight: bold; font-style: normal;">
+        <pre title="Preload (optional)">
+&lt;link rel=&quot;preload&quot; href=&quot;AvertaStd-Bold.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+        <div class="font-container" style="font-family: 'AvertaStd'; font-weight: bold; font-style: normal;">
             <p class="letters">
                 abcdefghijklmnopqrstuvwxyz<br>
 ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
+                0123456789.:,;()*!?'@#&lt;&gt;$%&^+-=~
             </p>
             <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
             <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
@@ -254,18 +186,21 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
             <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
         </div>
     </div>
+
     <div class="demo">
-        <h1 style="font-family: 'LoRes 12 OT'; font-weight: bold; font-style: normal;">LoRes 12 OT Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 12 OT';
-    font-weight: bold;
+        <h1 style="font-family: 'AvertaStd'; font-weight: 600; font-style: normal;">☞AvertaStd-Semibold</h1>
+        <pre title="Usage">.your-style {
+    font-family: 'AvertaStd';
+    font-weight: 600;
     font-style: normal;
 }</pre>
-        <div class="font-container" style="font-family: 'LoRes 12 OT'; font-weight: bold; font-style: normal;">
+        <pre title="Preload (optional)">
+&lt;link rel=&quot;preload&quot; href=&quot;AvertaStd-Semibold.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+        <div class="font-container" style="font-family: 'AvertaStd'; font-weight: 600; font-style: normal;">
             <p class="letters">
                 abcdefghijklmnopqrstuvwxyz<br>
 ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
+                0123456789.:,;()*!?'@#&lt;&gt;$%&^+-=~
             </p>
             <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
             <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
@@ -280,18 +215,21 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
             <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
         </div>
     </div>
+
     <div class="demo">
-        <h1 style="font-family: 'LoRes 12 OT Alt Oakland'; font-weight: bold; font-style: normal;">LoRes 12 OT Alt Oakland Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 12 OT Alt Oakland';
-    font-weight: bold;
+        <h1 style="font-family: 'AvertaStd'; font-weight: 300; font-style: normal;">☞AvertaStd-Light</h1>
+        <pre title="Usage">.your-style {
+    font-family: 'AvertaStd';
+    font-weight: 300;
     font-style: normal;
 }</pre>
-        <div class="font-container" style="font-family: 'LoRes 12 OT Alt Oakland'; font-weight: bold; font-style: normal;">
+        <pre title="Preload (optional)">
+&lt;link rel=&quot;preload&quot; href=&quot;AvertaStd-Light.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+        <div class="font-container" style="font-family: 'AvertaStd'; font-weight: 300; font-style: normal;">
             <p class="letters">
                 abcdefghijklmnopqrstuvwxyz<br>
 ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
+                0123456789.:,;()*!?'@#&lt;&gt;$%&^+-=~
             </p>
             <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
             <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
@@ -306,18 +244,21 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
             <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
         </div>
     </div>
+
     <div class="demo">
-        <h1 style="font-family: 'LoRes 9 OT Narrow'; font-weight: normal; font-style: normal;">LoRes 9 OT Narrow Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 OT Narrow';
+        <h1 style="font-family: 'AvertaStd'; font-weight: normal; font-style: normal;">☞AvertaStd-Regular</h1>
+        <pre title="Usage">.your-style {
+    font-family: 'AvertaStd';
     font-weight: normal;
     font-style: normal;
 }</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 OT Narrow'; font-weight: normal; font-style: normal;">
+        <pre title="Preload (optional)">
+&lt;link rel=&quot;preload&quot; href=&quot;AvertaStd-Regular.woff2&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</pre>
+        <div class="font-container" style="font-family: 'AvertaStd'; font-weight: normal; font-style: normal;">
             <p class="letters">
                 abcdefghijklmnopqrstuvwxyz<br>
 ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
+                0123456789.:,;()*!?'@#&lt;&gt;$%&^+-=~
             </p>
             <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
             <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
@@ -332,500 +273,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
             <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
         </div>
     </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 OT Wide'; font-weight: bold; font-style: normal;">LoRes 9 OT Wide Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 OT Wide';
-    font-weight: bold;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 OT Wide'; font-weight: bold; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 OT Narrow'; font-weight: bold; font-style: normal;">LoRes 9 OT Narrow Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 OT Narrow';
-    font-weight: bold;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 OT Narrow'; font-weight: bold; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 15 OT'; font-weight: bold; font-style: normal;">LoRes 15 OT Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 15 OT';
-    font-weight: bold;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 15 OT'; font-weight: bold; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 Plus OT Wide'; font-weight: bold; font-style: normal;">LoRes 9 Plus OT Wide Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 Plus OT Wide';
-    font-weight: bold;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 Plus OT Wide'; font-weight: bold; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 Plus OT Narrow'; font-weight: normal; font-style: normal;">LoRes 9 Plus OT Narrow Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 Plus OT Narrow';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 Plus OT Narrow'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 15 OT Alt Oakland'; font-weight: bold; font-style: normal;">LoRes 15 OT Alt Oakland Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 15 OT Alt Oakland';
-    font-weight: bold;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 15 OT Alt Oakland'; font-weight: bold; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 22 OT Serif'; font-weight: bold; font-style: normal;">LoRes 22 OT Serif Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 22 OT Serif';
-    font-weight: bold;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 22 OT Serif'; font-weight: bold; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 28 OT Narrow'; font-weight: normal; font-style: normal;">LoRes 28 OT Narrow Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 28 OT Narrow';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 28 OT Narrow'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 22 OT Oakland'; font-weight: bold; font-style: normal;">LoRes 22 OT Oakland Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 22 OT Oakland';
-    font-weight: bold;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 22 OT Oakland'; font-weight: bold; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 21 OT Serif'; font-weight: normal; font-style: normal;">LoRes 21 OT Serif Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 21 OT Serif';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 21 OT Serif'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 Minus OT Narrow'; font-weight: normal; font-style: normal;">LoRes 9 Minus OT Narrow Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 Minus OT Narrow';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 Minus OT Narrow'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 Plus OT Narrow'; font-weight: bold; font-style: normal;">LoRes 9 Plus OT Narrow Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 Plus OT Narrow';
-    font-weight: bold;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 Plus OT Narrow'; font-weight: bold; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 Minus OT Wide'; font-weight: normal; font-style: normal;">LoRes 9 Minus OT Wide Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 Minus OT Wide';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 Minus OT Wide'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 Plus OT Wide Alt'; font-weight: bold; font-style: normal;">LoRes 9 Plus OT Wide Alt Bold</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 Plus OT Wide Alt';
-    font-weight: bold;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 Plus OT Wide Alt'; font-weight: bold; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 28 OT'; font-weight: normal; font-style: normal;">LoRes 28 OT Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 28 OT';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 28 OT'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 22 OT Narrow'; font-weight: normal; font-style: normal;">LoRes 22 OT Narrow Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 22 OT Narrow';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 22 OT Narrow'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 15 OT Narrow'; font-weight: normal; font-style: normal;">LoRes 15 OT Narrow Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 15 OT Narrow';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 15 OT Narrow'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 12 OT'; font-weight: normal; font-style: normal;">LoRes 12 OT Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 12 OT';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 12 OT'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
-    <div class="demo">
-        <h1 style="font-family: 'LoRes 9 Plus OT Wide'; font-weight: normal; font-style: normal;">LoRes 9 Plus OT Wide Regular</h1>
-        <pre>.your-style {
-    font-family: 'LoRes 9 Plus OT Wide';
-    font-weight: normal;
-    font-style: normal;
-}</pre>
-        <div class="font-container" style="font-family: 'LoRes 9 Plus OT Wide'; font-weight: normal; font-style: normal;">
-            <p class="letters">
-                abcdefghijklmnopqrstuvwxyz<br>
-ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
-                0123456789.:,;()*!?'@#<>$%&^+-=~
-            </p>
-            <p class="s10" style="font-size: 10px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s11" style="font-size: 11px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s12" style="font-size: 12px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s14" style="font-size: 14px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s18" style="font-size: 18px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s24" style="font-size: 24px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s30" style="font-size: 30px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s36" style="font-size: 36px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s48" style="font-size: 48px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s60" style="font-size: 60px;">The quick brown fox jumps over the lazy dog.</p>
-            <p class="s72" style="font-size: 72px;">The quick brown fox jumps over the lazy dog.</p>
-        </div>
-    </div>
+
 </div>
 </body>
 </html>

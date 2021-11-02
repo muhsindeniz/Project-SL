@@ -10,14 +10,20 @@ header {
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    padding: 20px;
+    padding: 31px 0;
     top: 0;
     left: 0;
     z-index: 99;
     background: var(--bg-main);
     width: 100%;
 }
-
+.navbar-light .navbar-brand > img{
+    width: 32px;
+    margin-right: 3px;
+}
+.navbar-light .navbar-brand {
+	width: 150px;
+}
 @media only screen and (max-width: 992px){
 .navbar-expand-lg {
     -ms-flex-flow: row nowrap;
@@ -27,8 +33,9 @@ header {
 }
 }
 
-.navbar-expand-lg .navbar-collapse{
-    justify-content: center;
+.navbar-expand-lg .navbar-collapse {
+	justify-content: center;
+	max-width: calc(100% - 185px);
 }
 
 .navbar .menu-dropdown{
@@ -48,7 +55,7 @@ header {
     padding: 6px 10px;
     font-size: 14px;
     color: var(--black-color);
-    font-family: "AvertaStd-Semibold";
+    font-family: "AvertaStd";
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -65,9 +72,9 @@ header {
     margin-top: 50px !important;
 } */
 
-section{
+/* section{
     margin-top: 50px !important;
-}
+} */
 
 .navbar-nav li>span {
     position: relative;
@@ -86,22 +93,25 @@ section{
 .navbar-light .navbar-nav .nav-link {
     font-size: 14px;
     color: var(--black-color);
-    font-family: "AvertaStd-Semibold";
+    font-family: "AvertaStd";
 }
 
 .navbar .nav-item {
     display: flex;
     align-items: center;
 }
-
+.navbar-expand-lg .navbar-nav {
+	justify-content: flex-start;
+    width: 100%;
+}
 
 /* breakpoint and up - mega dropdown styles */
 
 @media screen and (min-width: 767px) {
     /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
     .navbar .nav-item {
-        padding: .5rem .5rem;
-        margin: 0 .25rem;
+        padding: 0;
+        margin: 0;
     }
     /* makes the dropdown full width  */
     .navbar .dropdown {
@@ -156,6 +166,8 @@ section{
     color: var(--black-color) !important;
     background-color: var(--bg-main);
     fill: var(--black-color) !important;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
@@ -228,15 +240,17 @@ section{
 }
 
 .navbar-search {
-    min-width: 300px;
-    background-color: var(--gray-bg);
-    padding: 10px 16px;
-    border: solid 2px var(--gray-bg);
-    border-radius: 30px;
-    outline: none;
-    max-height: 48px;
-    display: flex;
-    font-size: 12px;
+	min-width: 318px;
+	background-color: var(--gray-bg);
+	padding: 10px 16px;
+	border: solid 2px var(--gray-bg);
+	border-radius: 30px;
+	outline: none;
+	height: 48px;
+	display: flex;
+    align-items: center;
+	font-size: 12px;
+    margin-right: 15px;
 }
 
 ::placeholder{
@@ -259,15 +273,16 @@ section{
 }
 
 .nav-dark-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0.5px solid #C7C7C7;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    color: #333;
-    border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #C7C7C7;
+	width: 48px;
+	height: 48px;
+	background-color: #fff;
+	color: #333;
+	border-radius: 50%;
+	margin-left: 10px;
 }
 
 .nav-dark-button path{

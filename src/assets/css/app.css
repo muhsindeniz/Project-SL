@@ -1,24 +1,43 @@
 /* NFT MarketPlace Start -- Muhsin Deniz -- */
 
 @import './veriables.css';
-@import './responsive.css';
+
 
 /*
     NFT MarketPlace Veriables
 */
 
-.btn-primary {
-    background-image: url(../img/icons/custom/buttonBg.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: none;
-    border-radius: 30px;
-    font-size: 14px;
-    padding: 12px 25px;
-    color: #fff;
+body .container,
+body .container-fluid,
+body .container-lg,
+body .container-md,
+body .container-sm,
+body .container-xl{
+    max-width: 1320px;
+    padding:  0 15px;
+    margin:  0 auto;
 }
-
+img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.btn-primary {
+	background-image: url(../img/icons/custom/buttonBg.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: none;
+	border-radius: 30px;
+	font-size: 14px;
+	padding: 10px 27px 11px 27px;
+	color: #fff;
+}
+.nav-item .btn-primary-outline,
+.nav-item .btn-primary {
+    margin-left: 10px;
+}
 .buy-art-work-week-card {
     padding: 0 30px 30px 30px;
 }
@@ -214,14 +233,15 @@ border-bottom: solid 1px var(--gray-color);
 }
 
 .btn-primary-outline {
-    background: transparent;
-    border: solid 1px var(--pink-color);
-    border-radius: 30px;
-    font-size: 12px;
-    padding: 12px 25px;
-    color: var(--black-color);
-    width: 125px;
-    height: 45px;
+	background: transparent;
+	border: solid 1px var(--pink-color);
+	border-radius: 30px;
+	font-size: 12px;
+	padding: 12px 15px;
+	color: var(--black-color);
+	width: 94px;
+	height: 45px;
+	margin-left: 8px;
 }
 
 .btn-primary-outline-big{
@@ -244,6 +264,16 @@ border-bottom: solid 1px var(--gray-color);
     color: var(--red-color);
 }
 
+.footer-column-flex-border .footer-column:first-child {
+	padding-right: 6.9%;
+}
+.footer-column-flex-border .footer-column:first-child .footer-menu {
+	max-width: 92%;
+	width: 100%;
+	font-size: 16px;
+	line-height: 156.52%;
+	color: #6E6E6E;
+}
 footer .footer-menu {
     padding: 0;
     color: var(--black-text);
@@ -261,17 +291,30 @@ footer .footer-title h3{
     font-size: 22px !important;
 }
 
-footer .footer-title h6{
-    color: var(--black-text) !important;
+footer .footer-title h6 {
+	color: var(--black-text) !important;
+	line-height: 156.52%;
+	font-weight: 600;
 }
-
 footer .footer-menu li {
-    list-style-type: none;
-    padding: 10px 0;
-    font-size: 14px;
-    color: var(--black-text);
+	list-style-type: none;
+	padding: 0 0 15px 0;
+	font-family: AvertaStd;
+	font-size: 16px;
+	line-height: 156.52%;
+	color: #6E6E6E;
+	font-weight: 600;
 }
-
+footer .footer-menu li:hover{
+    color: var(--pink-color);
+}
+footer .footer-menu li > span {
+	font-weight: normal;
+}
+footer .btn-primary {
+	padding: 10px 10px;
+	min-width: 80px !important;
+}
 footer .footer-menu li:hover {
     cursor: pointer;
 }
@@ -313,24 +356,62 @@ footer .footer-social-media-container li:hover {
     font-weight: 400;
 }
 
-footer div{
-    color: var(--black-text);
+footer div {
+	font-family: AvertaStd;
+	font-size: 16px;
+	line-height: 156.52%;
+	color: #6E6E6E;
+	font-weight: 600;
 }
-
+.d-flex.footer-social-icons > div {
+	display: flex;
+	align-items: center;
+}
+.d-flex.footer-social-icons > div:hover{
+    opacity: 0.8;
+}
 footer section .footer-in-email {
-    outline: none;
-    border: 0.2px solid #C7C7C7;
-    box-sizing: border-box;
-    box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.01);
-    border-radius: 24px;
-    padding: 0 20px;
-    height: 50px;
-    font-size: 14px;
-    background-color: var(--footer-input-bg);
+	outline: none;
+	border: 0.2px solid #C7C7C7;
+	box-sizing: border-box;
+	padding: 0 20px;
+	height: 50px;
+	font-size: 14px;
+	background-color: var(--footer-input-bg);
+	width: 225px;
+	box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.01);
+	border-radius: 24px;
 }
-
+.artwork-item {
+	width: 31.3%;
+    margin-bottom: 1.2rem;
+}
+.artwork-item:nth-child(3n) {
+	margin-right: 0 !important;
+}
+.artWorkWeekSection .col-lg-5 {
+	-ms-flex: 0 0 40.167%;
+	flex: 0 0 40.167%;
+	max-width: 40.167%;
+}
+.artWorkWeekSection .home-artwork-week-day {
+	-ms-flex: 0 0 59.8%;
+	flex: 0 0 59.8%;
+	max-width: 59.8%;
+}
+.home-artwork-week-day > .d-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+.artwork-item:last-child {
+	margin-right: 0 !important;
+}
 .artWorkWeekSection img {
-    border-radius: 14px;
+	border-radius: 14px;
+	max-width: 100%;
+	width: auto;
+	max-height: 100%;
+	height: auto;
 }
 
 .artWorkWeekSection .artWorkMain {
@@ -360,12 +441,12 @@ footer section .footer-in-email {
 }
 
 .art-work-description-container small{
-    font-family: "AvertaStd-Regular" !important;
+    font-family: "AvertaStd" !important;
     font-size: 15px;
 }
 
 .art-work-description-container small b{
-    font-family: "AvertaStd-Regular" !important;
+    font-family: "AvertaStd" !important;
     font-size: 14px;
 }
 
@@ -411,19 +492,19 @@ footer section .footer-in-email {
 }
 
 .topSeller .topSellerCard .topSellectProfilePicture {
-    width: 95px;
-    height: 95px;
-    border-radius: 50%;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%);
+	width: 95px;
+	height: 95px;
+	border-radius: 50%;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%);
 }
 
 .topSeller .topSellerCard .topSellerUserInfo {
-    width: 100%;
-    text-align: center;
-    padding: 70px 10px 20px 10px;
+	width: 100%;
+	text-align: center;
+	padding: 55px 10px 20px 10px;
 }
 
 .topSeller .topSellerCard .topSellerUserInfo h5 {
@@ -431,10 +512,11 @@ footer section .footer-in-email {
 }
 
 .topSeller .topSellerCard .topSellerUserInfo small {
-    color: var(--gray-color);
-    font-size: 14px;
-    font-family: "AvertaStd-Semibold" !important;
-    margin-top: 10px;
+	color: var(--gray-color);
+	font-size: 14px;
+	font-family: "AvertaStd" !important;
+	margin-top: 10px;
+	display: block;
 }
 
 .topSellerContent .topSellerCard .topSellectProfilePicture .confirmation {
@@ -452,11 +534,39 @@ footer section .footer-in-email {
 }
 
 .liveAuction .liveAuction-card-container .live-image img {
-    border-radius: 15px;
-    max-height: 206px;
-    object-fit: cover;
+	border-radius: 15px;
+	max-height: 280px;
+	object-fit: cover;
+	width: 100%;
 }
-
+.liveAuction-card-container {
+	background: #FFFFFF;
+	border: 0.2px solid #EDECEC;
+	box-sizing: border-box;
+	box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.01);
+	border-radius: 15px;
+    margin-bottom: 25px;
+	overflow: hidden;
+    position: relative;
+}
+.liveAuction-card-container .bg-white{
+	position: relative;
+}
+.liveAuction-card-container .live-user-list {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	z-index: 1;
+	top: -20px;
+	background: transparent;
+	left: 23px;
+}
+.liveAuction-card-container .live-user-list > img {
+	width: 36px;
+	height: 36px;
+    border-radius: 50px;
+    border: 1px solid #FFFFFF;
+}
 .liveAuction .live-image {
     position: relative;
 }
@@ -469,11 +579,12 @@ footer section .footer-in-email {
     position: absolute;
     top: 20px;
     right: 15px;
-    color: var(--gray-color);
+    color: var(--text-light-color);
 }
 
 .liveAuction .card-heart-icon i {
-    color: var(--red-color);
+	color: var(--red-color);
+	margin-right: 5px;
 }
 
 .liveAuction .card-select-icon {
@@ -488,6 +599,7 @@ footer section .footer-in-email {
     box-sizing: border-box;
     box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.01);
     border-radius: 50%;
+    z-index: 1;
 }
 
 .liveAuction .card-select-icon i {
@@ -526,6 +638,7 @@ footer section .footer-in-email {
     bottom: -15px;
     text-align: center;
     padding: 5px 10px;
+    z-index: 1;
 }
 
 .quickExplore .nav-pills .nav-link.active,
@@ -569,8 +682,10 @@ footer section .footer-in-email {
     width: 100%;
 }
 
-.nft-start .swiper-container .swiper-slide img{
-    border-radius: 15px;
+.nft-start .swiper-container .swiper-slide > img {
+	border-radius: 15px;
+	max-height: 483px;
+	width: 100%;
 }
 
 .swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled{
@@ -597,7 +712,9 @@ footer section .footer-in-email {
     content: "\2190" !important;
     color: #000;
 }
-
+small.text-secondary {
+	color: #979797 !important;
+}
 .nft-start .slider-content{
     position: absolute;
     bottom: 0;
@@ -609,7 +726,11 @@ footer section .footer-in-email {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-
+.nft-start .slider-content > img {
+	width: 52px;
+	height: 52px;
+	margin-top: 10px;
+}
 .slider-conter-absolute{
     position: absolute;
     top: -75px;
@@ -723,8 +844,11 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
     border: solid 1px var(--gray-color) !important;
 }
 
-.topSeller .section-select-filter{
-    margin-left: 20px;
+.topSeller .section-select-filter {
+	margin-left: 26px;
+}
+.topSeller .ant-select {
+	width: 128px;
 }
 
 .topSeller .ant-select-single:not(.ant-select-customize-input) .ant-select-selector{
@@ -737,7 +861,7 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
 
 .topSeller .topSellerUserInfo h5 b{
     color: var(--black-color) !important;
-    font-family: "AvertaStd-Semibold" !important;
+    font-family: "AvertaStd" !important;
     font-size: 18px;
 }
 
@@ -914,6 +1038,7 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
     width: 488px;
     max-height: calc(100vh - 40px) !important;
     overflow-y: auto;
+    padding: 40px;
 }
 
 .popup-close-btn-exit{
@@ -1100,13 +1225,24 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
     align-items: center;
 }
  
-.nft-start .home-nft-slider-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+.nft-start .home-nft-slider-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	-ms-flex: 0 0 45%;
+	flex: 0 0 45%;
+	max-width: 45%;
 }
-
+.nft-start .home-nft-slider {
+	-ms-flex: 0 0 43.6%;
+	flex: 0 0 43.6%;
+	max-width: 43.6%;
+	margin-top: 67px !important;
+	padding-right: 20px;
+	padding-top: 5px;
+    margin-left: 6%;
+}
 
 .quickExplore .nav-tabs{
     border: none;
@@ -1139,17 +1275,66 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
     fill: var(--black-color) !important;
 }
 
-.place-a-bid-popup-container .popup-close-btn-outline{
-    width: 48px;
-    height: 48px;
-    border: solid 1px var(--gray-bg);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: -17px -25px 0 0;
+.place-a-bid-popup-container .popup-close-btn-outline {
+	width: 48px;
+	height: 48px;
+	border: solid 1px var(--gray-bg);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0 0 0;
 }
-
+.place-a-bid-popup-container .sub-heading {
+	font-size: 18px;
+	line-height: 130%;
+	color: #0E0E0E;
+	font-weight: lighter;
+	max-width: 98%;
+	width: 100%;
+	display: block;
+}
+.place-a-bid-popup-container .sub-heading span {
+	display: inline-block;
+	vertical-align: top;
+}
+.place-a-bid-popup-container .formcontrol {
+	border: none;
+	font-size: 24px;
+	line-height: 130%;
+	height: 32px;
+	font-weight: lighter;
+	padding-right: 80px;
+}
+input:focus,
+input:focus-visible {
+	outline: 0;
+}
+.place-a-bid-popup-container small {
+	font-size: 14px;
+	line-height: 130%;
+	color: #9D9D9D;
+	display: block;
+}
+.place-a-bid-popup-container .bid-input {
+	position: relative;
+	margin-bottom: 10px;
+}
+.balance-info > div {
+	font-size: 18px;
+	margin-bottom: 10px !important;
+}
+.balance-info > div b {
+	font-weight: 600;
+}
+.place-a-bid-popup-container .bid-input .info {
+	position: absolute;
+	right: 0;
+	top: 12px;
+}
+.place-a-bid-popup-container .bid-input .info b {
+	margin-left: 8px;
+}
 .nft-start .home-nft-slider-section .swiper-wrapper .swiper-slide{
     width: 100%;
 }
@@ -1165,14 +1350,15 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
 
 .topSellerContent .topSellerCard .topSellerCardImageover {
     width: 100%;
-    height: 160px;
+    height: 127px;
 }
 
 .topSellerContent .topSellerCard .topSellerCardImageover img {
-    object-fit: cover;
-    height: 100%;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+	object-fit: cover;
+	height: 100%;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	width: 100%;
 }
 
 .sign-in-container-section .sig-in-mobile{
@@ -1217,4 +1403,86 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
 
 .create-single-section-container .putOnMarketplace svg path{
     fill: var(--black-color) !important;
+}
+.home-banner-description h3 {
+	margin-left: 4px !important;
+	position: relative;
+	padding-bottom: 8px;
+}
+.home-nft-slider-section > h6 {
+	padding-top: 67px;
+	padding-bottom: 76px;
+}
+.nft-start-counter .btn-primary {
+	min-width: 132px;
+	line-height: 100%;
+}
+.nft-start-counter .d-flex.mt-4 {
+	padding-top: 20px;
+}
+section.nft-start {
+	margin-top: 60px;
+}
+.nft-start, .nft-start-counter h4, .nft-start h4, .navbar-brand span {
+	font-family: 'AvertaStd';
+	font-size: 29px;
+	line-height: 115.8%;
+}
+.nft-start-counter small {
+	font-size: 17px;
+	padding: 0 !important;
+	line-height: 100%;
+	display: block;
+	margin-top: 6px;
+}
+.nft-start-counter .d-flex.mt-4 > div {
+	padding-right: 35px !important;
+	margin-right: 35px;
+	padding-left: 0 !important;
+	border-right: 2px solid #dee2e6 !important;
+}
+.nft-start-counter .d-flex.mt-4 > div:last-child{
+    padding-right:0px !important;
+	margin-right:0px;
+}
+.nft-start-counter .d-flex.mt-4 > div.border-left {
+	border: none !important;
+}
+section .container-fluid,
+.artWorkWeekSection .container-fluid {
+	padding: 0 40px;
+}
+.main-title{
+    font-size: 40px;
+    line-height: 111.8%;
+}
+section.artWorkWeekSection {
+	padding-top: 82px;
+}
+
+.topSellerContent .d-flex {
+	width: 100%;
+	flex-wrap: wrap;
+}
+.topSellerContent .d-flex .topSellerCard {
+	width: 18.6%;
+	margin-bottom: 25px;
+	background: #FFFFFF;
+	border: 1px solid #C7C7C7;
+	box-sizing: border-box;
+	box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.01);
+	border-radius: 15px;
+	margin-right: 1.7%;
+}
+.topSellerContent .d-flex .topSellerCard:nth-child(5n){
+	margin-right: 0;
+}
+section.artWorkWeekSection .row.mt-5{
+    align-items: flex-start;
+}
+.buy-art-work-week .col-lg-6:first-child {
+	padding-right: 30px;
+}
+.buy-art-work-week .col-lg-6:last-child {
+	padding-left: 30px;
 }
