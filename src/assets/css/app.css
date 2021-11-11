@@ -42,6 +42,10 @@ img{
     padding: 0 30px 30px 30px;
 }
 
+.bighest-bid-text b span{
+    color: #979797;
+}
+
 .btn-light {
     background: var(--gray-bg);
     border: 0.5px solid #C7C7C7;
@@ -1612,3 +1616,172 @@ ul.filter.topSeller > li .ant-select-single:not(.ant-select-customize-input) div
 	flex-wrap: wrap;
 }
 
+.artwork-sales-btn {
+    color: #000000 !important;
+    font-size: 12px;
+    text-align: center;
+    padding: 7px 16px !important;
+    height: auto !important;
+    font-weight: bold;
+}
+
+.owner-details-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 330px;
+}
+
+.owner-details-list li{
+    margin-bottom: 20px;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.owner-details-list li a {
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 15px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #6300FF;
+    font-weight: bold;
+    display: inline-block;
+    padding: 12px 15px;
+}
+
+.owner-details-list li a span{
+    display: block;
+    margin-top: 2px;
+    font-size: 14px;
+    color: #979797;
+}
+
+.category-btn-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category-btn-list li{
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.category-btn-list li a {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 50px;
+    padding: 5px 18px;
+}
+
+.category-btn-list li a span{
+    margin-right: 6px;
+    line-height: 0;
+}
+
+.artwork-tab-nav li a{
+    font-weight: bold;
+    color: #979797 !important;
+}
+
+.artwork-tab-nav li a.active{
+    color: #000000 !important;
+}
+
+.profile-pictures-cover{
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-pictures-cover > img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.text-pink{
+    color: var(--pink-color) !important;
+}
+
+.filters-listing-reset button.btn-light{
+    font-weight: bold;
+    height: auto !important;
+}
+
+.filters-listing-reset button.btn-light:hover,
+.filters-listing-reset button.btn-light.active{
+    background-color: var(--pink-color) !important;
+    color: #FFFFFF !important;
+}
+
+.filters-listing-reset button.btn-light:hover svg path,
+.filters-listing-reset button.btn-light.active svg path{
+    fill: #FFFFFF;
+}
+
+.ActivityNumberCard{
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: auto;
+    padding: 20px 28px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.ActivityNumberCard-img{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.ActivityNumberCard-img .lable-icon {
+    position: absolute;
+    line-height: 0;
+    top: -6px;
+    left: -6px;
+}
+
+.ActivityNumberCard-info{
+    padding-left: 25px;
+}
+
+.ActivityNumberCard-info h4{
+    font-size: 18px;
+    line-height: 130%;
+    color: #000000;    
+}
+.ActivityNumberCard-info p{
+    font-size: 16px;
+    line-height: 130%;
+    color: #979797;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.ActivityNumberCard-info p span{
+    color: #000000;
+    margin: 0 4px;
+}
+
+.ActivityNumberCard-info .seenstatus{
+    font-size: 16px;
+    line-height: 130%;
+    color: #979797;    
+}

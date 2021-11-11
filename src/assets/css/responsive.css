@@ -1089,4 +1089,138 @@
     .liveAuction .row.mt-5 {
         margin: auto;
     }
+
+    .artwork-tab-nav li a {
+        padding: 8px 10px;
+    }
+
+    .owner-details-list li a {
+        padding: 8px 11px;
+    }
+
+    .owner-details-list li {
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+
+    .buy-highest-bid-block-left{
+        text-align: left;
+    }
+
+    .buy-highest-bid-block.d-flex.buy-font > div > * {
+        width: 100%;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .buy-highest-bid-block.d-flex.buy-font > div {
+        width: 50%;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .buy-highest-bid-block.d-flex.buy-font > div.buy-highest-bid-block-left{
+        border-right: 1px solid #E4E4E5 !important;
+        border-bottom: 0 !important;
+        padding-right: 10px !important;
+    }
+
+    .buy-highest-bid-block.d-flex.buy-font > div.buy-highest-bid-block-right{
+        padding-left: 10px !important;
+    }
+
+    .buy-highest-bid-block-left > span {
+        width: auto !important;
+        display: inline-block;
+        font-size: 12px !important;
+    }
+    .action-btn.buy-highest-bid-block-btn > div{
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%
+    }
+
+    .buy-highest-bid-block-right .d-flex.mt-3 div{
+        font-size: 12px;
+    }
+
+    .activity-number-card-right {
+        order: -1;
+        margin-top: -45px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .filters-listing-reset .d-flex.mb-2 h5{
+        font-size: 18px !important;
+        color: #0E0E0E;        
+    }
+
+    .filters-listing-reset .d-flex{
+        display: flex !important;
+    }
+
+    .filters-listing-button-list{
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        width: 100%;
+        overflow: auto;
+        scrollbar-width: none;
+        padding-top: 8px;
+        scrollbar-width: none;
+    }
+    .filters-listing-button-list::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .filters-listing-button-list button{
+        display: inline-block !important;
+    }
+
+    .ActivityNumberCard{
+        width: 100%;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+    }
+
+    .ActivityNumberCard-info {
+        padding-left: 15px;
+    }
+
+    .Collection-topSellerContent{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .ActivityNumberCard-info h4 {
+        font-size: 15px !important;
+        padding-bottom: 5px;
+    }
+
+    .ActivityNumberCard-info p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 376px) {
+    .buy-highest-bid-block.d-flex.buy-font > div {
+        width: 100%;
+    }
+
+    .buy-highest-bid-block.d-flex.buy-font > div.buy-highest-bid-block-left {
+        border-right: 0 !important;
+        border-bottom: 1px solid #E4E4E5 !important;
+        padding-right: 0px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .buy-highest-bid-block.d-flex.buy-font > div.buy-highest-bid-block-right {
+        padding-left: 0px !important;
+        margin-top: 0 !important;
+    }
 }
