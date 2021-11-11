@@ -87,7 +87,7 @@
         padding-top: 10px;
     }
     .margin-50 {
-        margin-top: 45px !important;
+        margin-top: 60px !important;
     }
     .nft-start h1.section-title {
         font-size: 52px !important;
@@ -168,6 +168,7 @@
         width: 38px;
         height: 38px;
         margin-left: 5px;
+        padding: 5px;
     }
     .navbar-nav .btn{
         padding: 0 13px;
@@ -197,6 +198,43 @@
         -ms-flex: 0 0 80%;
         flex: 0 0 80%;
         max-width: 80%;
+    }
+    div.cryptoloria-page {
+        margin-top: 90px;
+    }
+    .artCryptoLogo {
+        width: 60%;
+    }
+    .cryptoioria-banner-container .navbar-brand {
+        margin-top: -20px;
+    }
+    .cryptoioria-banner-container div.pl-4.pr-4 {
+        max-width: 550px;
+    }
+    .cryptoioria-banner-container > div > div.d-flex > div {
+        min-width: 120px;
+    }
+    .cryptoioria-banner-container {
+        height: 55vh;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    .art-work-description-container small {
+        font-size: 12px;
+    }
+    .topSellerContent .topSellerCard .topSellerCardImageover {
+        height: 95px;
+    }
+    .topSeller .topSellerCard .topSellectProfilePicture {
+        width: 75px;
+        height: 75px;
+        top: 60px;
+    }
+    .topSellerContent .topSellerCard .topSellectProfilePicture .confirmation {
+        width: 20px;
+        height: 20px;
+        right: 7px;
     }
 }
 @media only screen and (max-width: 991px) {
@@ -500,8 +538,10 @@
         width: 103px !important;
         height: 103px !important;
     }
-    .profile-info-position {
-        top: -70px !important;
+    div.profile-info-position {
+        margin-top: -50px !important;
+        width: 100%;
+        margin-bottom: 20px;
     }
     .faq-container .sub-tabs-menu .accordion a {
         padding-left: 10% !important;
@@ -619,7 +659,7 @@
     }
 
     .artCryptoLogo{
-        width: 80% !important;
+        width: 90% !important;
     }
 
     .cryptoioria-banner-container::after{
@@ -628,14 +668,33 @@
         background-position: bottom !important;
     }
 
-    .cryptoioria-banner-container{
-        height: 500px !important;
+    .cryptoioria-banner-container {
+        height: 70vh;
     }
-
-    .cryptoioria-banner-container .crypto-border-right{
-        padding-right: 25px !important;
-        padding-left: 15px !important;
+    .cryptoioria-banner-container div.pl-4.pr-4 {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .cryptoioria-banner-container .navbar-brand {
+        margin-top: -20px;
+        padding-bottom: 15px;
+    }
+    .cryptoioria-banner-container div.d-flex div.crypto-border-right {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
         border-color: var(--black-color) !important;
+        min-width: 80px;
+    }
+    .cryptoioria-banner-container > div > div.d-flex {
+        max-width: 100%;
+        margin: 30px auto 0 auto !important;
+    }
+    .cryptoioria-banner-container h4 {
+        font-size: 24px !important;
+    }
+    .cryptoioria-banner-container div.crypto-border-right div {
+        font-size: 14px;
+        margin-top: 3px;
     }
 
     .btn-primary-outline {
@@ -825,7 +884,7 @@
         font-size: 14px;
     }
     .liveAuction-card-container .p-4 {
-        padding: 20px 10px 10px 10px !important;
+        padding: 15px !important;
     }
     .liveAuction .order-sm-1 {
         align-items: center;
@@ -970,5 +1029,64 @@
         font-size: 12px !important;
         margin-right: 7px;
     }
-
+    .liveAuction .liveAuction-card-container .live-image img {
+        max-height: unset;
+    }
+    .profile-pictures-infos .edit-profile {
+        max-width: 180px !important;
+        width: 100% !important;
+    }
+    div.ant-tabs > .ant-tabs-nav {
+        margin-bottom: 10px;
+    }
+    .profile-activity-filter-mobile {
+        margin-top: 7px;
+        margin-bottom: 12px;
+    }
+    .profile-pictures-infos .profile-activity-filter-mobile path {
+        fill: var(--black-color);
+    }
+    .profile-pictures-infos .profile-activity-filter-mobile rect {
+        stroke: var(--purple);
+    }
+    .topSellerContent .d-flex.activity {
+        padding: 0;
+        white-space: normal;
+    }
+    .topSellerContent .d-flex.activity .topSellerCard {
+        width: 100%;
+        margin-right: auto !important;
+    }
+    .profile-usr-name-h3-size h3 {
+        font-size: 18px !important;
+    }
+    div.profile-info-position .mt-4:last-child {
+        width: 260px;
+    }
+    .profile-pictures-infos button.profile-upload,
+    .profile-pictures-infos button.select {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    .explore-page > h3 {
+        width: 100%;
+        margin-bottom: 15px !important;
+    }
+    ul.filter.topSeller {
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        width: 100%;
+        overflow: auto;
+        scrollbar-width: none;
+        padding-top: 8px;
+    }
+    ul.filter.topSeller::-webkit-scrollbar {
+        display: none;
+    }
+    ul.filter.topSeller  .ant-select-single.ant-select-show-arrow .ant-select-selection-item{
+        font-size: 12px;
+    }
+    .liveAuction .row.mt-5 {
+        margin: auto;
+    }
 }

@@ -1,6 +1,7 @@
 @import './veriables.css';
 @import './responsive.css';
 
+
 .buy-art-work-week {
     margin-top: 80px;
 }
@@ -212,32 +213,33 @@
     width: 85%;
     outline: none;
 }
-
 .profile-user-pictures {
-    width: 167px;
-    height: 167px;
-    border-radius: 50%;
+	width: 167px;
+	height: 167px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 5px solid #fff;
 }
-
 .profile-info-position {
-    width: 200px;
-    left: 50%;
-    position: relative;
-    transform: translate(-50%);
-    top: -120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+	width: 200px;
+	left: 50%;
+	position: relative;
+	transform: translate(-50%);
+	margin-top: -80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 50px;
 }
 
 .profile-pictures-infos .edit-profile {
-    border-radius: 30px;
-    font-size: 14px;
-    padding: 10px 10px;
-    min-width: 120px;
+	border-radius: 30px;
+	font-size: 14px;
+	padding: 10px 10px;
+	min-width: 120px;
+	max-width: 168px !important;
 }
-
 .profile-pictures-infos .profile-upload,
 .profile-pictures-infos .select {
     width: 48px !important;
@@ -474,10 +476,10 @@ footer .topSeller .headerSelect .ant-select-single.ant-select-show-arrow .ant-se
     text-align: left !important;
 }
 
+.cryptoloria-hidden-bids .live-image > img,
 .cryptoloria-hidden-bids .nft-rich-art{
     filter: blur(8px) !important;
 }
-
 .follow-step h6 {
 	font-size: 24px;
 	line-height: 130%;

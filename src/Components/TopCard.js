@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
-export default function TopCard ({title,Price,topuserimg, topcoverimg}) {
+export default function TopCard ({title,follow,btnname,datetime,Price,topuserimg, topcoverimg}) {
   return (
       <div className="topSellerCard">
 
@@ -18,7 +18,10 @@ export default function TopCard ({title,Price,topuserimg, topcoverimg}) {
         </div>
         <div className="topSellerUserInfo">
             <h5><b>{title}</b></h5>
+            <h5 className="color-ping mt-2 mb-2">{follow}</h5>
+            <small>{datetime}</small>
             <small>{Price}</small>
+            <button className="btn-ping  w-100 mt-3">{btnname}</button>
         </div>
       </div>
   );

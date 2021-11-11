@@ -118,6 +118,9 @@ const Buy = () => {
                                 <div className="mt-5">
                                     <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                         <li className="nav-item">
+                                            <a className="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-Details" role="tab" aria-controls="pills-details" aria-selected="true">Details</a>
+                                        </li>
+                                        <li className="nav-item">
                                             <a className="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Owner</a>
                                         </li>
                                         <li className="nav-item">
@@ -128,7 +131,13 @@ const Buy = () => {
                                         </li>
                                     </ul>
                                     <div className="tab-content" id="pills-tabContent">
-                                        <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                                        <div className="tab-pane fade  show active" id="pills-Details" role="tabpanel" aria-labelledby="pills-details-tab">
+                                            <h4>Owner</h4>
+
+                                        </div>
+
+                                        <div className="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                             <div className="w-100 d-flex justify-content-between mb-3">
                                                 <div className="d-flex">
                                                     <div className="user-img">

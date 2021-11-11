@@ -1,4 +1,9 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useState,useContext, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import SwiperCore, { Keyboard, Pagination, Navigation, Autoplay } from "swiper/core";
+
+import ArtWork from '../Components/ArtWork';
 import artWorkWeekOne from "../assets/img/custom/artWorkWeekOne.png";
 import artWorkWeek1 from "../assets/img/custom/artWorkWeek1.png";
 import artWorkWeek2 from "../assets/img/custom/artWorkWeek2.png";
@@ -9,13 +14,35 @@ import artWorkWeek6 from "../assets/img/custom/artWorkWeek6.png";
 import topSellerUser1 from "../assets/img/custom/topSellerUser1.png";
 import topSellerUser2 from "../assets/img/custom/topSellerUser2.png";
 import topSellerUser3 from "../assets/img/custom/topSellerUser3.png";
+import topSellerUser4 from "../assets/img/custom/topSellerUser4.png";
+import topSellerUser5 from "../assets/img/custom/topSellerUser5.png";
+import topSellerUser6 from "../assets/img/custom/topSellerUser6.png";
+import topSellerUser7 from "../assets/img/custom/topSellerUser7.png";
+import topSellerUser8 from "../assets/img/custom/topSellerUser8.png";
+import topSellerUser9 from "../assets/img/custom/topSellerUser9.png";
+import topSellerUser10 from "../assets/img/custom/topSellerUser10.png";
+import topSeller2 from "../assets/img/custom/topSeller2.png";
+import topSeller3 from "../assets/img/custom/topSeller3.png";
+import topSeller4 from "../assets/img/custom/topSeller4.png";
+import topSeller5 from "../assets/img/custom/topSeller5.png";
+import topSeller6 from "../assets/img/custom/topSeller6.png";
+import topSeller7 from "../assets/img/custom/topSeller7.png";
+import topSeller8 from "../assets/img/custom/topSeller8.png";
+import topSeller9 from "../assets/img/custom/topSeller9.png";
+import topSeller10 from "../assets/img/custom/topSeller10.png";
 import logo from "../assets/img/custom/cryptoioriaLogo.png";
 import shape from "../assets/img/icons/custom/Shape.svg";
+import HotBids from '../Components/HotBids';
 import fabaLogo from "../assets/img/custom/x.svg";
 import { Menu, Dropdown } from 'antd';
 import { motion } from "framer-motion"
+import FullScreenImage from '../Components/Popup/FullScreenImage';
+import TopCard from '../Components/TopCard';
+import LiveAuctions from '../Components/LiveAuctions';
+
 
 const Cryptoloria = () => {
+    let [openImage, setOpenImage] = useState(false)
 
     const variants = {
         hidden: { opacity: 0 },
@@ -41,11 +68,14 @@ const Cryptoloria = () => {
 
     return (
         <>
+          {
+            openImage && <FullScreenImage setOpenImage={setOpenImage} />
+        }
 
             <motion.div
                 initial="hidden"
                 animate="visible"
-                variants={variants} className="container-fluid p-0 d-flex justify-content-center align-items-center flex-column" style={{ marginTop: "100px" }}>
+                variants={variants} className="container-fluid p-0 d-flex justify-content-center align-items-center flex-column cryptoloria-page">
                 <img src={logo} className="artCryptoLogo" />
                 <div className="cryptoioria-banner-container">
                     <div className="position-absolute text-center d-flex flex-column">
@@ -79,7 +109,7 @@ const Cryptoloria = () => {
                                 <div>Minutes</div>
                             </div>
 
-                            <div className="ml-4">
+                            <div className="crypto-border-right">
                                 <h4 className="m-0"><b>25</b></h4>
                                 <div>Seconds</div>
                             </div>
@@ -88,68 +118,84 @@ const Cryptoloria = () => {
                 </div>
             </motion.div>
 
+
             <motion.section
                 initial="hidden"
                 animate="visible"
                 variants={variants} className="artWorkWeekSection">
                 <div className="container-fluid">
                     <div className="w-100 d-flex justify-content-between align-items-center">
-                        <h3><b>msDoge Collection 01</b></h3>
+                        <h3 className="main-title"><b>Featured Collection Name</b></h3>
                         <button className="btn-primary-outline">View All</button>
                     </div>
 
-                    <div className="row">
-                        <div className="col-sm-12 col-md-5 col-lg-5 position-relative mt-3">
-                            <img src={artWorkWeekOne} width="100%" alt="" />
+                    <div className="row mt-5">
+                        <div className="col-sm-12 col-md-5 col-lg-5 position-relative">
+                            <img src={artWorkWeekOne} className="cursor-pointer" width="95%" alt="" onClick={() => {setOpenImage(true); document.body.style.overflow = "hidden";}} />
                             <div className="art-work-description-container">
-                                <h4 className="mb-0">The Black</h4>
+                                <h4 className="mb-0"><b>Moon Landing</b></h4>
                                 <small>Original Series</small>
                             </div>
                         </div>
 
-                        <div className="col-sm-12 col-md-7 col-lg-7 position-relative home-artwork-week-day">
-                            <div className="d-flex overflow-auto">
-                                <div className="position-relative mr-3 mt-3">
-                                    <img src={artWorkWeek1} width="230" alt="" />
-                                    <div className="art-work-description-container">
-                                        <small>Butterfly</small>
-                                    </div>
-                                </div>
-                                <div className="position-relative mr-3 mt-3">
-                                    <img src={artWorkWeek2} width="230" alt="" />
-                                    <div className="art-work-description-container">
-                                        <small>Butterfly</small>
-                                    </div>
-                                </div>
-                                <div className="position-relative mr-3 mt-3">
-                                    <img src={artWorkWeek3} width="230" alt="" />
-                                    <div className="art-work-description-container">
-                                        <small>Butterfly</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="d-flex overflow-auto">
-                                <div className="position-relative mr-3 mt-3">
-                                    <img src={artWorkWeek4} width="230" alt="" />
-                                    <div className="art-work-description-container">
-                                        <small>Butterfly</small>
-                                    </div>
-                                </div>
-                                <div className="position-relative mr-3 mt-3">
-                                    <img src={artWorkWeek5} width="230" alt="" />
-                                    <div className="art-work-description-container">
-                                        <small>Butterfly</small>
-                                    </div>
-                                </div>
-                                <div className="position-relative mr-3 mt-3">
-                                    <img src={artWorkWeek6} width="230" alt="" />
-                                    <div className="art-work-description-container">
-                                        <small>Butterfly</small>
-                                    </div>
-                                </div>
+                        <div className="col-sm-12 col-md-7 col-lg-7 home-artwork-week-day position-relative d-flex flex-column align-items-stretch justify-content-between">
+                            <div className="d-flex overflow-auto justify-content-between w-100 justify-content-between">
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek1} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek2} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek3} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek4} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek5} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
+                                <ArtWork title="Butterfly" artworkimg={artWorkWeek6} setOpenImage={(imgFlag) => setOpenImage(imgFlag)} />
                             </div>
                         </div>
+                    </div>
+                </div>
+            </motion.section>
+
+
+            <motion.section
+                initial="hidden"
+                animate="visible"
+                variants={variants} className="topSeller">
+                <div className="container-fluid">
+                    <div className="w-100 d-flex justify-content-between align-items-center">
+                        <h3 className="main-title"><b>Hot Collections</b></h3>
+                        <button className="btn-primary-outline">View All</button>
+                    </div>
+
+                    <div className="topSellerContent mt-5">
+                        <div className="d-flex">
+                            <TopCard topcoverimg={topSeller2} topuserimg={topSellerUser1} title="Courtney Henry" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller3} topuserimg={topSellerUser2} title="Eleanor Pena" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller2} topuserimg={topSellerUser3} title="Darlene Robertson" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller4} topuserimg={topSellerUser4} title="Robert Fox" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller5} topuserimg={topSellerUser5} title="Savannah Nguyen" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller6} topuserimg={topSellerUser6} title="Devon Lane" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller7} topuserimg={topSellerUser7} title="Arlene McCoy" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller8} topuserimg={topSellerUser8} title="Albert Flores" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller9} topuserimg={topSellerUser9} title="Kristin Watson" Price="$1,403"  />
+                            <TopCard topcoverimg={topSeller10} topuserimg={topSellerUser10} title="Cody Fisher" Price="$1,403"  />
+                        </div>
+                    </div>
+                </div>
+            </motion.section>
+
+
+            <motion.section
+                initial="hidden"
+                animate="visible"
+                variants={variants} className="liveAuction live-auction-none-mobile proile-liked-filter cryptoloria-hidden-bids">
+                <div className="container-fluid">
+                    <div className="w-100 d-flex justify-content-between align-items-center">
+                        <h3><b>Hidden Bids</b></h3>
+                        <button className="btn-primary-outline">View All</button>
+                    </div>
+
+                    <div className="row mt-5">
+                        <LiveAuctions Coverimg={artWorkWeek1} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        <LiveAuctions Coverimg={artWorkWeek2} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        <LiveAuctions Coverimg={artWorkWeek3} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        <LiveAuctions Coverimg={artWorkWeek4} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
                     </div>
                 </div>
             </motion.section>
@@ -157,139 +203,84 @@ const Cryptoloria = () => {
             <motion.section
                 initial="hidden"
                 animate="visible"
-                variants={variants} className="liveAuction quickExplore cryptoloria-hidden-bids">
+                variants={variants} className="liveAuction-web-none cryptoloria-hidden-bids liveAuction">
                 <div className="container-fluid">
-
-                    <div className="d-flex justify-content-between mb-3">
+                    <div className="w-100">
                         <h3><b>Hidden Bids</b></h3>
                     </div>
+                    <Swiper
+                        style={{ marginTop: 15 }}
+                        spaceBetween={10}
+                        slidesPerView={1}
+                        navigation={true}
+                    >
+                        <SwiperSlide>
+                            <LiveAuctions Coverimg={artWorkWeek1} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <LiveAuctions Coverimg={artWorkWeek1} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <LiveAuctions Coverimg={artWorkWeek1} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <LiveAuctions Coverimg={artWorkWeek1} title="Memescalf#782021" heartcount="24" User1={topSellerUser1} User2={topSellerUser2} User3={topSellerUser3} WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        </SwiperSlide>
 
-                    <div className="w-100 headerSelect">
-                        <div className="row">
-                            <div className="col-sm-12 col-lg-3">
-                                <div className="liveAuction-card-container cryptoloria-blue-images">
-                                    <div className="live-image">
-                                        <img src={artWorkWeek2} className="nft-rich-art" width="100%" alt="" />
-                                        <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                        <Dropdown overlay={menu}>
-                                            <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                <i className="fas fa-ellipsis-h"></i>
-                                            </div>
-                                        </Dropdown>
-                                    </div>
+                    </Swiper>
+                </div>
+            </motion.section>
 
-                                    <div className="bg-white p-4">
-                                        <div className="position-relative live-user-list">
-                                            <img src={topSellerUser1} width="36px" alt="" />
-                                            <img src={topSellerUser2} width="36px" alt="" />
-                                            <img src={topSellerUser3} width="36px" alt="" />
-                                            <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                        </div>
 
-                                        <h6>Memescalf#782021</h6>
+            <motion.section
+                initial="hidden"
+                animate="visible"
+                variants={variants} className="liveAuction live-auction-none-mobile hot-bids-liveAuction">
+                <div className="container-fluid">
+                    <div className="w-100 d-flex justify-content-between align-items-center">
+                        <h3><b>Hot Bids</b></h3>
+                        <button className="btn-primary-outline">View All</button>
+                    </div>
 
-                                        <div className="d-flex justify-content-between align-items-center">
-                                            <div className="text-danger"><b>1.2 WETH</b></div>
-                                            <small className="text-secondary">Highest bid 1/1</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-sm-12 col-lg-3">
-                                <div className="liveAuction-card-container">
-                                    <div className="live-image">
-                                        <img src={artWorkWeek3} className="nft-rich-art" width="100%" alt="" />
-                                        <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                        <Dropdown overlay={menu}>
-                                            <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                <i className="fas fa-ellipsis-h"></i>
-                                            </div>
-                                        </Dropdown>
-                                    </div>
-
-                                    <div className="bg-white p-4">
-                                        <div className="position-relative live-user-list">
-                                            <img src={topSellerUser1} width="36px" alt="" />
-                                            <img src={topSellerUser2} width="36px" alt="" />
-                                            <img src={topSellerUser3} width="36px" alt="" />
-                                            <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                        </div>
-
-                                        <h6>Memescalf#782021</h6>
-
-                                        <div className="d-flex justify-content-between align-items-center">
-                                            <div className="text-danger"><b>1.2 WETH</b></div>
-                                            <small className="text-secondary">Highest bid 1/1</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-sm-12 col-lg-3">
-                                <div className="liveAuction-card-container">
-                                    <div className="live-image">
-                                        <img src={artWorkWeek4} className="nft-rich-art" width="100%" alt="" />
-                                        <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                        <Dropdown overlay={menu}>
-                                            <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                <i className="fas fa-ellipsis-h"></i>
-                                            </div>
-                                        </Dropdown>
-                                    </div>
-
-                                    <div className="bg-white p-4">
-                                        <div className="position-relative live-user-list">
-                                            <img src={topSellerUser1} width="36px" alt="" />
-                                            <img src={topSellerUser2} width="36px" alt="" />
-                                            <img src={topSellerUser3} width="36px" alt="" />
-                                            <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                        </div>
-
-                                        <h6>Memescalf#782021</h6>
-
-                                        <div className="d-flex justify-content-between align-items-center">
-                                            <div className="text-danger"><b>1.2 WETH</b></div>
-                                            <small className="text-secondary">Highest bid 1/1</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-sm-12 col-lg-3">
-                                <div className="liveAuction-card-container">
-                                    <div className="live-image">
-                                        <img src={artWorkWeek1} className="nft-rich-art" width="100%" alt="" />
-                                        <div className="card-heart-icon"><i className="fas fa-heart"></i> 24</div>
-                                        <Dropdown overlay={menu}>
-                                            <div className="card-select-icon ant-dropdown-link" onClick={e => e.preventDefault()}>
-                                                <i className="fas fa-ellipsis-h"></i>
-                                            </div>
-                                        </Dropdown>
-                                    </div>
-
-                                    <div className="bg-white p-4">
-                                        <div className="position-relative live-user-list">
-                                            <img src={topSellerUser1} width="36px" alt="" />
-                                            <img src={topSellerUser2} width="36px" alt="" />
-                                            <img src={topSellerUser3} width="36px" alt="" />
-                                            <div className="live-card-tick"><i className="fas fa-check"></i></div>
-                                        </div>
-
-                                        <h6>Memescalf#782021</h6>
-
-                                        <div className="d-flex justify-content-between align-items-center">
-                                            <div className="text-danger"><b>1.2 WETH</b></div>
-                                            <small className="text-secondary">Highest bid 1/1</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                    <div className="row  mt-5">
+                    <HotBids Coverimg={artWorkWeek1} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                    <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                    <HotBids Coverimg={artWorkWeek3} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                    <HotBids Coverimg={artWorkWeek4} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
                     </div>
                 </div>
             </motion.section>
+
+            <motion.section
+                initial="hidden"
+                animate="visible"
+                variants={variants} className="liveAuction-web-none liveAuction proile-liked-filter mobile-filter-live-auc">
+                <div className="container-fluid">
+                    <div className="w-100">
+                        <h3><b>Hot Bids</b></h3>
+                    </div>
+                    <Swiper
+                        style={{ marginTop: 15 }}
+                        spaceBetween={10}
+                        slidesPerView={1}
+                        navigation={true}
+                    >
+                        <SwiperSlide>
+                            <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <HotBids Coverimg={artWorkWeek2} heartcount="24" time="3H : 15M : 50S left" title="Memescalf#782021"  WETH="1.2 WETH" bid="Highest bid 1/1" />
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+            </motion.section>
+
 
         </>
     )

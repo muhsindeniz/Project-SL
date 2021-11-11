@@ -22,6 +22,7 @@ import Token from './Pages/Token';
 import Activity from './Pages/Activity';
 import Following from './Pages/Following';
 import Cryptoloria from './Pages/Cryptoloria';
+import Explore from './Pages/Explore';
 import FullScreenImage from './Components/Popup/FullScreenImage';
 import CreateCollectibleMultiplePopup from './Components/Popup/CreateCollectibleMultiplePopup';
 import FinishedCollectiblePopup from './Components/Popup/FinishedCollectiblePopup';
@@ -58,6 +59,7 @@ const App = () => {
                     <Route path="/CreateCollectibleSingle" component={CreateCollectibleSingle} exact />
                     <Route path="/Faq" component={Faq} exact />
                     <Route path="/Profile" component={Profile} exact />
+                    <Route path="/Explore" component={Explore} exact />
                 </Switch>
                 <Footer />
             </Router>

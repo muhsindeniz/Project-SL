@@ -496,7 +496,7 @@ footer section .footer-in-email {
 	height: 95px;
 	border-radius: 50%;
 	position: absolute;
-	top: 25%;
+	top: 80px;
 	left: 50%;
 	transform: translate(-50%);
 }
@@ -976,13 +976,13 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
     display: block;
 }
 
-.cryptoioria-banner-container{
-    width: 100vw;
-    height: 950px;
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(74,65,126,0.8225665266106442) 35%, rgba(74,65,126,0.5732668067226891) 64%, rgba(252,252,252,0) 100%);
-    position: relative;
-    display: flex;
-    justify-content: center;
+.cryptoioria-banner-container {
+	width: 100vw;
+	height: 150vh;
+	background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(74,65,126,0.8225665266106442) 35%, rgba(74,65,126,0.5732668067226891) 64%, rgba(252,252,252,0) 100%);
+	position: relative;
+	display: flex;
+	justify-content: center;
 }
 
 .cryptoioria-banner-container::after{
@@ -1005,16 +1005,32 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
     fill: var(--black-text) !important;
 }
 
-.cryptoioria-banner-container .crypto-border-right{
-    border-right: solid 2px #000;
-    padding-right: 35px;
-    padding-left: 35px;
+.cryptoioria-banner-container .crypto-border-right {
+	border-right:none;
+	padding-right: 32px;
+	padding-left: 32px;
+    position: relative;
 }
-
-.cryptoioria-banner-container h4{
-    text-align: left;
-}   
-
+.cryptoioria-banner-container .crypto-border-right::before {
+	content: "";
+	top: 2px;
+	bottom: 0px;
+	width: 2px;
+	height: 42px;
+	background: #2A2A2A;
+	border-radius: 4px;
+	position: absolute;
+	right: 12px;
+	margin: auto;
+}
+.cryptoioria-banner-container .crypto-border-right:last-child::before{
+    display: none;
+}
+.cryptoioria-banner-container h4 {
+	text-align: left;
+	font-size: 28px;
+	line-height: 105.8%;
+}
 /* .place-a-bid-popup-container .popup-close-btn-outline{
 
 } */
@@ -1486,3 +1502,113 @@ section.artWorkWeekSection .row.mt-5{
 .buy-art-work-week .col-lg-6:last-child {
 	padding-left: 30px;
 }
+.ant-tabs-content-holder h3 {
+	font-weight: 600 !important;
+	font-size: 24px;
+}
+.ant-tabs-content-holder .color-gray {
+	font-size: 18px;
+	line-height: 21px;
+	max-width: 264px;
+	margin: 15px auto 0 auto;
+}
+.topSellerContent .d-flex.activity .topSellerCard {
+	width: 30.63%;
+	margin-right: 4%;
+}
+.topSellerContent .d-flex.activity .topSellerCard:last-child {
+	margin-right: 0;
+}
+div.ant-tabs > .ant-tabs-nav{
+	margin-bottom: 30px;
+}
+.topSellerUserInfo button:empty{
+    display: none;
+}
+.profile-tab-menu .liveAuction-card-container .live-user-list {
+	position: relative;
+	top: auto;
+	left: auto;
+}
+
+div.cryptoloria-page {
+	margin-top: 172px;
+}
+.cryptoioria-banner-container .navbar-brand {
+	padding-top: 0;
+	padding-bottom: 26px;
+	margin-right: 0;
+	white-space: normal;
+	margin-top: -30px;
+}
+.cryptoioria-banner-container .navbar-brand span {
+	font-size: 22px;
+	letter-spacing: 1px;
+	margin-left: 9px !important;
+}
+.cryptoioria-banner-container a.navbar-brand {
+	margin-bottom: 0 !important;
+	padding-bottom: 24px;
+}
+.cryptoioria-banner-container div.pl-4.pr-4 {
+	font-size: 18px;
+	line-height: 150.3%;
+	max-width: 650px;
+	letter-spacing: 0.4px;
+}
+.cryptoioria-banner-container > div > div.d-flex {
+	max-width: 500px;
+	margin: 60px auto 0 auto !important;
+	width: 100%;
+}
+.cryptoioria-banner-container > div > div.d-flex > div {
+	min-width: 140px;
+}
+.cryptoioria-banner-container div.crypto-border-right div {
+	text-align: left;
+	font-size: 18px;
+	line-height: 115.8%;
+	color: #000000;
+	margin-top: 5px;
+}
+
+ul.filter.topSeller {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+ul.filter.topSeller > li {
+	margin-left: 12px;
+    position: relative;
+}
+ul.filter.topSeller .ant-select {
+	margin: 0;
+	width: auto;
+	max-width: 180px;
+}
+ul.filter.topSeller > li .label {
+	position: absolute;
+	right: 15px;
+	top: -8px;
+	font-size: 10px;
+	line-height: 156.52%;
+	background: var(--white-color);
+	display: block;
+	z-index: 1;
+	padding: 0 5px;
+	color: var(--black-color) !important;
+}
+ul.filter.topSeller > li .icon {
+	position: absolute;
+	top: 11px;
+    left: 13px;
+}
+ul.filter.topSeller > li .ant-select-single:not(.ant-select-customize-input) div.ant-select-selector {
+	padding-left: 40px;
+}
+.d-flex.explore-page {
+	flex-wrap: wrap;
+}
+
