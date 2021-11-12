@@ -137,11 +137,17 @@ nav h3,
 .create-single-section-container h6{
     color: var(--black-color);
     background-color: var(--bg-main);
+    font-weight: bold !important;
 }
 
 .create-single-section-container .prize-single-collectible input{
     background-color: var(--bg-main);
     width: 100% !important;
+    font-size: 16px;
+}
+
+.create-single-section-container .prize-single-collectible input::placeholder{
+    color: #9D9D9D !important;
 }
 
 .place-a-bid-popup-container input{
@@ -175,6 +181,7 @@ border-bottom: solid 1px var(--gray-color);
 .profile-pictures-infos .btn-gray{
     background: var(--gray-bg);
     border: solid 1px #fff;
+    display: inline-block   ;
 }
 
 .profile-pictures-infos .ant-tabs-tab-active{
@@ -953,6 +960,7 @@ footer .ant-select:not(.ant-select-customize-input) .ant-select-selector{
 
 .profile-usr-name-h3-size h3{
     font-size: 24px !important;
+    text-align: center;
 }
 
 .profile-pictures-infos .profile-pictures-cover{
@@ -1785,3 +1793,91 @@ ul.filter.topSeller > li .ant-select-single:not(.ant-select-customize-input) div
     line-height: 130%;
     color: #979797;    
 }
+
+h4.pro-username{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    color: #0E0E0E;
+    font-family: 'LoRes 9 Plus OT Narrow' !important;
+    padding-top: 5px;
+    display: block;
+}
+
+.following-profile-topSellerContent .d-flex.activity .topSellerCard{
+    width: calc(20% - 26px);
+    margin-right: 13px !important;
+    margin-left: 13px !important;
+}
+
+.following-profile-topSellerContent .d-flex.activity .topSellerCard .topSellerUserInfo h5 b{
+    font-family: 'LoRes 9 Plus OT Narrow' !important;
+}
+
+.topSellerUserInfo .btn-ping{
+    border: 1px solid transparent;
+    max-width: 272px;
+}
+
+.topSellerUserInfo .btn-ping:hover{
+    background-color: transparent;
+    border-color: var(--pink-color);
+    color: #000000 !important;
+}
+
+.faq-sec .container-fluid {
+    padding-top: 100px;
+}
+
+.faq-sec .main-title{
+    padding-bottom: 50px;
+}
+
+.faq-sec.faq-container .tab-label{
+    margin-bottom: 0;
+}
+
+.faq-sec.faq-container .tab-content{
+    background: #F7F7F7 !important;
+    border-radius: 20px !important;
+}
+
+.faq-sec.faq-container [id*="open-accordion"]:after,
+.faq-sec.faq-container [id*="close-accordion"]:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    top: 10px;
+}
+
+.faq-sec.faq-container .sub-tabs-menu .accordion span:target~[id*="close-accordion"]:after {
+    border-top: 5px solid #333;
+}
+
+.faq-sec.faq-container .sub-tabs-menu .accordion a {
+    padding-left: 3%;
+    font-family: 'LoRes 9 Plus OT Narrow';
+    height: auto !important;
+    padding-bottom: 15px;
+}
+
+.faq-sec.faq-container .sub-tabs-menu .accordion-content {
+    width: 100%;
+    padding-left: 3%;
+}
+
+.faq-sec.faq-container .sub-tabs-menu .accordion-content p{
+    font-size: 18px;
+    color: #0E0E0E;
+}
+
+.create-single-section-container,
+.token-page-section{
+    margin-top: 60px;
+}
+
+.activity-list-container > div > img{
+    width: 120px;
+}
+

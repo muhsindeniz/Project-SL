@@ -154,14 +154,21 @@
 }
 
 .upload-file-container {
-    border: dashed 2px #666;
     padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 25px;
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px dashed #0E0E0E;
+    box-sizing: border-box;
+    border-radius: 30px;
+    max-width: 320px;
+}
+
+.upload-file-container  button.btn-primary{
+    min-width: 192px;
 }
 
 .create-single-section-container .custom-switch .custom-control-label::before {
@@ -198,14 +205,21 @@
     text-align: center;
 }
 
+.create-single-section-container div .prize-single-collectible {
+    font-weight: normal !important;
+}
+
 .prize-single-collectible {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: solid 1px var(--gray-color);
-    padding: 8px 0;
+    border-bottom: solid 1px #C4C4C4;
+    padding: 13px 0;
     display: flex;
     justify-content: space-between;
+    margin-top: 6px;
+    font-size: 16px;
+    color: #9D9D9D !important;
 }
 
 .prize-single-collectible input {
@@ -213,15 +227,29 @@
     width: 85%;
     outline: none;
 }
+
 .profile-user-pictures {
 	width: 167px;
 	height: 167px;
 	border-radius: 50%;
-	overflow: hidden;
 	border: 5px solid #fff;
+    position: relative;
 }
+
+.profile-user-pictures > img{
+    border-radius: 100%;
+}
+
+span.profile-check-icon {
+    display: block;
+    line-height: 0;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
 .profile-info-position {
-	width: 200px;
+	width: 556px;
 	left: 50%;
 	position: relative;
 	transform: translate(-50%);
@@ -231,6 +259,47 @@
 	align-items: center;
 	flex-direction: column;
 	margin-bottom: 50px;
+    text-align: center;
+}
+
+.profile-usr-info{
+    margin-top: 25px;
+}
+
+.profile-usr-info .website-link {
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.follows-block span{
+    color: #9D9D9D;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.follows-block span b{
+    color: #000000;
+}
+
+.profile-usr-info .website-link span{
+    line-height: 0;
+    margin-right: 10px;
+}
+
+.profile-usr-info p{
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    color: #9D9D9D;
+}
+
+.read-more-link{
+    color: #000;
 }
 
 .profile-pictures-infos .edit-profile {
@@ -499,4 +568,8 @@ footer .topSeller .headerSelect .ant-select-single.ant-select-show-arrow .ant-se
 }
 .follow-step small b {
 	font-weight: 600;
+}
+
+.CreateCollectibleEdit-right{
+    padding-left: 75px !important;
 }

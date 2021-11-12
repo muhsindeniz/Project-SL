@@ -236,6 +236,10 @@
         height: 20px;
         right: 7px;
     }
+
+    .following-profile-topSellerContent .d-flex.activity .topSellerCard {
+        width: calc(25% - 26px);
+    }
 }
 @media only screen and (max-width: 991px) {
     header .navbar-expand-lg > .container-fluid {
@@ -375,6 +379,10 @@
     }
     .liveAuction .d-lg-none {
         display: none;
+    }
+
+    .following-profile-topSellerContent .d-flex.activity .topSellerCard {
+        width: calc(33.33% - 26px);
     }
 }
 
@@ -1053,6 +1061,11 @@
         padding: 0;
         white-space: normal;
     }
+
+    .topSellerContent .row{
+        margin: 0 !important;
+    }
+
     .topSellerContent .d-flex.activity .topSellerCard {
         width: 100%;
         margin-right: auto !important;
@@ -1203,6 +1216,36 @@
     .ActivityNumberCard-info p {
         font-size: 13px;
         margin-bottom: 5px;
+    }
+
+    .following-profile-topSellerContent .d-flex.activity .topSellerCard {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .faq-sec.faq-container .sub-tabs-menu .accordion a {
+        padding-bottom: 0px;
+    }
+
+    .faq-sec.faq-container .sub-tabs-menu .accordion-content p {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .faq-sec.faq-container .sub-tabs-menu .accordion-content {
+        padding-left: 10%;
+    }
+
+    .faq-container .tab {
+        margin-bottom: 15px !important;
+    }
+
+    .faq-sec .main-title {
+        padding-bottom: 20px;
+    }
+
+    .faq-sec .container-fluid {
+        padding-top: 70px;
     }
 
 }

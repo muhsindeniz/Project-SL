@@ -23,7 +23,9 @@ import Activity from './Pages/Activity';
 import Following from './Pages/Following';
 import Cryptoloria from './Pages/Cryptoloria';
 import Collection from './Pages/Collection';
+import ProfileAdditionalDetails from './Pages/ProfileAdditionalDetails';
 import Explore from './Pages/Explore';
+
 import FullScreenImage from './Components/Popup/FullScreenImage';
 import CreateCollectibleMultiplePopup from './Components/Popup/CreateCollectibleMultiplePopup';
 import FinishedCollectiblePopup from './Components/Popup/FinishedCollectiblePopup';
@@ -62,6 +64,7 @@ const App = () => {
                     <Route path="/Faq" component={Faq} exact />
                     <Route path="/Profile" component={Profile} exact />
                     <Route path="/Explore" component={Explore} exact />
+                    <Route path="/ProfileAdditionalDetails" component={ProfileAdditionalDetails} exact />
                 </Switch>
                 <Footer />
             </Router>

@@ -12,10 +12,13 @@ const Faq = () => {
         <motion.section
             initial="hidden"
             animate="visible"
-            variants={variants} className="faq-container">
+            variants={variants} className="faq-container faq-sec">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-sm-12">
+                        <div className="w-100">
+                            <h3 class="main-title"><b>Artwork of the week</b></h3>
+                        </div>
                         <div className="tabs">
                             <div className="tab">
                                 <input type="checkbox" id="rd1" name="rd" defaultChecked />
@@ -183,7 +186,6 @@ const Faq = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
