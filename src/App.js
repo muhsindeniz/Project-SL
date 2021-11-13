@@ -23,6 +23,7 @@ import Activity from './Pages/Activity';
 import Following from './Pages/Following';
 import Cryptoloria from './Pages/Cryptoloria';
 import Collection from './Pages/Collection';
+import index from './Pages/StarlightLanding/index';
 import ProfileAdditionalDetails from './Pages/ProfileAdditionalDetails';
 import Explore from './Pages/Explore';
 
@@ -65,6 +66,7 @@ const App = () => {
                     <Route path="/Profile" component={Profile} exact />
                     <Route path="/Explore" component={Explore} exact />
                     <Route path="/ProfileAdditionalDetails" component={ProfileAdditionalDetails} exact />
+                    <Route path="/index" component={index} exact />
                 </Switch>
                 <Footer />
             </Router>
