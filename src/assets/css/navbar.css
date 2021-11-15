@@ -402,3 +402,38 @@ header {
     margin-top: -12px !important;
     right: 20px !important;
 }
+
+/* New Header Css Start */
+
+.landing-header.navbar{
+    background-color: transparent;
+}
+
+.landing-header.navbar-light .navbar-nav .nav-link{
+    background-color: transparent;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.landing-header button.btn.btn-primary-outline {
+    color: #fff;
+}
+
+.landing-header.navbar .nav-item{
+    display: block;
+    text-align: center;
+    flex: inherit;
+    margin: 0 8px;
+}
+
+.landing-header.navbar .navbar-nav{
+    justify-content: center;
+}
+
+.landing-header.navbar .navbar-brand h3{
+    color: #fff;
+}
+
+.landing-header.navbar .dropdown-toggle::after {
+    border-color: #fff transparent transparent transparent;
+}

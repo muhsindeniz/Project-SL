@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import starlBanner from '../../assets/img/custom/starlBanner.png'
+import { useLocation, Link } from "react-router-dom";
 
 const StarlBanner = () => {
 return (
@@ -11,6 +12,21 @@ return (
             <div className="starl-banner-info">
                 <h1>Starlight <sub>(SLX)</sub></h1>
                 <p>An ever-expanding universe of creativity built on the Solana blockchain.</p>
+                <div className="new-header-right-btn">
+                    <ul className="d-flex justify-content-center">
+                        <li className="nav-item p-0 d-flex align-items-center">
+                            <Link to="/CreateCollectible" className="nav-link p-0">
+                                <button className="btn btn-primary-outline">Whitepaper</button>
+                            </Link>
+                        </li>
+
+                        <li className="nav-item p-0 d-flex align-items-center">
+                            <Link to="/CreateCollectible" className="nav-link p-0">
+                                <button className="btn btn-fill">Buy SLX</button>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>

@@ -30,7 +30,7 @@ return (
                         </ul>
                         <div className="hard-cap-main-box">
                             <h6>Hard Cap:</h6>
-                            <a href="#0" className="btn btn-primary">100, 000, 000 SLX</a>
+                            <a href="#0" className="btn btn-fill">100, 000, 000 SLX</a>
                         </div>
                         <ul className="hard-camp-right-list">
                             <li>
@@ -60,7 +60,7 @@ return (
                         </div>
                         <div className="hard-claim-btn-block">
                             <p>You are eligible for rewards:</p>
-                            <a href="#0" className="btn btn-primary">Claim now  </a>
+                            <a href="#0" className="btn btn-fill">Claim now  </a>
                         </div>
                     </div>
                 </div>
