@@ -86,7 +86,8 @@ h6{
 }
 
 section {
-    padding: 50px 70px;
+	padding: 50px 25px;
+	background: #fff;
 }
 
 button, .nav-tabs .nav-link{

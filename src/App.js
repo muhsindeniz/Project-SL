@@ -4,9 +4,7 @@ import './assets/css/app.css';
 import './assets/css/navbar.css';
 import 'antd/dist/antd.css';
 import './assets/css/responsive.css';
-import Navbar from './Components/Layout/Navbar';
-import Footer from './Components/Layout/Footer';
-import index from './Pages/StarlightLanding/index';
+import StarlightLanding from './Pages/StarlightLanding/index';
 
 import 'swiper/swiper-bundle.css';
 import {
@@ -16,15 +14,14 @@ import {
 } from "react-router-dom";
 
 const App = () => {
-
     return (
         <>
             <Router>
-                <Navbar />
+                
                 <Switch>
-                    <Route path="/index" component={index} exact />
+                    <Route path="/" component={StarlightLanding} exact />
                 </Switch>
-                <Footer />
+                
             </Router>
         </>
     )

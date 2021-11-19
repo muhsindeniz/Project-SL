@@ -22,13 +22,6 @@ return (
                     </div>
                 </div>
             </div>
-            <div className="starlight-roadmap-block">
-                <h2>Starlight roadmap:</h2>
-                <div className="starlight-roadmap-btn-block">
-                    <p>A peak into the future. Project priority is decided  <br/> by the Starlight community. <b>Have your say:</b></p>
-                    <a href="#0" className="btn btn-fill">Vote: coming soon</a>
-                </div>
-            </div>
         </div>
     </section>
     )

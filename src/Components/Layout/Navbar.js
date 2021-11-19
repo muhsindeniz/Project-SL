@@ -4,17 +4,16 @@ import vectorLogo from "../../assets/img/custom/Vector.svg";
 import menu4Line from "../../assets/img/icons/custom/menu-4-line.svg";
 import userProfilePictures from "../../assets/img/icons/custom/userNav.svg";
 import fabaLogo from "../../assets/img/custom/x.svg";
-import { useLocation, Link } from "react-router-dom";
 import userTick from "../../assets/img/icons/custom/logo.svg";
 import grayPp from "../../assets/img/custom/grayPp.png";
+import { Link, animateScroll as scroll } from "react-scroll";
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     const [theme, setTheme] = useState(localStorage.getItem('theme'))
     const [openProfileDropMenu, setOpenProfileDropMenu] = useState(false);
     const [notificationPopup, setNotificationPopup] = useState(false);
 
-    const location = useLocation();
 
     useEffect(() => {
         localStorage.setItem('theme', theme);
@@ -95,6 +94,12 @@ const Navbar = () => {
         }
     }
 
+    const [headerbg, setScroll] = useState(false);
+    useEffect(() => {
+    window.addEventListener("scroll", () => {
+        setScroll(window.scrollY > 50);
+    });
+    }, []);
 
     return (
         <>
@@ -108,7 +113,7 @@ const Navbar = () => {
                                         location.pathname === "/FullScreenImage" ? <div style={{ backgroundColor: "#6300FF" }} className="p-3 d-flex justify-content-center text-white">DesignerName - choose yours and earn x3 Starlight rewards!</div> : ""
             } */}
 
-            <header className="pl-4 pr-4">
+            <header className="pl-4 pr-4" className={headerbg ? "bg-black" : "bg-white"} >
                 {/* <nav className="navbar navbar-light navbar-expand-lg" id="myNavbar" style={{
                     position: location.pathname === "/Profile" ? "relative" :
                         location.pathname === "/Buy" ? "relative" :
@@ -245,46 +250,49 @@ const Navbar = () => {
 
                             <ul className="navbar-nav nav-fill align-items-center">
 
-                                <li className="nav-item ">
-                                    <Link to="/Profile" className="nav-link">My Item</Link>
+                                <li className="nav-item" onClick={() => props.setTab('ourVision')}>
+                                    <Link to="ourVision" 
+                                        smooth={true} 
+                                        duration={500} 
+                                        className="nav-link">
+                                            Our Vision
+                                    </Link>
                                 </li>
 
-                                <li className="nav-item ">
-                                    <Link to="/Following" className="nav-link">Following</Link>
+                                <li className="nav-item " onClick={() => props.setTab('platform')}>
+                                    <Link to="Platform" 
+                                        smooth={true} 
+                                        duration={500} 
+                                        className="nav-link">
+                                            Platform
+                                    </Link>
                                 </li>
 
-                                <li className="nav-item ">
-                                    <Link to="/Activity" className="nav-link">Activity</Link>
+                                <li className="nav-item " onClick={() => props.executeScroll}>
+                                    <Link to="SLXToken" 
+                                        smooth={true} 
+                                        duration={500} 
+                                        className="nav-link">
+                                            SLX Token
+                                    </Link>
                                 </li>
 
-                                <li className="nav-item ">
-                                    <Link to="/Faq" className="nav-link">How it works</Link>
+                                <li className="nav-item " onClick={() => props.executeScroll}>
+                                <Link to="Roadmap" 
+                                        smooth={true} 
+                                        duration={500} 
+                                        className="nav-link">
+                                            Roadmap
+                                    </Link>
                                 </li>
 
-
-                                <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
-                                    <div className="dropdown-menu" aria-labelledby="servicesDropdown">
-                                        <ul className="menu-dropdown">
-                                            <Link to="/Token"><li>Token</li></Link>
-                                            <Link to="/"><li>Discussion</li></Link>
-                                            <Link to="/"><li>Voting</li></Link>
-                                            <Link to="/"><li>Suggest feature</li></Link>
-                                            <Link to="/"><li>Subscribe</li></Link>
-                                            <ul className="nav-bar-social-items mt-3 border-top">
-                                                <li><i className="fab fa-twitter"></i></li>
-                                                <li><i className="fab fa-telegram-plane"></i></li>
-                                                <li><svg width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9.99913 6.87726C8.27882 6.87726 6.87491 8.28117 6.87491 10.0015C6.87491 11.7218 8.27882 13.1257 9.99913 13.1257C11.7194 13.1257 13.1234 11.7218 13.1234 10.0015C13.1234 8.28117 11.7194 6.87726 9.99913 6.87726ZM19.3694 10.0015C19.3694 8.70773 19.3812 7.4257 19.3085 6.13429C19.2358 4.63429 18.8937 3.30304 17.7968 2.20617C16.6976 1.10695 15.3687 0.767103 13.8687 0.694447C12.5749 0.621791 11.2929 0.63351 10.0015 0.63351C8.70773 0.63351 7.4257 0.621791 6.13429 0.694447C4.63429 0.767103 3.30304 1.10929 2.20617 2.20617C1.10695 3.30538 0.767103 4.63429 0.694447 6.13429C0.621791 7.42804 0.63351 8.71007 0.63351 10.0015C0.63351 11.2929 0.621791 12.5773 0.694447 13.8687C0.767103 15.3687 1.10929 16.6999 2.20617 17.7968C3.30538 18.896 4.63429 19.2359 6.13429 19.3085C7.42804 19.3812 8.71007 19.3694 10.0015 19.3694C11.2952 19.3694 12.5773 19.3812 13.8687 19.3085C15.3687 19.2359 16.6999 18.8937 17.7968 17.7968C18.896 16.6976 19.2358 15.3687 19.3085 13.8687C19.3835 12.5773 19.3694 11.2952 19.3694 10.0015ZM9.99913 14.8085C7.33898 14.8085 5.1921 12.6616 5.1921 10.0015C5.1921 7.34132 7.33898 5.19445 9.99913 5.19445C12.6593 5.19445 14.8062 7.34132 14.8062 10.0015C14.8062 12.6616 12.6593 14.8085 9.99913 14.8085ZM15.003 6.12023C14.3819 6.12023 13.8804 5.61867 13.8804 4.99757C13.8804 4.37648 14.3819 3.87492 15.003 3.87492C15.6241 3.87492 16.1257 4.37648 16.1257 4.99757C16.1259 5.14505 16.097 5.29112 16.0406 5.42741C15.9843 5.5637 15.9016 5.68754 15.7973 5.79182C15.693 5.89611 15.5692 5.9788 15.4329 6.03515C15.2966 6.0915 15.1505 6.12041 15.003 6.12023Z" fill="#9D9D9D" />
-                                                </svg>
-                                                </li>
-                                                <li><i className="fab fa-discord"></i></li>
-                                                <li><i className="fab fa-youtube"></i></li>
-                                                <li><i className="fab fa-medium-m"></i></li>
-                                            </ul>
-                                        </ul>
-
-                                    </div>
+                                <li className="nav-item " onClick={() => props.executeScroll}>
+                                <Link to="Community" 
+                                        smooth={true} 
+                                        duration={500} 
+                                        className="nav-link">
+                                            Community
+                                    </Link>
                                 </li>
                             </ul>
 

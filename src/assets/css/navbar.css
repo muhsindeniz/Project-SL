@@ -16,6 +16,7 @@ header {
     z-index: 99;
     background: var(--bg-main);
     width: 100%;
+    transition: all 0.5s ease;
 }
 .navbar-light .navbar-brand > img{
     width: 32px;
@@ -404,7 +405,17 @@ header {
 }
 
 /* New Header Css Start */
-
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+    z-index: 99;
+}
+header.bg-black > .navbar{
+    transition: all 0.5s ease;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0) 3%, rgb(0, 0, 0) 100%);
+}
 .landing-header.navbar{
     background-color: transparent;
 }
@@ -416,9 +427,14 @@ header {
 }
 
 .landing-header button.btn.btn-primary-outline {
-    color: #fff;
+	color: #fff;
+	border-color: #fff;
 }
-
+.landing-header.navbar .nav-item .btn-fill {
+	background-image: none;
+	background-color: #6300FF;
+	border: 1px solid #fff;
+}
 .landing-header.navbar .nav-item{
     display: block;
     text-align: center;

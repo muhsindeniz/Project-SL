@@ -1,7 +1,7 @@
 /* starl-banner-sec Start */
-.starl-banner-sec{
-    padding: 0 !important;
-    position: relative;
+.starl-banner-sec {
+	padding: 0 !important;
+	position: static;
 }
 
 .starl-banner-inner{
@@ -11,7 +11,7 @@
 .starl-banner-img{
     position: relative;
     overflow: hidden;
-    padding-top: 43.35%;
+    padding-top: 41.35%;
 }
 
 .starl-banner-img:before{
@@ -24,7 +24,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30.4%, rgba(255, 255, 255, 0.62) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    z-index: 1;
+    z-index: 0;
 }
 
 .starl-banner-img > img{
@@ -44,7 +44,18 @@
     font-weight: normal;
     font-size: 72px;
     color: #FFFFFF;
-    padding-bottom: 90px;
+    padding-bottom: 130px;
+}
+.starl-banner-info h3 {
+	font-size: 62px;
+	line-height: 111.8%;
+	background: -webkit-linear-gradient(#6300FF , transparent);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #fff;
+	margin-bottom: 25px !important;
+	display: block;
 }
 
 .starl-banner-info h1 sub{
@@ -54,7 +65,7 @@
 .starl-banner-info {
     position: absolute;
     z-index: 1;
-    bottom: 110px;
+    bottom: 50px;
     left: 0;
     right: 0;
     text-align: center;
@@ -63,14 +74,19 @@
     margin-right: auto;
 }
 
-.starl-banner-info p{
-    font-size: 32px;
-    color: #FFFFFF;
-    margin-bottom: 0;
-    line-height: normal;
+.starl-banner-info p {
+	margin-bottom: 0;
+	font-family: AvertaStd;
+	font-size: 24px;
+	line-height: 111.8%;
+	text-align: center;
+	color: #FFFFFF;
+	text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
 }
-
 /* primed-and-ready-sec Start */
+section.primed-and-ready-sec {
+	background: #fff;
+}
 .primed-left-block {
     width: 50%;
 }
@@ -170,14 +186,13 @@
     filter: blur(50px);
 }
 
-.time-warping-speed-list li.total-list-item:before {
-    top: -40px;
-    left: 50px;
-    background: rgba(114, 151, 177, 0.62);
-    opacity: 0.7;
-    filter: blur(50px);
+.time-warping-speed-list li.total-list-item::before {
+	top: 0px;
+	left: 20px;
+	background: rgba(114, 151, 177, 0.62);
+	opacity: 0.7;
+	filter: blur(50px);
 }
-
 .time-warping-speed-list li:last-child{
     padding-bottom: 0;
 }
@@ -223,19 +238,23 @@
 
 /* an-engaging-sec Start */
 .an-engaging-sec {
-    padding-top: 90px;
-    padding-bottom: 90px;
+	padding-top: 90px;
+	padding-bottom: 0;
+	background: linear-gradient(180deg, #010125 71.48%, #000000 100%);
+}
+.an-engaging-sec *{
+    color: #fff;
 }
 .an-engaging-left-block {
-    width: 50%;
-    padding-right: 180px;
+	width: 43%;
+	padding-right: 0;
 }
-
-.an-engaging-right-block{
-    text-align: right;
-    position: relative;
-    z-index: 1;
-    width: 50%;
+.an-engaging-right-block {
+	text-align: right;
+	position: relative;
+	z-index: 1;
+	width: 57%;
+	margin-top: -150px;
 }
 
 span.Collectionimgbg-img {
@@ -249,13 +268,17 @@ span.Collectionimgbg-img {
 
 /* the-starlight-sec Start */
 
-.the-starlight-sec{
-    background-image: url('../../assets//img/custom/Tokenbgone.png');
-    padding-top: 130px;
-    padding-bottom: 130px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.the-starlight-sec {
+	background-image: url('../../assets/img/custom/Tokenbgone.png');
+	padding-top: 130px;
+	padding-bottom: 130px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+	margin-top: -50px;
+    background-attachment: fixed;
 }
 
 .the-starlight-left-block *{
@@ -289,20 +312,20 @@ span.Collectionimgbg-img {
 }
 
 .hard-camp-block ul li .completed-status {
-    font-size: 10px;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 5px;
-    position: absolute;
-    top: -8px;
-    left: 50%;
-    background-color: #000;
-    margin: 0 auto;
-    display: table;
-    transform: translateX(-50%);
-    padding: 0 7px;
+	font-size: 10px;
+	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 5px;
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	background-color: transparent;
+	margin: 0 auto;
+	display: table;
+	transform: translateX(-50%);
+	padding: 0 7px;
 }
 
 .hard-camp-block ul li .completed-status > span{
@@ -435,35 +458,54 @@ span.Collectionimgbg-img {
 .collections-exculsive-left-block p{
     max-width: 516px;
 }
-
 .collections-exculsive-left-block {
     width: 50%;
 }
-
 .collections-exculsive-right-block {
-    width: calc(50% + 100px);
-    margin-left: -100px;
+	width: calc(50% + 100px);
+	margin-left: -100px;
+	margin-top: -200px;
+	z-index: 1;
 }
 
 .collections-exculsive-right-block img{
     width: 100%;
 }
-
 .collections-exculsive-sec {
-    padding-top: 280px;
-    background-image: url('../../assets/img/custom/wave.png');
-    background-position: 28% 85%;
-    background-repeat: no-repeat;
+	padding: 120px 25px 65px 25px;
+    background-image: url('../../assets/img/custom/mountain-bg.png');
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-attachment: fixed;
+}
+.collections-exculsive-sec::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30%);
+	z-index: 0;
+	height: 100%;
+}
+.collections-exculsive-sec *{
+    color: #fff;
+}
+.collections-exculsive-sec .container {
+	position: relative;
+	z-index: 1;
 }
 
-.next-collection-block h4{
-    font-size: 24px;
-    font-family: 'LoRes 9 Plus OT Narrow' !important;
-    font-weight: bold;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    padding-bottom: 40px;
+.next-collection-block h4 {
+	font-size: 24px;
+	font-family: 'LoRes 9 Plus OT Narrow' !important;
+	font-weight: bold;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #fff;
+	padding-bottom: 30px;
 }
 
 .next-collection-count-list {
@@ -475,10 +517,10 @@ span.Collectionimgbg-img {
 
 .next-collection-count-list li{
     font-size: 29px;
-    color: #000000;
+    color: #fff;
     font-weight: bold;
     line-height: normal;
-    border-right: 2px solid #000000;
+    border-right: 2px solid #fff;
     padding-right: 40px;
     margin-right: 40px;
 }
@@ -491,52 +533,75 @@ span.Collectionimgbg-img {
 
 .next-collection-count-list li span{
     font-size: 18px;
-    color: #000000;
+    color: #fff;
     font-weight: normal;
     display: block;
 }
-
 .next-collection-block {
-    padding-top: 220px;
+	padding-top: 160px;
 }
-
+.new-an-engaging-section {
+	margin-top: -290px;
+}
+.new-an-engaging-section .new-an-engaging-left-block {
+	width: 55%;
+	margin-bottom: -55px;
+}
+.new-an-engaging-section .new-an-engaging-left-block img{
+	width: 100%;
+}
 /* elders-realm-sec Start */
-
-.elders-realm-sec{
+section.elders-realm-sec {
+	padding: 90px 0 0 0;
+}
+.elders-bg{
     background-image: url('../../assets/img/custom/Gamebg.png');
     background-color: #FFFFFF;
     background-position: top center;
     background-size: cover;
-    padding-bottom: 80px;
+    padding-bottom: 0;
     position: relative;
     background-attachment: fixed;
-    z-index: 1;
 }
 
-.elders-realm-sec::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 400px;
-    background: linear-gradient(180deg, #FCFCFC 4.69%, rgba(0, 0, 0, 0) 100%);
-    z-index: -1;
+.elders-bg::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 400px;
+	background: linear-gradient(180deg, #fff 10%, rgba(0, 0, 0, 0) 100%);
 }
 
 span.game-well-img {
+	display: block;
+	padding-top: 0;
+	text-align: center;
+	z-index: 2;
+	position: relative;
+}
+span.game-well-img .desktop {
     display: block;
-    padding-top: 64px;
+    margin: auto;
 }
-
-.elders-realm-left-block{
-    width: 50%;
+span.game-well-img .mobile {
+    display: none;
+    margin: auto;
 }
-
+.elders-realm-left-block {
+	width: 38%;
+	margin: 0 auto;
+}
+.elders-realm-sec .white-bg {
+	margin-bottom: -50px;
+	z-index: 2;
+	position: relative;
+}
 .elders-realm-right-block{
-    width: 50%;
+    text-align: center;
+    width: 100%;
 }
-
 .elders-realm-left-block h2{
     font-weight: bold;
     font-size: 36px;
@@ -545,15 +610,10 @@ span.game-well-img {
     -webkit-text-stroke-color: #000000;
 }
 
-.elders-realm-right-block{
-    text-align: center;
-}
-
 .elderslog-img-info{
     display: block;
 }
-
-.elderslog-img-info p{
+.elderslog-img-info > p{
     font-size: 18px;
     text-align: center;
     color: #000000;
@@ -563,7 +623,7 @@ span.game-well-img {
 /* climeworks-sec */
 
 .climeworks-sec{
-    padding-bottom: 80px;
+    padding-bottom: 40px;
     padding-top: 80px;
 }
 
@@ -694,7 +754,7 @@ span.game-well-img {
     position: relative;
     min-height: 220px;
     padding-bottom: 70px;
-    background-color: #FCFCFC;
+    background-color: #fff;
 }
 
 .weare-here-list-full-list > ul:nth-child(odd) > li:last-child:after {
@@ -731,7 +791,7 @@ span.game-well-img {
     width: 143px !important;
     right: -128px !important;
     background-position: center;
-    top: 2px;
+    top: 1px;
     background-size: 116px !important;
 }
 
@@ -817,9 +877,13 @@ span.game-well-img {
     margin-top: 5px;
 }
 
-.weare-here-sec{
-    padding-top: 100px;
-    overflow: hidden;
+.weare-here-sec {
+	padding-top: 100px;
+	padding-bottom: 0;
+	overflow: hidden;
+	background: #fff;
+	z-index: 0;
+	position: relative;
 }
 
 .weare-here-list-full-list > ul:last-child > li{
@@ -834,10 +898,6 @@ span.game-well-img {
     background-size: contain;
     padding-top: 0;
 }
-.stay-update-sec .container{
-    border-top: 1px solid #979797;
-}
-
 .stay-update-msg {
     text-align: center;
     margin-bottom: 38px;
@@ -932,6 +992,32 @@ span.msg-icon > span {
 .landing-header.navbar-light .navbar-toggler {
     background: transparent !important;
 }
+section.cummunity{
+    background: url('../../assets//img/custom/community-bg.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 0;
+}
+.cummunity .row.align-items-center {
+	justify-content: space-between;
+}
+.cummunity .cummunity-left-block {
+	width: 45%;
+	margin-top: -155px;
+}
+.cummunity .cummunity-right-block {
+	width: 45%;
+}
+.cummunity .cummunity-right-block * {
+	color: #fff;
+}
+.roadmap {
+	width: 30%;
+	margin-bottom: 70px;
+}
+.roadmap .sec-title {
+	margin-bottom: 20px !important;
+}
 
 
 @media (max-width: 1500px) {
@@ -945,7 +1031,7 @@ span.msg-icon > span {
     }
 
     .weare-here-block {
-        max-width: 1000px;
+        max-width: 85%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1129,10 +1215,10 @@ span.msg-icon > span {
     }
 }   
 
-
-
-
-@media (max-width: 980px) {
+@media (max-width: 991px) {
+    .new-header-right-btn {
+        display: none;
+    }
     .the-starlight-left-block {
         width: 100%;
         padding-right: 0;
@@ -1311,12 +1397,13 @@ span.msg-icon > span {
     .an-engaging-left-block {
         padding-right: 0;
         width: 100%;
-        padding-top: 20px;
+        padding-top: 0;
+        margin-top: -90px;
     }
-
+    
     .an-engaging-sec {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
+        padding-top: 30px !important;
+        padding-bottom: 0px !important;
         padding-right: 15px !important;
         padding-left: 15px !important;
     }
@@ -1324,12 +1411,14 @@ span.msg-icon > span {
     .an-engaging-right-block {
         width: 100%;
         order: -1;
+        margin-top: 53px;
+        transform: scale(1.7);
+        margin-left: -20px;
     }
-
     .common-gapping.the-starlight-sec {
-        padding: 40px 15px !important;
+        padding: 30px 15px !important;
+        background-attachment: scroll;
     }
-
     .hard-camp-block ul li .camp-show-btn {
         padding: 12px 10px;
         font-size: 10px;
@@ -1362,14 +1451,19 @@ span.msg-icon > span {
     .hard-camp-claim-box {
         margin-bottom: -140px;
     }
-
-    .collections-exculsive-sec{
+    .collections-exculsive-sec {
         padding-left: 15px !important;
         padding-right: 15px !important;
+        padding-top: 0px !important;
+        background-attachment: scroll;
+        padding-bottom: 170px !important;
+        background-position: 30% 0;
     }
-
     .sec-title {
-        font-size: 24px !important;
+        font-size: 22px !important;
+    }
+    .sec-title br {
+        display: none;
     }
 
     .collections-exculsive-left-block {
@@ -1377,18 +1471,17 @@ span.msg-icon > span {
     }
 
     .collections-exculsive-right-block {
-        width: calc(1000% + 0px);
+        width: 100%;
+        margin-top: auto;
     }
 
     .next-collection-block {
-        padding-top: 30px;
-        padding-bottom: 40px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
-
     section.common-gapping.elders-realm-sec {
-        padding: 40px 15px 80px 15px !important;
+        padding: 30px 15px 30px 15px !important;
     }
-
     .elders-realm-left-block {
         width: 100%;
     }
@@ -1477,27 +1570,28 @@ span.msg-icon > span {
         font-size: 10px;
         margin-left: auto;
         margin-right: auto;
-        max-width: 80px;
+        max-width: 100%;
         text-align: center;
         line-height: normal;
+        min-height: 42px;
     }
 
     .weare-here-list li {
-        min-height: 138px;
+        min-height: 149px;
         padding-bottom: 25px;
     }
 
-    .weare-here-list-full-list > ul:nth-child(odd) > li:last-child:after {
-        width: 140px;
-        height: 140px;
+    .weare-here-list-full-list > ul:nth-child(2n+1) > li:last-child::after {
+        width: 152px;
+        height: 152px;
         top: 10px;
         right: -66px;
         border-width: 2px;
     }
 
     .weare-here-list-full-list > ul:nth-child(even) > li:first-child:after {
-        width: 140px;
-        height: 140px;
+        width: 152px;
+        height: 152px;
         top: 10px;
         left: -66px;
         border-width: 2px;
@@ -1537,9 +1631,11 @@ span.msg-icon > span {
         right: 0;
         height: 1px;
         background-color: #979797;
-        display: block;
+        display: none;
     }
-
+    .join-our-socials ul li a {
+        padding: 15px;
+    }
     .join-our-socials ul li {
         width: 50%;
         padding: 8px;
@@ -1550,7 +1646,14 @@ span.msg-icon > span {
     }
 
     .weare-here-sec {
-        padding-top: 80px !important;
+        padding: 150px 0 0 0 !important;
+    }
+    section.climeworks-sec {
+        padding: 0 0 20px 0 !important;
+    }
+    .roadmap {
+        width: 100%;
+        margin-bottom: 70px;
     }
     .starl-banner-info .new-header-right-btn{
         display: block;
@@ -1568,6 +1671,108 @@ span.msg-icon > span {
     .new-header-right-btn {
         display: none;
     }
+    .starl-banner-info p {
+        font-size: 16px;
+    }
+    section.cummunity {
+        padding-bottom: 0 !important;
+        background-attachment: scroll;
+    }
+    .cummunity .row.align-items-center {
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
+    .cummunity .cummunity-left-block {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .cummunity .cummunity-right-block {
+        width: 100%;
+    }
+    .time-warping-speed-list li {
+        padding-bottom: 15px;
+    }
+    .time-warping-speed-list li h4,
+    .time-warping-speed-list li h3 {
+        text-align: center;
+    }
+    .time-warping-speed-list li p {
+        padding-left: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .update-time {
+        padding-top: 5px;
+        text-align: center;
+    }
+    .time-warping-sec {
+        padding-top: 30px !important;
+        padding-bottom: 60px !important;
+    }
+   .an-engaging-left-block {
+        padding-right: 0;
+        width: 100%;
+        padding-top: 0;
+        margin-top: -90px;
+    }
+    .new-an-engaging-section {
+        margin-top: auto;
+    }
+    .new-an-engaging-section .new-an-engaging-left-block {
+        width: 100%;
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+    .next-collection-block h4 {
+        font-size: 22px !important;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .collections-exculsive-sec .container {
+        position: static;
+    }
+    .next-collection-block {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        padding: 15px;
+    }
+    .next-collection-count-list {
+        justify-content: center;
+    }
+    .next-collection-count-list li {
+        text-align: center;
+    }
+    .collections-exculsive-sec::before {
+        display: none;
+    }
+    .elderslog-img-info > p {
+        font-size: 16px;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .elders-bg {
+        background-attachment: scroll;
+        margin: 0 -15px;
+    }
+    .elders-realm-sec .white-bg {
+        margin-bottom: auto;
+    }
+    span.game-well-img .desktop {
+        display: none;
+    }
+    span.game-well-img .mobile {
+        display: block;
+    }
+    .weare-here-block {
+        max-width: 90%;
+    }
+    .weare-here-list li p span {
+        display: inline-block;
+    }
+    
 }
 
 

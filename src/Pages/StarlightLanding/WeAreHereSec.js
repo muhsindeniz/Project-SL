@@ -6,6 +6,10 @@ const WeAreHereSec = () => {
 return (
     <section className="common-gapping weare-here-sec">
         <div className="container">
+            <div className="roadmap">
+                <h2 className="sec-title">Starlight roadmap:</h2>
+                <p>A peak into the future. Project priority is decided<br/>by the Starlight community. <b>Have your say.</b></p>
+            </div>
             <div className="weare-here-block">
                 <div className="weare-here-list-full-list">
                     <ul className="weare-here-list"> 

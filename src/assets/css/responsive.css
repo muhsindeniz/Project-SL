@@ -55,7 +55,16 @@
         font-size: 18px !important;
     }
     .navbar-expand-lg div.navbar-collapse {
-        max-width: calc(100% - 135px);
+        max-width: 100%;
+        background: rgba(0,0,0,0.95);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        padding-top: 70px !important;
+        padding-top: 30px;
+        min-height: 100vh;
     }
     div.navbar-search {
         min-width: 200px;
@@ -409,7 +418,7 @@
         padding-top: 30px !important;
     }
     section {
-        padding:20px 0 !important;
+        padding:30px 15px !important;
     }
     .nft-start .section-title {
         font-size: 36px !important;
@@ -1247,7 +1256,6 @@
     .faq-sec .container-fluid {
         padding-top: 70px;
     }
-
 }
 
 @media only screen and (max-width: 376px) {

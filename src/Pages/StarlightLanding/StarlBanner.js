@@ -10,8 +10,9 @@ return (
                 <img src={starlBanner} />
             </div>
             <div className="starl-banner-info">
-                <h1>Starlight <sub>(SLX)</sub></h1>
-                <p>An ever-expanding universe of creativity built on the Solana blockchain.</p>
+                <h1>Starlight</h1>
+                <h3>BUILD YOUR WORLD</h3>
+                <p>The leading NFT gateway into Metaverse<br/>on the Solana blockchain.</p>
                 <div className="new-header-right-btn">
                     <ul className="d-flex justify-content-center">
                         <li className="nav-item p-0 d-flex align-items-center">
