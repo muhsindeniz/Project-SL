@@ -1402,6 +1402,7 @@ section.cummunity{
     }
     
     .an-engaging-sec {
+        overflow: hidden;
         padding-top: 30px !important;
         padding-bottom: 0px !important;
         padding-right: 15px !important;
@@ -1411,9 +1412,10 @@ section.cummunity{
     .an-engaging-right-block {
         width: 100%;
         order: -1;
-        margin-top: 53px;
-        transform: scale(1.7);
+        transform: scale(1.2);
         margin-left: -20px;
+        margin-top: 40px;
+        text-align: center;
     }
     .common-gapping.the-starlight-sec {
         padding: 30px 15px !important;
