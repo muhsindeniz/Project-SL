@@ -26,26 +26,28 @@ const StarlightLanding = (props) => {
         <>
           <Navbar tab={tab} setTab={setTab} executeScroll={executeScroll}/>
           <StarlBanner />
-          <div id="ourVision">
-            <PrimedandReady />
-            <Cummunity/>
-            <TimeWarpingSec />
-          </div>
-          <div id="Platform">
-            <AnEngagingSec />
-            <EldersRealmSec />
-          </div>
-          <div id="SLXToken">
-            <TheStarlightSec />
-          </div>
-          <div id="Roadmap">
-            <WeAreHereSec />
-            <ClimeworksSec />
-          </div>
-          <div id="Community">
-            <StayUpdateSec />
-          </div>
-          <Footer />
+          <div className="all-warp">
+            <div id="ourVision">
+              <PrimedandReady />
+              <Cummunity/>
+              <TimeWarpingSec />
+            </div>
+            <div id="Platform">
+              <AnEngagingSec />
+              <EldersRealmSec />
+            </div>
+            <div id="SLXToken">
+              <TheStarlightSec />
+            </div>
+            <div id="Roadmap">
+              <WeAreHereSec />
+              <ClimeworksSec />
+            </div>
+            <div id="Community">
+              <StayUpdateSec />
+            </div>
+            <Footer />
+          </div> 
         </>
     )
 }

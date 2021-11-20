@@ -9,9 +9,9 @@ return (
         <div className="container">
             <div className="row align-items-center">
                 <div className="primed-left-block">
-                    <h2 className="sec-title">Primed and Ready, <br/> The Future is here.</h2>
+                    <h2 className="sec-title">Primed and Ready,<br/>The Future is here.</h2>
                     <p className="text">Built on the ultra-fast and efficient PoS Solana blockchain and utilising the open-sourced Metaplex infrastructure, the way you discover and own NFTs is about to change forever.</p>
-                    <p className="text">Starlight will become the preferred community-led platform to discover, buy and sell NFTs on the Solana blockchain.</p>
+                    <p className="text">Starlight is positioned to be the preferred community owned and led platform for discovery, exploration and education of the Metaverse and NFT trading and transactions.</p>
                     <div className="primed-logo-block">
                         <span><img src={SolanaLogo} /></span>
                         <span><img src={MetaplexLogo} /></span>

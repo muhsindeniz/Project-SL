@@ -18,7 +18,6 @@ return (
                         <h2 className="sec-title">The more you use, the cleaner the air.</h2>
                         <h3>0.01% of every transaction.</h3>
                         <p className="text">Creation inspires art, and therefore it is incredibly important that future generations have a safe and healthy planet to explore and create. This is why we're partnering with Climeworks.</p>
-                        <p className="text">As Starlight NFT marketplace scales in prominence and usage on the world's fastest blockchain, the funding raised to give back to the planet will be significant. We are so excited about the extraordinary work Climeworks is doing.</p>
                     </div>
                 </div>
             </div>

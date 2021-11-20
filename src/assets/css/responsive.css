@@ -54,18 +54,7 @@
     .navbar-light .navbar-brand h3 {
         font-size: 18px !important;
     }
-    .navbar-expand-lg div.navbar-collapse {
-        max-width: 100%;
-        background: rgba(0,0,0,0.95);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        padding-top: 70px !important;
-        padding-top: 30px;
-        min-height: 100vh;
-    }
+
     div.navbar-search {
         min-width: 200px;
         margin-right: 10px;
@@ -79,17 +68,17 @@
         padding: 10px 16px;
     }
     .btn-primary-outline {
-        width: 80px;
+        min-width: 80px;
         height: 45px;
     }
     .btn-primary-outline {
         padding: 10px 10px;
-        width: 80px;
+        min-width: 80px;
         height: 45px;
         margin-left: 5px;
     }
     section {
-        padding: 30px 26px;
+        padding: 60px 26px;
     }
     section.nft-start {
         margin-top: 60px;
@@ -251,6 +240,18 @@
     }
 }
 @media only screen and (max-width: 991px) {
+    .navbar-expand-lg div.navbar-collapse {
+        max-width: 100%;
+        background: rgba(0,0,0,0.95);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        padding-top: 70px !important;
+        padding-top: 30px;
+        min-height: 100vh;
+    }
     header .navbar-expand-lg > .container-fluid {
         padding-right: 15px;
         padding-left: 15px;
@@ -265,7 +266,7 @@
         padding: 0 15px;
     }
     section {
-        padding: 25px 10px;
+        padding: 60px 15px;
     }
     .nft-start .home-nft-slider-section {
         flex: 0 0 50%;
@@ -418,7 +419,7 @@
         padding-top: 30px !important;
     }
     section {
-        padding:30px 15px !important;
+        padding:40px 15px !important;
     }
     .nft-start .section-title {
         font-size: 36px !important;
@@ -1239,6 +1240,9 @@
     .faq-sec.faq-container .sub-tabs-menu .accordion-content p {
         font-size: 16px;
         margin-bottom: 0;
+    }
+    .starl-banner-info h3 {
+        font-size: 46px;
     }
 
     .faq-sec.faq-container .sub-tabs-menu .accordion-content {

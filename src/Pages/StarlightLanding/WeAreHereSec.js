@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Downarrow from '../../assets/img/icons/custom/downarrow.png';
 import InnerCircle from '../../assets/img/custom/innercircle.png';
+import { Link, useLocation } from "react-router-dom";
 
 const WeAreHereSec = () => {
 return (
@@ -8,7 +9,9 @@ return (
         <div className="container">
             <div className="roadmap">
                 <h2 className="sec-title">Starlight roadmap:</h2>
-                <p>A peak into the future. Project priority is decided<br/>by the Starlight community. <b>Have your say.</b></p>
+                <p className="text">A peak into the future. Project priority is decided<br/>by the Starlight community. <b>Have your say.</b>
+                <Link className="btn btn-fill" to="#0">Coming soon</Link>
+                </p>
             </div>
             <div className="weare-here-block">
                 <div className="weare-here-list-full-list">
@@ -22,7 +25,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Jun 2021</h6>
-                            <p>Napkin scribblings.</p>
+                            <p>Napkin<br/> scribblings.</p>
                         </li>
                         <li className="active">
                             <span className="weare-here-hover">
@@ -33,7 +36,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 1: Dec 2021</h6>
-                            <p>Soft launch.</p>
+                            <p>Soft<br/> launch.</p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -44,7 +47,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 2: Jan 2022</h6>
-                            <p>Starlight v1 public launch.</p>
+                            <p>Starlight v1<br/> launch.</p>
                         </li>
                     </ul>
                     <ul className="weare-here-list">
@@ -57,7 +60,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 5: May 2022</h6>
-                            <p>Startlight Rewards launch.</p>
+                            <p>Startlight <br/>Rewards launch.</p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -68,7 +71,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 4: May 2022</h6>
-                            <p>Starlight v1.1<span>+ Profiles, Create Collectibles, Activity</span></p>
+                            <p>Starlight v1.1<span>+ Profiles, Create <br/>Collectibles, Activity</span></p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -79,7 +82,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 3: Mar 2022</h6>
-                            <p>Elders of the Realm 3D <span>Partnership</span></p>
+                            <p>Elders of the Realm 3D<span>Gateway collaboration</span></p>
                         </li>
                     </ul>
                     <ul className="weare-here-list">
@@ -92,7 +95,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 3: Mar 2022</h6>
-                            <p>Starlight App Development</p>
+                            <p>Starlight App <br/>Development</p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -103,7 +106,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 7: Sep 2022</h6>
-                            <p>Starlight v1.2<span>+ In-game NFT exchange</span></p>
+                            <p>Starlight v1.2<span>+ In-game NFT <br/>exchange</span></p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -114,7 +117,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 8: have your say.</h6>
-                            <p>Global takeover.</p>
+                            <p>Global <br/>takeover.</p>
                         </li>
                     </ul>
                 </div>

@@ -10,7 +10,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    padding: 31px 0;
+    padding: 23px 0;
     top: 0;
     left: 0;
     z-index: 99;
@@ -26,17 +26,18 @@ header {
 	width: 150px;
 }
 @media only screen and (max-width: 992px){
-.navbar-expand-lg {
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-}
+    .navbar-expand-lg {
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
 }
 
 .navbar-expand-lg .navbar-collapse {
 	justify-content: center;
 	max-width: calc(100% - 185px);
+	padding-left: 90px;
 }
 
 .navbar .menu-dropdown{

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import PlatformImg from '../../assets/img/custom/PlatformImg.png';
 import CollectionImgBg from '../../assets/img/custom/Collectionimgbg.svg';
 import engaging from '../../assets/img/custom/always-engaging.png';
+import mobileengaging from '../../assets/img/custom/mobile-always-engaging.png';
 import CollectionsExculsiveImage from '../../assets/img/custom/CollectionsExculsiveImage.png';
 
 const AnEngagingSec = () => {
@@ -16,7 +17,8 @@ return (
                     <p className="text">Show off not only your NFT creations or collection but also your Starlight rewards tier based on how many Starlight tokens you hold.</p>
                 </div>
                 <div className="an-engaging-right-block">
-                    <img src={engaging} />
+                    <img className="desktop" src={engaging} />
+                    <img className="mobile" src={mobileengaging} />
                 </div>
             </div>
 
@@ -25,7 +27,7 @@ return (
                     <img src={PlatformImg} />
                 </div>
                 <div className="new-an-engaging-right-block">
-                    <h2 className="sec-title">Collections exculsive only<br/>on the Starlight gateway.</h2>
+                    <h2 className="sec-title">Collections exculsive only<br/> on the Starlight gateway.</h2>
                 </div>
             </div>
         </div>

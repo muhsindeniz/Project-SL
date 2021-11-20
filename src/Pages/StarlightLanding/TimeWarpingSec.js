@@ -35,7 +35,7 @@ return (
                             <p><span>0.034ETH / $136.25</span>ON RARIBLE</p>
                         </li>
                     </ul>
-                    <p className="update-time">Updated 3 hours ago.</p>
+                    <p className="update-time">Price example from 11 November 2021</p>
                 </div>
                 <div className="time-warping-right-sec">
                     <h2 className="sec-title">Time-warping speeds, <br/>low transaction fees.</h2>

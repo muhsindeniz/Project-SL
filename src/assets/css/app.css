@@ -13,7 +13,7 @@ body .container-lg,
 body .container-md,
 body .container-sm,
 body .container-xl{
-    max-width: 1320px;
+    max-width: 1235px;
     padding:  0 15px;
     margin:  0 auto;
 }

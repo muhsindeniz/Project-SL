@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import starlBanner from '../../assets/img/custom/starlBanner.png'
+import mobilebanner from '../../assets/img/custom/mobile-banner.png'
 import { useLocation, Link } from "react-router-dom";
 
 const StarlBanner = () => {
@@ -7,7 +8,8 @@ return (
     <section className="starl-banner-sec">
         <div className="starl-banner-inner">
             <div className="starl-banner-img">
-                <img src={starlBanner} />
+                <img className="desktop" src={starlBanner} />
+                <img className="mobile" src={mobilebanner} />
             </div>
             <div className="starl-banner-info">
                 <h1>Starlight</h1>
