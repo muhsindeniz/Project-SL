@@ -1,11 +1,11 @@
 import React from 'react'
 import fabaLogo from "../../assets/img/custom/x.svg";
 import { Menu, Dropdown, Select } from 'antd';
-import { Link } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const { Option } = Select;
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer>
             <section className="m-0">
@@ -30,10 +30,29 @@ const Footer = () => {
                             </div>
 
                             <ul className="footer-menu">
-                                <li>Vision</li>
-                                <li>Token</li>
-                                <li>Metaverse</li>
-                                <li>Roadmap</li>
+                                <li className="nav-item" onClick={() => props.setTab('ourVision')}>
+                                    <Link to="ourVision" 
+                                        smooth={true} 
+                                        duration={500}>
+                                            Vision
+                                    </Link></li>
+                                <li onClick={() => props.setTab('platform')}>
+                                    <Link to="Platform" 
+                                        smooth={true} 
+                                        duration={500}>
+                                            Platform
+                                    </Link></li>
+                                <li onClick={() => props.executeScroll}><Link to="SLXToken" 
+                                        smooth={true} 
+                                        duration={500}>
+                                            Token
+                                    </Link></li>
+                                <li onClick={() => props.executeScroll}><Link to="Roadmap" 
+                                        smooth={true} 
+                                        duration={500}
+                                        >
+                                            Roadmap
+                                    </Link></li>
                             </ul>
                         </div>
 
@@ -88,9 +107,9 @@ const Footer = () => {
                                             </svg>
 
                                             <span className="ml-2">English</span></Option>
-                                        <Option value="中文"> 中文</Option>
+                                        {/* <Option value="中文"> 中文</Option>
                                         <Option value="한국어">한국어</Option>
-                                        <Option value="日本語">日本語</Option>
+                                        <Option value="日本語">日本語</Option> */}
                                     </Select>
                                 </div>
                             </div>

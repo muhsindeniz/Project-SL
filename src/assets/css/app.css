@@ -186,7 +186,10 @@ footer .footer-menu li {
 	color: #6E6E6E;
 	font-weight: 600;
 }
-footer .footer-menu li:hover{
+footer .footer-menu li a{
+    color: inherit;
+}
+footer .footer-menu li:hover a{
     color: var(--pink-color);
 }
 footer .footer-menu li > span {
@@ -284,7 +287,18 @@ footer section .footer-in-email {
 .footer-column-flex-border {
     border-bottom: 0.5px solid #adadad;
 }
-
+footer .ant-select:not(.ant-select-customize-input) div.ant-select-selector {
+	background: #FFFFFF;
+	border: 0.2px solid #5b5b5b !important;
+	border-radius: 47px;
+	height: 45px;
+	padding: 5px 15px;
+	box-shadow: none !important;
+}
+.ant-select-selector span {
+	color: #000;
+	font-size: 14px;
+}
 .d-web-none {
     display: none;
 }

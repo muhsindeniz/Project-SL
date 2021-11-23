@@ -278,7 +278,7 @@ const Navbar = (props) => {
                                 </li>
 
                                 <li className="nav-item " onClick={() => props.executeScroll}>
-                                <Link to="Roadmap" 
+                                    <Link to="Roadmap" 
                                         smooth={true} 
                                         duration={500} 
                                         className="nav-link">
