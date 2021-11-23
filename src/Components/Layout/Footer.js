@@ -20,7 +20,7 @@ const Footer = () => {
                             </div>
 
                             <ul className="footer-menu">
-                                <li><span className="color-gray">The Eden Smart Chain is a low latency, cross platform smart contract chain for digital assets, fiat on-ramping and dApps.</span></li>
+                                <li><span className="color-gray">Starlight will become the preferred community-led platform to discover, buy and sell NFTs on the Solana blockchain.</span></li>
                             </ul>
                         </div>
 
@@ -109,16 +109,16 @@ const Footer = () => {
 
                         <div className="d-flex footer-social-icons">
                             <div>
-                                <i className="fab fa-twitter"></i>
-                            </div>
-                            <div>
-                                <i className="fab fa-telegram-plane"></i>
-                            </div>
-                            <div>
                                 <i className="fab fa-discord"></i>
                             </div>
                             <div>
-                                <i className="fab fa-youtube"></i>
+                                <i className="fab fa-twitter"></i>
+                            </div>
+                            <div>
+                                <i className="fab fa-reddit-alien"></i>
+                            </div>
+                            <div>
+                                <i className="fab fa-telegram-plane"></i>
                             </div>
                         </div>
 

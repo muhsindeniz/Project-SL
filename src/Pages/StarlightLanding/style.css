@@ -4,8 +4,6 @@ body {
 }
 .starl-banner-sec {
 	padding: 0 !important;
-	position: sticky;
-	top: 0;
 }
 .all-warp{
     position: relative;
@@ -291,10 +289,10 @@ span.Collectionimgbg-img {
 	position: relative;
 	z-index: 1;
 	margin-top: -50px;
-    background-attachment: fixed;
 }
 .hard-claim-btn-block .btn.btn-fill {
 	padding: 8px 37px;
+    pointer-events: none;
 }
 .the-starlight-left-block *{
     color: #fff;
@@ -334,11 +332,12 @@ span.Collectionimgbg-img {
 	justify-content: center;
 	padding-bottom: 5px;
 	position: absolute;
-	top: -25px;
+	top: -23px;
 	left: 50%;
 	background-color: transparent;
 	margin: 0 auto;
-	display: table;
+	display: flex;
+    align-items: center;
 	transform: translateX(-50%);
 	padding: 0;
 }
@@ -392,7 +391,7 @@ span.Collectionimgbg-img {
 .hard-cap-main-box a.btn {
 	font-family: AvertaStd;
 	font-size: 24px;
-	line-height: 28px;
+	line-height: 100%;
 	text-align: center;
 	color: #FFFFFF;
     font-weight: 600;
@@ -505,7 +504,6 @@ span.Collectionimgbg-img {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	background-attachment: fixed;
 }
 .collections-exculsive-sec::before {
 	content: "";
@@ -691,9 +689,14 @@ span.game-well-img .mobile {
 }
 
 .climeworks-right-block {
-    width: 44%;
+	width: 44%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
-
+.climeworks-right-block .text:last-child {
+	margin-bottom: 0;
+}
 .climeworks-left-block {
     width: 56%;
     display: flex;
@@ -1036,7 +1039,6 @@ span.msg-icon > span {
 section.cummunity{
     background: url('../../assets//img/custom/community-bg.png') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
     padding-bottom: 0;
 }
 .cummunity .row.align-items-center {
@@ -1315,6 +1317,17 @@ section.cummunity{
     .stay-update-msg h3 {
         font-size: 30px;
         margin-bottom: 20px !important;
+    }
+    .new-header-right-btn button {
+        padding: 0 15px;
+    }
+    .new-header-right-btn button {
+        height: 40px !important;
+        font-size: 13px !important;
+    }
+    .new-header-right-btn UL.d-flex {
+        margin-right: 0;
+        justify-content: flex-end;
     }
 }   
 
@@ -1917,9 +1930,10 @@ section.cummunity{
         margin-bottom: 70px;
         text-align: left;
     }
-    .starl-banner-info .new-header-right-btn{
+    .starl-banner-info .new-header-right-btn {
         display: block;
         padding-top: 20px;
+        width: 100%;
     }
     .starl-banner-info {
         bottom: 40px;

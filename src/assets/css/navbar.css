@@ -22,9 +22,6 @@ header {
     width: 32px;
     margin-right: 3px;
 }
-.navbar-light .navbar-brand {
-	width: 150px;
-}
 @media only screen and (max-width: 992px){
     .navbar-expand-lg {
         -ms-flex-flow: row nowrap;
@@ -34,10 +31,16 @@ header {
     }
 }
 
+.navbar-light .navbar-brand {
+	width: 25%;
+}
+.new-header-right-btn {
+	width: 25%;
+}
 .navbar-expand-lg .navbar-collapse {
 	justify-content: center;
-	max-width: calc(100% - 185px);
-	padding-left: 90px;
+	width: calc(100% - 50%);
+	padding-left: 0;
 }
 
 .navbar .menu-dropdown{
