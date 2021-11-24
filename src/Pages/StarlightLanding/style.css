@@ -1853,23 +1853,23 @@ section.cummunity{
     }
 
     .weare-here-list li {
-        min-height: 149px;
+        min-height: 140px;
         padding-bottom: 25px;
     }
 
     .weare-here-list-full-list > ul:nth-child(2n+1) > li:last-child::after {
-        width: 152px;
-        height: 152px;
+        width: 142px;
+        height: 142px;
         top: 10px;
-        right: -66px;
+        right: -67px;
         border-width: 2px;
     }
 
     .weare-here-list-full-list > ul:nth-child(even) > li:first-child:after {
-        width: 152px;
-        height: 152px;
+        width: 142px;
+        height: 142px;
         top: 10px;
-        left: -66px;
+        left: -67px;
         border-width: 2px;
     }
 
@@ -2158,6 +2158,9 @@ section.cummunity{
     .new-an-engaging-section .new-an-engaging-right-block {
         width: 100%;
         margin-bottom: 30px;
+    }
+    .weare-here-list {
+        margin: 0 -10px;
     }
 }
 
