@@ -10,7 +10,6 @@ return (
             <div className="roadmap">
                 <h2 className="sec-title">Starlight roadmap:</h2>
                 <p className="text">A peak into the future. Project priority is decided<br/>by the Starlight community. <b>Have your say.</b>
-                <Link className="btn btn-fill" to="#0">Coming soon</Link>
                 </p>
             </div>
             <div className="weare-here-block">

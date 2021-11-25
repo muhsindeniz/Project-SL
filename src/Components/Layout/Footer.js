@@ -1,11 +1,11 @@
 import React from 'react'
 import fabaLogo from "../../assets/img/custom/x.svg";
 import { Menu, Dropdown, Select } from 'antd';
-import { Link } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const { Option } = Select;
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer>
             <section className="m-0">
@@ -20,7 +20,7 @@ const Footer = () => {
                             </div>
 
                             <ul className="footer-menu">
-                                <li><span className="color-gray">The Eden Smart Chain is a low latency, cross platform smart contract chain for digital assets, fiat on-ramping and dApps.</span></li>
+                                <li><span className="color-gray">Starlight will become the preferred community-led platform to discover, buy and sell NFTs on the Solana blockchain.</span></li>
                             </ul>
                         </div>
 
@@ -30,10 +30,29 @@ const Footer = () => {
                             </div>
 
                             <ul className="footer-menu">
-                                <li>Vision</li>
-                                <li>Token</li>
-                                <li>Metaverse</li>
-                                <li>Roadmap</li>
+                                <li className="nav-item" onClick={() => props.setTab('ourVision')}>
+                                    <Link to="ourVision" 
+                                        smooth={true} 
+                                        duration={500}>
+                                            Vision
+                                    </Link></li>
+                                <li onClick={() => props.setTab('platform')}>
+                                    <Link to="Platform" 
+                                        smooth={true} 
+                                        duration={500}>
+                                            Platform
+                                    </Link></li>
+                                <li onClick={() => props.executeScroll}><Link to="SLXToken" 
+                                        smooth={true} 
+                                        duration={500}>
+                                            Token
+                                    </Link></li>
+                                <li onClick={() => props.executeScroll}><Link to="Roadmap" 
+                                        smooth={true} 
+                                        duration={500}
+                                        >
+                                            Roadmap
+                                    </Link></li>
                             </ul>
                         </div>
 
@@ -88,9 +107,9 @@ const Footer = () => {
                                             </svg>
 
                                             <span className="ml-2">English</span></Option>
-                                        <Option value="中文"> 中文</Option>
+                                        {/* <Option value="中文"> 中文</Option>
                                         <Option value="한국어">한국어</Option>
-                                        <Option value="日本語">日本語</Option>
+                                        <Option value="日本語">日本語</Option> */}
                                     </Select>
                                 </div>
                             </div>
@@ -109,16 +128,16 @@ const Footer = () => {
 
                         <div className="d-flex footer-social-icons">
                             <div>
-                                <i className="fab fa-twitter"></i>
-                            </div>
-                            <div>
-                                <i className="fab fa-telegram-plane"></i>
-                            </div>
-                            <div>
                                 <i className="fab fa-discord"></i>
                             </div>
                             <div>
-                                <i className="fab fa-youtube"></i>
+                                <i className="fab fa-twitter"></i>
+                            </div>
+                            <div>
+                                <i className="fab fa-reddit-alien"></i>
+                            </div>
+                            <div>
+                                <i className="fab fa-telegram-plane"></i>
                             </div>
                         </div>
 
