@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import starlBanner from '../../assets/img/custom/starlBanner.png'
+import starlBanner from '../../assets/img/custom/starlBanner.jpg'
 import mobilebanner from '../../assets/img/custom/mobile-banner.png'
 import { useLocation, Link } from "react-router-dom";
 

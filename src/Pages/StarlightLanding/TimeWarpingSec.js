@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import SolanaLogo from '../../assets/img/custom/solanalogo.png';
-import MetaplexLogo from '../../assets/img/custom/metaplexlogo.png';
+import SolanaLogo from '../../assets/img/custom/solanalogo.svg';
+import MetaplexLogo from '../../assets/img/custom/metaplexlogo.svg';
 import PrimedImg from '../../assets/img/custom/primedimg.png';
 
 const TimeWarpingSec = () => {
