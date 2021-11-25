@@ -1026,6 +1026,7 @@ span.msg-icon > span {
 	margin-bottom: 0;
 	margin-top: 8px;
 	margin-right: -12px;
+	justify-content: flex-end;
 }
 .new-header-right-btn button {
 	padding: 0 28px;
