@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import MsgBig from '../../assets/img/icons/custom/msgbig.png';
-import Discord from '../../assets/img/icons/custom/Discord.png';
-import TwitterIcon from '../../assets/img/icons/custom/Twitter.png';
-import TelegramIcon from '../../assets/img/icons/custom/Telegram.png';
-import RedditIcon from '../../assets/img/icons/custom/Reddit.png';
+import Discord from '../../assets/img/icons/custom/Discord.svg';
+import TwitterIcon from '../../assets/img/icons/custom/Twitter.svg';
+import TelegramIcon from '../../assets/img/icons/custom/Telegram.svg';
+import RedditIcon from '../../assets/img/icons/custom/Reddit.svg';
 
 
 const StayUpdateSec = () => {

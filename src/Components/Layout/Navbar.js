@@ -3,7 +3,7 @@ import searchLine from "../../assets/img/icons/custom/search-line.svg";
 import vectorLogo from "../../assets/img/custom/Vector.svg";
 import menu4Line from "../../assets/img/icons/custom/menu-4-line.svg";
 import userProfilePictures from "../../assets/img/icons/custom/userNav.svg";
-import fabaLogo from "../../assets/img/custom/x.png";
+import fabaLogo from "../../assets/img/custom/x.svg";
 import userTick from "../../assets/img/icons/custom/logo.svg";
 import grayPp from "../../assets/img/custom/grayPp.png";
 import { Link, animateScroll as scroll } from "react-scroll";

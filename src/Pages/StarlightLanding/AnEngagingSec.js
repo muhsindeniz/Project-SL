@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import PlatformImg from '../../assets/img/custom/PlatformImg.png';
+import PlatformImg from '../../assets/img/custom/PlatformImg.svg';
 import CollectionImgBg from '../../assets/img/custom/Collectionimgbg.svg';
 import engaging from '../../assets/img/custom/always-engaging.png';
 import mobileengaging from '../../assets/img/custom/mobile-always-engaging.png';
