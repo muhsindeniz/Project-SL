@@ -280,7 +280,7 @@ span.Collectionimgbg-img {
 /* the-starlight-sec Start */
 
 .the-starlight-sec {
-	background-image: url('../../assets/img/custom/Tokenbgone.png');
+	background-image: url('../../assets/img/custom/Tokenbgone.jpg');
 	padding-top: 114px;
 	padding-bottom: 107px;
 	background-position: center;
@@ -773,6 +773,8 @@ span.game-well-img .mobile {
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
+    height:100%;
 }
 
 .weare-here-list {
