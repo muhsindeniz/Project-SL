@@ -134,11 +134,12 @@ const Footer = (props) => {
                                 <a href="https://twitter.com/starlight_meta" target="_blank"><i className="fab fa-twitter"></i></a>
                             </div>
                             <div>
-                            <a href="https://www.reddit.com/r/starlightmeta/" target="_blank"><i className="fab fa-telegram-plane"></i></a>
+                               <a href="https://www.reddit.com/r/starlightmeta/" target="_blank" > <i className="fab fa-reddit-alien"></i></a>
                             </div>
                             <div>
-                               <a href="https://t.me/starlightmeta" target="_blank" > <i className="fab fa-reddit-alien"></i></a>
+                            <a href="https://t.me/starlightmeta" target="_blank"><i className="fab fa-telegram-plane"></i></a>
                             </div>
+                           
                             
                         </div>
 

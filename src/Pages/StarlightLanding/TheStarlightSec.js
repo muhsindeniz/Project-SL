@@ -31,7 +31,7 @@ return (
                         <div className="hard-cap-main-box">
                         <ul className="hard-camp-center-list">
                             <li>
-                                {/* <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span> */}
+                                <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span>
                                 <span className="camp-show-btn">2%: Seed</span>
                                 <span className="camp-show-btn-label">2,000,000 NEUM</span>
                             </li>
