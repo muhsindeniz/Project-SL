@@ -6,6 +6,7 @@ import userProfilePictures from "../../assets/img/icons/custom/userNav.svg";
 import fabaLogo from "../../assets/img/custom/x.svg";
 import userTick from "../../assets/img/icons/custom/logo.svg";
 import grayPp from "../../assets/img/custom/grayPp.png";
+import pdf from '../../assets/Starlight-Whitepaper-v1.4.pdf';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = (props) => {
@@ -300,9 +301,9 @@ const Navbar = (props) => {
                         <div className="new-header-right-btn">
                             <ul className="d-flex">
                                 <li className="nav-item d-sm-none d-lg-block p-0 d-flex align-items-center">
-                                    <Link to="/CreateCollectible" className="nav-link p-0">
+                                    <a href={pdf} target="_blank" className="nav-link p-0">
                                         <button className="btn btn-primary-outline">Whitepaper</button>
-                                    </Link>
+                                    </a>
                                 </li>
 
                                 <li className="nav-item d-sm-none d-lg-block p-0 d-flex align-items-center" onClick={() => props.executeScroll}>
