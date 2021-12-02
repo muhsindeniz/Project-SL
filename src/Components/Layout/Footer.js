@@ -62,7 +62,7 @@ const Footer = (props) => {
                             </div>
 
                             <ul className="footer-menu">
-                                <li><a href="https://discord.com/channels/910446505733812254/910446506350362637" target="_blank">Discord</a></li>
+                                <li><a href="https://discord.gg/h3pWz4fY72" target="_blank">Discord</a></li>
                                 <li><a href="https://twitter.com/starlight_meta" target="_blank">Twitter</a></li>
                                 <li><a href="https://t.me/starlightmeta" target="_blank" >Telegram</a></li>
                                 <li><a href="https://www.reddit.com/r/starlightmeta/" target="_blank">Reddit</a></li>
@@ -128,17 +128,18 @@ const Footer = (props) => {
 
                         <div className="d-flex footer-social-icons">
                             <div>
-                                <a href="https://discord.com/channels/910446505733812254/910446506350362637" target="_blank"> <i className="fab fa-discord"></i></a>
+                                <a href="https://discord.gg/h3pWz4fY72" target="_blank"> <i className="fab fa-discord"></i></a>
                             </div>
                             <div>
                                 <a href="https://twitter.com/starlight_meta" target="_blank"><i className="fab fa-twitter"></i></a>
                             </div>
                             <div>
-                               <a href="https://t.me/starlightmeta" target="_blank" > <i className="fab fa-reddit-alien"></i></a>
-                            </div>
-                            <div>
                             <a href="https://www.reddit.com/r/starlightmeta/" target="_blank"><i className="fab fa-telegram-plane"></i></a>
                             </div>
+                            <div>
+                               <a href="https://t.me/starlightmeta" target="_blank" > <i className="fab fa-reddit-alien"></i></a>
+                            </div>
+                            
                         </div>
 
                         <div className="d-web-none"><small>© 2021, All Rights Reserved.</small></div>

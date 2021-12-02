@@ -23,7 +23,7 @@ return (
                     <h3>Join our socials:</h3>
                     <ul>
                         <li>
-                            <a href="https://discord.com/channels/910446505733812254/910446506350362637" target="_blank">
+                            <a href="https://discord.gg/h3pWz4fY72" target="_blank">
                                 <img src={Discord} />
                                 Discord
                             </a>
