@@ -2182,13 +2182,18 @@ section.cummunity{
     }
 }
 
+@media(max-width:480px) {
+    .an-engaging-right-block > img.mobile {
+        margin-top: -67px;
+    }
+}
 
 @media (max-width: 370px){
     .primed-logo-block > span {
         margin-right: 15px;
         max-width: 150px;
     }
-
+    
     .time-warping-left-block {
         width: 100%;
     }
