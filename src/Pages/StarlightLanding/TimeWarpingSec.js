@@ -39,7 +39,7 @@ return (
                 </div>
                 <div className="time-warping-right-sec">
                     <h2 className="sec-title">Time-warping speeds, <br/>low transaction fees.</h2>
-                    <p className="text">Discovering, buying and selling NFTs should be frictionless, effortless and fast. Starlight is built to bring you the best NFT marketplace experience on the Solana blockchain with time-warping transaction speeds of 400 millisecond per block and jaw-dropping low fees.</p>
+                    <p className="text">Discovering, buying and selling NFTs should be frictionless, effortless and fast. Starlight is built to bring you the best NFT Marketplace and interaction experience on the Solana blockchain with time-warping transaction speeds of 400 millisecond per block and jaw-dropping low fees.</p>
                 </div>
             </div>
         </div>

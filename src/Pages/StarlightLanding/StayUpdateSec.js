@@ -23,25 +23,25 @@ return (
                     <h3>Join our socials:</h3>
                     <ul>
                         <li>
-                            <a href="#0">
+                            <a href="https://discord.com/channels/910446505733812254/910446506350362637" target="_blank">
                                 <img src={Discord} />
                                 Discord
                             </a>
                         </li>
                         <li>
-                            <a href="#0">
+                            <a href="https://twitter.com/starlight_meta" target="_blank">
                                 <img src={TwitterIcon} />
                                 Twitter
                             </a>
                         </li>
                         <li>
-                            <a href="#0">
+                            <a href="https://t.me/starlightmeta" target="_blank">
                                 <img src={TelegramIcon} />
                                 Telegram
                             </a>
                         </li>
                         <li>
-                            <a href="#0">
+                            <a href="https://www.reddit.com/r/starlightmeta/" target="_blank">
                                 <img src={RedditIcon} />
                                 Reddit
                             </a>

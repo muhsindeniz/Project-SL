@@ -20,7 +20,7 @@ const Footer = (props) => {
                             </div>
 
                             <ul className="footer-menu">
-                                <li><span className="color-gray">Starlight will become the preferred community-led platform to discover, buy and sell NFTs on the Solana blockchain.</span></li>
+                                <li><span className="color-gray">A community-led NFT platform that powers metaverses, enables next-gen discovery and trading of digital assets and is rewarding for users.</span></li>
                             </ul>
                         </div>
 
@@ -62,10 +62,10 @@ const Footer = (props) => {
                             </div>
 
                             <ul className="footer-menu">
-                                <li>Discord</li>
-                                <li>Twitter</li>
-                                <li>Telegram</li>
-                                <li>Reddit</li>
+                                <li><a href="https://discord.com/channels/910446505733812254/910446506350362637" target="_blank">Discord</a></li>
+                                <li><a href="https://twitter.com/starlight_meta" target="_blank">Twitter</a></li>
+                                <li><a href="https://t.me/starlightmeta" target="_blank" >Telegram</a></li>
+                                <li><a href="https://www.reddit.com/r/starlightmeta/" target="_blank">Reddit</a></li>
                             </ul>
                         </div>
 

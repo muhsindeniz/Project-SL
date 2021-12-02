@@ -7,9 +7,9 @@ return (
         <div className="container">
             <div className="row align-items-center">
                 <div className="the-starlight-left-block">
-                    <h2 className="sec-title">The Starlight DAO Governance Token</h2>
-                    <p className="text">The Starlight (SLX) token empowers the community by distributing voting rights over project delivery and road mapping.</p>
-                    <p className="text">It also rewards the Starlight community in various ways: airdrops proportional to user activity, access to exclusive NFT collections, NFT lotteries, low platform fees and access to collaboration tokens.</p>
+                    <h2 className="sec-title">The Starlight <br/>token: NEUM</h2>
+                    <p className="text">The NEUM token is the governance token of the Starlight platform. It allows our community to have an invested interest in the future of the platform. The NEUM token will be built and hosted on the Solana blockchain. The NEUM token will be the preferred native currency on both the Starlight Marketplace and Starlight Meta-bridge.</p>
+                    <p className="text">Because of these key benefits the NEUM token offers and high utility required, we expect a considerable reception and demand for the token as it develops.</p>
                 </div>
                 <div className="the-starlight-right-block">
                     <div className="hard-camp-block">

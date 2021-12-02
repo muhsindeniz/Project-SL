@@ -12,9 +12,9 @@ return (
                 <div className="elders-realm-right-block">
                     <span className="elderslog-img-info">
                         <img src={EldersLog} />
-                        <p>A Starlight gateway collaboration</p>
+                        <p>A Starlight Meta-bridge collaboration</p>
                         <div className="elders-realm-left-block">
-                            <p className="text">Introducing Starlight's exclusive collaboration with Elders of the Realm 3D. A gaming experience where you'll have to navigate, negotiate and battle your way up to the throne of the universe. Use your SLX to trade unique characters and accessories in the metaverse.</p>
+                            <p className="text">Introducing Starlight's exclusive collaboration with Elders of the Realm 3D. A gaming experience where you'll have to navigate, negotiate and battle your way up to the throne of the universe. Use your NEUM token to trade unique characters and accessories in the metaverse.</p>
                         </div>
                     </span>
                 </div>

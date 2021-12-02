@@ -12,9 +12,9 @@ return (
         <div className="container">
             <div className="row align-items-start">
                 <div className="an-engaging-left-block">
-                    <h2 className="sec-title">Always engaging,<br/>always rewarding.</h2>
-                    <p className="text">When you buy and sell on the Starlight NFT marketplace using our native Starlight Token, you will have access to perks, privileges and exclusive NFT collection drops.</p>
-                    <p className="text">Show off not only your NFT creations or collection but also your Starlight rewards tier based on how many Starlight tokens you hold.</p>
+                    <h2 className="sec-title">Next-gen NFT <br/>marketplace experience.</h2>
+                    <p className="text">When you buy and sell on the Starlight Marketplace using our native Starlight Token, you will have access to perks, privileges and exclusive NFT collection drops.</p>
+                    <p className="text">The Starlight Marketplace is equipped with seven unique tools. Each tool serves a specific function that benefits artists, creators and collectors. These tools are: Gallery, Trade, Factory, Launchpad, Rewards, Forge and App.</p>
                 </div>
                 <div className="an-engaging-right-block">
                     <img className="desktop" src={engaging} />
@@ -26,20 +26,18 @@ return (
                 <div className="new-an-engaging-left-block">
                     <img src={PlatformImg} />
                 </div>
-                <div className="new-an-engaging-right-block">
-                    <h2 className="sec-title">Collections exculsive only<br/> on the Starlight gateway.</h2>
-                </div>
             </div>
         </div>
     </section>
-
+    
     <section className="common-gapping collections-exculsive-sec">
         <div className="container">
             <div className="row">
                 <div className="collections-exculsive-left-block">
-                    <p className="text">We partner with metaverse creators, game designers, artists, musicians, and photographers worldwide to offer Starlight token holders the most exclusive and sought-after NFT collections.</p>
-                    <p className="text">When you trade on the Starlight marketplace, you can be sure that you're part of the community that is leading the NFT space in the expression of creativity on the world's fastest blockchain.</p>
-                    <div className="next-collection-block">
+                <h2 className="sec-title">Interact with your<br/>digital assets on the<br/>Starlight Meta-bridge.</h2>
+                    <p className="text">The Starlight Meta-bridge takes NFT ownership to a whole new level by bridging the gap between the digital world and reality. This metaverse enabling technology will power our interaction with our digital assets. This could be as simple as displaying NFT collections in homes right from your Starlight Marketplace profile to augmented reality interaction via AR hardware and 3D games.</p>
+                    <p className="text">To achieve this, we are building two powerplants: the Meta-bridge Force and Meta-bridge Drive API. Our first project is with the upcoming game Elders of the Realm.</p>
+                    {/* <div className="next-collection-block">
                         <h4>Next collection drop in:</h4>
                         <ul className="next-collection-count-list">
                             <li>
@@ -59,7 +57,7 @@ return (
                                 <span>Seconds</span>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="collections-exculsive-right-block">
                     <img src={CollectionsExculsiveImage} />

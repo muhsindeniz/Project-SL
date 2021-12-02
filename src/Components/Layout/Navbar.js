@@ -273,7 +273,7 @@ const Navbar = (props) => {
                                         smooth={true} 
                                         duration={500} 
                                         className="nav-link">
-                                            SLX Token
+                                            NEUM Token
                                     </Link>
                                 </li>
 
@@ -307,7 +307,7 @@ const Navbar = (props) => {
 
                                 <li className="nav-item d-sm-none d-lg-block p-0 d-flex align-items-center">
                                     <Link to="/CreateCollectible" className="nav-link p-0">
-                                        <button className="btn btn-fill">Buy SLX</button>
+                                        <button className="btn btn-fill">Join now</button>
                                     </Link>
                                 </li>
                             </ul>
