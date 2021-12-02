@@ -378,6 +378,11 @@ span.Collectionimgbg-img {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+    position: relative;
+}
+.hard-camp-center-list {
+    position: absolute;
+    top:-120px;
 }
 
 .hard-cap-main-box h6{
@@ -413,11 +418,11 @@ span.Collectionimgbg-img {
 }
 
 .hard-camp-block ul.hard-camp-left-list li:first-child {
-    right: -80px;
+    right: -50px;
 }
 
 .hard-camp-block ul.hard-camp-right-list li:first-child {
-    left: -80px;
+    left: -50px;
 }
 
 .hard-camp-block ul.hard-camp-left-list li:last-child {
@@ -888,7 +893,7 @@ span.game-well-img .mobile {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    top: -50px;
+    top: -43px;
 }
 
 .weare-here-hover {
@@ -1588,7 +1593,14 @@ section.cummunity{
         overflow: hidden;
         padding-top: 151.15%;
     }
-
+    .hard-camp-center-list  {
+        top: -80px;
+    }
+    .hard-camp-center-list  li .camp-show-btn{
+        min-width: 95px;
+        margin: 0 auto;
+    
+    }
     .primed-left-block {
         width: 100%;
     }
@@ -1664,6 +1676,7 @@ section.cummunity{
         max-width: 95px;
         width: 100%;
         min-width: 95px;
+        margin: 0 auto;
     }
 
     .hard-camp-block ul li .camp-show-btn-label {

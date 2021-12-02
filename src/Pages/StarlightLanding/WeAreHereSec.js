@@ -35,7 +35,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 1: Sep 2021</h6>
-                            <p>Marketplace front-end<br/>implementation.</p>
+                            <p>Marketplace front-end </p><p><br/> implementation.</p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -46,7 +46,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 2: Dec 2021</h6>
-                            <p>Launchpads and initial <br/>marketing plan deployment.</p>
+                            <p>Launchpads and initial </p><p> marketing plan deployment.</p>
                         </li>
                     </ul>
                     <ul className="weare-here-list">
@@ -59,7 +59,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 5: May 2022</h6>
-                            <p>Starlight Marketplace MVP v1.2 <br/><span>+ Rewards, Forge</span></p>
+                            <p>Starlight Marketplace MVP v1.2 <br/> <span>+ Rewards, Forge</span></p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -69,8 +69,8 @@ return (
                             <span className="weare-here-img">
                                 <img src={InnerCircle} />
                             </span>
-                            <h6>Stage 4: May 2022</h6>
-                            <p>Starlight Marketplace MVP v1.1<br/><span>+ Gallery, Trade Toolse</span></p>
+                            <h6>Stage 4: Mar 2022</h6>
+                            <p>Starlight Marketplace MVP v1.1 <br/><span>+ Gallery, Trade Toolse</span></p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -81,7 +81,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 3: Feb 2022</h6>
-                            <p>Starlight Marketplace MVP v1 launch<br/><span>Featuring exclusive NFT collections</span> </p>
+                            <p>Starlight Marketplace MVP v1 launch <br/><span>Featuring exclusive NFT collections</span> </p>
                         </li>
                     </ul>
                     <ul className="weare-here-list">

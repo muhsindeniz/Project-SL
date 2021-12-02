@@ -16,34 +16,41 @@ return (
                         <ul className="hard-camp-left-list">
                             <li>
                                 <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span>
-                                <span className="camp-show-btn">2%: Seed</span>
-                                <span className="camp-show-btn-label">2, 000, 000 SLX</span>
+                                <span className="camp-show-btn">25%: Public</span>
+                                <span className="camp-show-btn-label">25,000,000 NEUM</span>
                             </li>
                             <li>
-                                <span className="camp-show-btn">20%: Liquidity</span>
-                                <span className="camp-show-btn-label">2, 000, 000 SLX</span>
+                                <span className="camp-show-btn">10%: Ecosystem Development</span>
+                                <span className="camp-show-btn-label">10,000,000 NEUM</span>
                             </li>
                             <li>
                                 <span className="camp-show-btn">8%: Team & Dev</span>
-                                <span className="camp-show-btn-label">8, 000, 000 SLX</span>
+                                <span className="camp-show-btn-label">8,000,000 NEUM</span>
                             </li>
                         </ul>
                         <div className="hard-cap-main-box">
+                        <ul className="hard-camp-center-list">
+                            <li>
+                                <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span>
+                                <span className="camp-show-btn">2%: Seed</span>
+                                <span className="camp-show-btn-label">2,000,000 NEUM</span>
+                            </li>
+                        </ul>
                             <h6>Hard Cap:</h6>
-                            <a href="#0" className="btn btn-fill">100, 000, 000 SLX</a>
+                            <a href="#0" className="btn btn-fill">100,000,000 NEUM</a>
                         </div>
                         <ul className="hard-camp-right-list">
                             <li>
-                                <span className="camp-show-btn">40%: Public</span>
-                                <span className="camp-show-btn-label">40, 000, 000 SLX</span>
+                                <span className="camp-show-btn">20%: Liquidity</span>
+                                <span className="camp-show-btn-label">20,000,000 NEUM</span>
                             </li>
                             <li>
-                                <span className="camp-show-btn">20%: Airdrops</span>
-                                <span className="camp-show-btn-label">2, 000, 000 SLX</span>
+                                <span className="camp-show-btn">25%:  Community Rewards</span>
+                                <span className="camp-show-btn-label">25,000,000 NEUM</span>
                             </li>
                             <li>
                                 <span className="camp-show-btn">10%: Marketing</span>
-                                <span className="camp-show-btn-label">10, 000, 000 SLX</span>
+                                <span className="camp-show-btn-label">10,000,000 NEUM</span>
                             </li>
                         </ul>
                     </div>

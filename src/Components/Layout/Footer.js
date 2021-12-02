@@ -121,23 +121,23 @@ const Footer = (props) => {
                     <div className="d-flex justify-content-between d-mobile-flex-column">
                         <div className="d-flex justify-content-between" style={{ fontSize: "12px" }}>
                             <div className="d-mobile-none">© 2021, All Rights Reserved.</div>
-                            <div className="margin-mobile-left">Privacy Policy</div>
-                            <div className="ml-3">Terms of Service</div>
+                            {/* <div className="margin-mobile-left">Privacy Policy</div>
+                            <div className="ml-3">Terms of Service</div> */}
                             <div className="d-sm-block d-lg-none">Language: English</div>
                         </div>
 
                         <div className="d-flex footer-social-icons">
                             <div>
-                                <i className="fab fa-discord"></i>
+                                <a href="https://discord.com/channels/910446505733812254/910446506350362637" target="_blank"> <i className="fab fa-discord"></i></a>
                             </div>
                             <div>
-                                <i className="fab fa-twitter"></i>
+                                <a href="https://twitter.com/starlight_meta" target="_blank"><i className="fab fa-twitter"></i></a>
                             </div>
                             <div>
-                                <i className="fab fa-reddit-alien"></i>
+                               <a href="https://t.me/starlightmeta" target="_blank" > <i className="fab fa-reddit-alien"></i></a>
                             </div>
                             <div>
-                                <i className="fab fa-telegram-plane"></i>
+                            <a href="https://www.reddit.com/r/starlightmeta/" target="_blank"><i className="fab fa-telegram-plane"></i></a>
                             </div>
                         </div>
 

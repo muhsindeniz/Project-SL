@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import starlBanner from '../../assets/img/custom/starlBanner.jpg'
-import mobilebanner from '../../assets/img/custom/mobile-banner.png'
-import { useLocation, Link } from "react-router-dom";
+import starlBanner from '../../assets/img/custom/starlBanner.jpg';
+import mobilebanner from '../../assets/img/custom/mobile-banner.png';
+import pdf from '../../assets/Starlight-Whitepaper-v1.4.pdf';
+import { useLocation } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 
-const StarlBanner = () => {
+const StarlBanner = (props) => {
+
 return (
     <section className="starl-banner-sec">
         <div className="starl-banner-inner">
@@ -19,14 +22,14 @@ NFT platform built on the Solana blockchain.</p>
                 <div className="new-header-right-btn">
                     <ul className="d-flex justify-content-center">
                         <li className="nav-item p-0 d-flex align-items-center">
-                            <Link to="/CreateCollectible" className="nav-link p-0">
+                        <a href={pdf} target="_blank" className="nav-link p-0">
                                 <button className="btn btn-primary-outline">Whitepaper</button>
-                            </Link>
+                            </a>
                         </li>
 
-                        <li className="nav-item p-0 d-flex align-items-center">
-                            <Link to="/CreateCollectible" className="nav-link p-0">
-                                <button className="btn btn-fill">Buy SLX</button>
+                        <li className="nav-item p-0 d-flex align-items-center"  onClick={() => props.executeScroll}>
+                            <Link to="Community" className="nav-link p-0">
+                                <button className="btn btn-fill">Join Now</button>
                             </Link>
                         </li>
                     </ul>
