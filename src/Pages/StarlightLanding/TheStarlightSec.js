@@ -15,7 +15,7 @@ return (
                     <div className="hard-camp-block">
                         <ul className="hard-camp-left-list">
                             <li>
-                                <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span>
+                                {/* <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span> */}
                                 <span className="camp-show-btn">25%: Public</span>
                                 <span className="camp-show-btn-label">25,000,000 NEUM</span>
                             </li>
@@ -31,7 +31,7 @@ return (
                         <div className="hard-cap-main-box">
                         <ul className="hard-camp-center-list">
                             <li>
-                                <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span>
+                                {/* <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span> */}
                                 <span className="camp-show-btn">2%: Seed</span>
                                 <span className="camp-show-btn-label">2,000,000 NEUM</span>
                             </li>
@@ -58,11 +58,11 @@ return (
                         <div className="hard-camp-claim-show-box">
                             <div className="hard-claim-balance-box">
                                 <p>Your balance</p>
-                                <h2>102<sub>SLX</sub></h2>
+                                <h2>102<sub>NEUM</sub></h2>
                             </div>
                             <div className="hard-claim-available-box">
                                 <p>Available for claim</p>
-                                <h2>546<sub>SLX</sub></h2>
+                                <h2>546<sub>NEUM</sub></h2>
                             </div>
                         </div>
                         <div className="hard-claim-btn-block">

@@ -26,7 +26,7 @@ return (
                             <h6>Apr 2021</h6>
                             <p>Napkin scribblings.</p>
                         </li>
-                        <li className="active">
+                        <li>
                             <span className="weare-here-hover">
                                 We are here
                                 <img src={Downarrow} />
@@ -37,7 +37,7 @@ return (
                             <h6>Stage 1: Sep 2021</h6>
                             <p>Marketplace front-end </p><p><br/> implementation.</p>
                         </li>
-                        <li>
+                        <li className="active">
                             <span className="weare-here-hover">
                                 We are here
                                 <img src={Downarrow} />
