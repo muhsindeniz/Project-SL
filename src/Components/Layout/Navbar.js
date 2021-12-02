@@ -305,8 +305,8 @@ const Navbar = (props) => {
                                     </Link>
                                 </li>
 
-                                <li className="nav-item d-sm-none d-lg-block p-0 d-flex align-items-center">
-                                    <Link to="/CreateCollectible" className="nav-link p-0">
+                                <li className="nav-item d-sm-none d-lg-block p-0 d-flex align-items-center" onClick={() => props.executeScroll}>
+                                    <Link to="Community" className="nav-link p-0">
                                         <button className="btn btn-fill">Join now</button>
                                     </Link>
                                 </li>
