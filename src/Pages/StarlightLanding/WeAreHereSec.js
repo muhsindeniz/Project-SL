@@ -70,7 +70,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 4: Mar 2022</h6>
-                            <p>Starlight Marketplace MVP v1.1 <br/><span>+ Gallery, Trade Tools</span></p>
+                            <p>Starlight Marketplace MVP v1.1 <br/><span>+ Gallery, Trade</span></p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
