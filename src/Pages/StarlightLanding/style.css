@@ -1867,7 +1867,7 @@ section.cummunity{
         max-width: 100%;
         text-align: center;
         line-height: normal;
-        min-height: 42px;
+        /* min-height: 42px; */
     }
 
     .weare-here-list li {
@@ -1949,7 +1949,7 @@ section.cummunity{
         padding: 180px 0 0 0 !important;
     }
     section.climeworks-sec {
-        padding: 0 0 20px 0 !important;
+        padding: 28px 0 20px 0 !important;
     }
     .roadmap {
         width: 100%;
