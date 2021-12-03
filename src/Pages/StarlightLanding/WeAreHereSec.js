@@ -35,7 +35,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 1: Sep 2021</h6>
-                            <p>Marketplace front-end </p><p><br/> implementation.</p>
+                            <p>Marketplace front-end </p><p>implementation.</p>
                         </li>
                         <li className="active">
                             <span className="weare-here-hover">

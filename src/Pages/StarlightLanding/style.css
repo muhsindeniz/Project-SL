@@ -1872,7 +1872,7 @@ section.cummunity{
 
     .weare-here-list li {
         min-height: 140px;
-        padding-bottom: 25px;
+        padding-bottom: 0px;
     }
 
     .weare-here-list-full-list > ul:nth-child(2n+1) > li:last-child::after {
