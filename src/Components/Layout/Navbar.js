@@ -6,7 +6,7 @@ import userProfilePictures from "../../assets/img/icons/custom/userNav.svg";
 import fabaLogo from "../../assets/img/custom/x.svg";
 import userTick from "../../assets/img/icons/custom/logo.svg";
 import grayPp from "../../assets/img/custom/grayPp.png";
-import pdf from '../../assets/Starlight-Whitepaper-v1.4.pdf';
+import pdf from '../../assets/Starlight-Whitepaper-v1.5.pdf';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = (props) => {
