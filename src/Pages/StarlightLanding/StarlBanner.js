@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import starlBanner from '../../assets/img/custom/starlBanner.jpg';
 import mobilebanner from '../../assets/img/custom/mobile-banner.png';
-import pdf from '../../assets/Starlight-Whitepaper-v1.4.pdf';
+import pdf from '../../assets/Starlight-Whitepaper-v1.5.pdf';
 import { useLocation } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
 
