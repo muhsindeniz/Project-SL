@@ -20,8 +20,8 @@ return (
                                 <span className="camp-show-btn-label">25,000,000 NEUM</span>
                             </li>
                             <li>
-                                <span className="camp-show-btn">10%: Ecosystem Development</span>
-                                <span className="camp-show-btn-label">10,000,000 NEUM</span>
+                                <span className="camp-show-btn">15%: Ecosystem Development</span>
+                                <span className="camp-show-btn-label">15,000,000 NEUM</span>
                             </li>
                             <li>
                                 <span className="camp-show-btn">8%: Team & Dev</span>
@@ -41,8 +41,8 @@ return (
                         </div>
                         <ul className="hard-camp-right-list">
                             <li>
-                                <span className="camp-show-btn">20%: Liquidity</span>
-                                <span className="camp-show-btn-label">20,000,000 NEUM</span>
+                                <span className="camp-show-btn">15%: Liquidity</span>
+                                <span className="camp-show-btn-label">15,000,000 NEUM</span>
                             </li>
                             <li>
                                 <span className="camp-show-btn">25%:  Community Rewards</span>
