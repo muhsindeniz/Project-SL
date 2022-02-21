@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import EldersLog from '../../assets/img/custom/elders-log.png';
+import EldersLog from '../../assets/img/custom/seven-realms.png';
 import GameWellImg from '../../assets/img/custom/gamewellimg.png';
 import mobileGameWellImg from '../../assets/img/custom/mobile-gamewellimg.png';
 
@@ -12,9 +12,9 @@ return (
                 <div className="elders-realm-right-block">
                     <span className="elderslog-img-info">
                         <img src={EldersLog} />
-                        <p>A Starlight Meta-bridge collaboration</p>
+                        <p>Exclusive metaverse game collaboration</p>
                         <div className="elders-realm-left-block">
-                            <p className="text">Introducing Starlight's exclusive collaboration with Elders of the Realm 3D. A gaming experience where you'll have to navigate, negotiate and battle your way up to the throne of the universe. Use your NEUM token to trade unique characters and accessories in the metaverse.</p>
+                            <p className="text">Introducing Starlight's exclusive collaboration with Seven Realms 3D. A gaming experience where you'll have to navigate, negotiate and battle your way up to the throne of the universe. Use your NEUM token to trade unique characters and accessories in the metaverse.</p>
                         </div>
                     </span>
                 </div>

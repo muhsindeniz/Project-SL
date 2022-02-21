@@ -10,8 +10,8 @@ return (
             <div className="row align-items-center">
                 <div className="primed-left-block">
                     <h2 className="sec-title">Primed and Ready,<br/>The Future is here.</h2>
-                    <p className="text">Built on the ultra-fast and efficient Solana blockchain and utilising the open-sourced Metaplex infrastructure, the way you discover, own and interact with digital assets are about to change forever.</p>
-                    <p className="text">Starlight is positioned to be the preferred community owned and led platform for discovery, trading and interaction of NFTs, built to work with the Metaverse.</p>
+                    <p className="text">Starlight is built on the ultra-fast and efficient Solana blockchain and utilising the open-sourced Metaplex infrastructure. The way you discover, own and interact with digital assets are about to change forever.</p>
+                    <p className="text">The need for a next-generation NFT platform is crucial to facilitate the mass adoption of meta-related content and digital products. We are at the edge of a new reality where digital assets become our primary means of work and play.</p>
                     <div className="primed-logo-block">
                         <span><img src={SolanaLogo} /></span>
                         <span><img src={MetaplexLogo} /></span>
@@ -26,6 +26,8 @@ return (
     )
 }
 export default PrimedandReady
+
+
 
 
 

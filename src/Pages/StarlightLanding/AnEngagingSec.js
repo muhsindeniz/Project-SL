@@ -12,9 +12,9 @@ return (
         <div className="container">
             <div className="row align-items-start">
                 <div className="an-engaging-left-block">
-                    <h2 className="sec-title">Next-gen NFT <br/>marketplace experience.</h2>
-                    <p className="text">When you buy and sell on the Starlight Marketplace using our native Starlight Token, you will have access to perks, privileges and exclusive NFT collection drops.</p>
-                    <p className="text">The Starlight Marketplace is equipped with seven unique tools. Each tool serves a specific function that benefits artists, creators and collectors. These tools are: Gallery, Trade, Factory, Launchpad, Rewards, Forge and App.</p>
+                    <h2 className="sec-title">Next-generation <br/> NFT Marketplace.</h2>
+                    <p className="text">When you buy and sell on the Starlight Marketplace using our native Starlight Token, you will have access to perks, privileges and exclusive NFT collection drops. </p>
+                    <p className="text">The Starlight Marketplace is equipped with five unique tools. Each tool serves a specific function that benefits artists, creators and collectors. These tools are: Gallery, Trade, Factory, Launchpad and Rewards.</p>
                 </div>
                 <div className="an-engaging-right-block">
                     <img className="desktop" src={engaging} />
@@ -34,9 +34,8 @@ return (
         <div className="container">
             <div className="row">
                 <div className="collections-exculsive-left-block">
-                <h2 className="sec-title">Interact with your<br/>digital assets on the<br/>Starlight Meta-bridge.</h2>
-                    <p className="text">The Starlight Meta-bridge takes NFT ownership to a whole new level by bridging the gap between the digital world and reality. This metaverse enabling technology will power our interaction with our digital assets. This could be as simple as displaying NFT collections in homes right from your Starlight Marketplace profile to augmented reality interaction via AR hardware and 3D games.</p>
-                    <p className="text">To achieve this, we are building two powerplants: the Meta-bridge Force and Meta-bridge Drive API. Our first project is with the upcoming game Elders of the Realm.</p>
+                <h2 className="sec-title">An eye on the future with <b /> Starlight Meta-bridge</h2>
+                    <p className="text">The Starlight Meta-bridge is our second bold step to take NFT ownership to a whole new level by bridging the digital world and reality gap. This metaverse enabling technology will power our interaction with our digital assets. This could be as simple as displaying NFT collections in homes from your Starlight Marketplace profile to augmented reality interaction via AR hardware and 3D games.</p>
                     {/* <div className="next-collection-block">
                         <h4>Next collection drop in:</h4>
                         <ul className="next-collection-count-list">

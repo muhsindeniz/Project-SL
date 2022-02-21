@@ -15,8 +15,8 @@ return (
                         <img src={ClimeworksLogo}/>
                     </div>
                     <div className="climeworks-right-block">
-                        <h2 className="sec-title">The more you use, the cleaner the air.</h2>
-                        <h3>0.01% of every transaction.</h3>
+                        <h2 className="sec-title">The more you use,<br/>the cleaner the air.</h2>
+                        <h3>1% from transaction fees profits</h3>
                         <p className="text">Creation inspires art, and therefore it is incredibly important that future generations have a safe and healthy planet to explore and create. This is why we're partnering with Climeworks.</p>
                     </div>
                 </div>

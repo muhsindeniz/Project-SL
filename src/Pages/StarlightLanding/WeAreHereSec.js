@@ -58,8 +58,8 @@ return (
                             <span className="weare-here-img">
                                 <img src={InnerCircle} />
                             </span>
-                            <h6>Stage 5: Jul 2022</h6>
-                            <p>Starlight Marketplace MVP v1.2 <br/> <span>+ Rewards, Forge</span></p>
+                            <h6>Stage 5: Aug 2022</h6>
+                            <p>Starlight Marketplace MVP v1.2 <br/> <span>+ Rewards</span></p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -70,7 +70,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 4: Jun 2022</h6>
-                            <p>Starlight Marketplace MVP v1.1 <br/><span>+ Gallery, Trade</span></p>
+                            <p>Starlight Marketplace MVP v1.1 <br/><span>+ Gallery, Trade Tools</span></p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -94,8 +94,7 @@ return (
                                 <img src={InnerCircle} />
                             </span>
                             <h6>Stage 6: Sep 2022</h6>
-                            <p>Elders of the Ream 3D:<br/><span>Meta-bridge Force collaboration</span></p>
-                            <p>Starlight Marketplace App:<br/><span>Development begins</span></p>
+                            <p>7 Realms 3D: <br/><span>Meta-bridge collaboration</span></p>
                         </li>
                         <li>
                             <span className="weare-here-hover">
@@ -105,7 +104,7 @@ return (
                             <span className="weare-here-img">
                                 <img src={InnerCircle} />
                             </span>
-                            <h6>Stage 7: Oct 2022</h6>
+                            <h6>Stage 7: Nov 2022</h6>
                             <p>Starlight Marketplace MVP v1.3<br/><span>+ Factory, Launchpads</span></p>
                         </li>
                         <li>
@@ -116,8 +115,8 @@ return (
                             <span className="weare-here-img">
                                 <img src={InnerCircle} />
                             </span>
-                            <h6>Stage 8: Nov 2022</h6>
-                            <p>Meta-bridge Drive API launch.</p>
+                            <h6>Stage 8: Mar 2023</h6>
+                            <p>Meta-bridge public launch.</p>
                         </li>
                     </ul>
                 </div>

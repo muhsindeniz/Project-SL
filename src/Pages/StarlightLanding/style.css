@@ -1088,6 +1088,107 @@ section.cummunity{
 	display: none;
 }
 
+
+/* out team */
+.our-team-div {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    justify-content: center;
+    -webkit-jutify-content:center;
+    align-items: center;
+    -webkit-align-items:center;
+    -ms-align-items:center;
+    flex-direction: column;
+    -webkit-flex-direction:column;
+    -ms-flex-direction:column;
+    max-width: 260px;
+}
+.our-team-div .instagram {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../assets/img/icons/custom/linkedin.png');
+    background-size: cover;
+}
+.our-team-container {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    justify-content: center;
+    -webkit-jutify-content:center;
+    align-items: center;
+    -webkit-align-items:center;
+    -ms-align-items:center;
+    gap: 50px;
+}
+#OurTeam {
+    background-color: #fff;
+}
+#OurTeam h3 {
+    text-align: center;
+}
+.our-team-wrapper .our-team-img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    margin-bottom: 22px;
+    background-color: #000;
+}
+.our-team-wrapper .our-team-img img {
+    width: 100%;
+}
+.our-team-wrapper .our-team-info h5 {
+    font-size: 18px;
+    line-height: 20.12px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 12px;
+}
+.our-team-wrapper .our-team-info span {
+    font-size: 12px;
+    line-height: 13.42px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    display: block;
+}
+.our-team-wrapper .our-team-info p {
+    font-size: 12px;
+    line-height: 13.42px;
+    text-align: center;
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 12px;
+}
+.partnership-wrapper {
+    padding-top: 100px;
+    background-color: #fff;
+    padding-bottom: 50px;
+}
+.partnership-container:last-child {
+    margin-bottom: 0;
+}
+.partnership-wrapper h3 {
+    text-align: center;
+    margin-bottom: 44px;
+}
+.partnership-container {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    justify-content: center;
+    -webkit-jutify-content:center;
+    align-items: center;
+    -webkit-align-items:center;
+    -ms-align-items:center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
 @media (max-width: 1400px) {
     .sec-title {
         margin-bottom: 30px !important;
@@ -2185,6 +2286,12 @@ section.cummunity{
 @media(max-width:480px) {
     .an-engaging-right-block > img.mobile {
         margin-top: -67px;
+    }
+    .our-team-container {
+        flex-direction: column;
+    }
+    .partnership-container {
+        flex-wrap: wrap;
     }
 }
 

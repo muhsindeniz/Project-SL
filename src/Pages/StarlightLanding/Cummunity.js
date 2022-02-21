@@ -12,9 +12,9 @@ return (
                     <img src={communityImg} />
                 </div>
                 <div className="cummunity-right-block">
-                    <h2 className="sec-title">Starlight Marketplace <br/>and Meta-bridge.</h2>
-                    <p className="text">There are two main functions of the Starlight Platform. The Marketplace is where users discover, trade and collect the world’s most sought-after digital assets powered by the Solana blockchain.</p>
-                    <p className="text">The Meta-bridge allows brands and companies to partner with Starlight to enable users to interact with their digital assets in games or metaverse-enabled homes.</p>
+                    <h2 className="sec-title">A platform that <br/> scales and adapts.</h2>
+                    <p className="text">The Starlight Marketplace is our first step towards enabling the convergence of both the digital and real worlds. It provides a seamless, fast and affordable way for our community to discover, trade and collect the highest quality and most sought-after assets in the world.</p>
+                    <p className="text">As the community explores how NFTs can become an integral part of our lives as mass adoption increases, Starlight’s second step is to enable further utility and interaction for NFTs at home and work.</p>
                 </div>
             </div>
         </div>
@@ -22,6 +22,8 @@ return (
     )
 }
 export default Cummunity
+
+
 
 
 

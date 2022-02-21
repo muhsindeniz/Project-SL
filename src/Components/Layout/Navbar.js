@@ -6,7 +6,7 @@ import userProfilePictures from "../../assets/img/icons/custom/userNav.svg";
 import fabaLogo from "../../assets/img/custom/x.svg";
 import userTick from "../../assets/img/icons/custom/logo.svg";
 import grayPp from "../../assets/img/custom/grayPp.png";
-import pdf from '../../assets/Starlight-Whitepaper-v1.5.pdf';
+// import pdf from '../../assets/Starlight-Whitepaper-v1.5.pdf';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = (props) => {
@@ -150,7 +150,7 @@ const Navbar = (props) => {
 
                             <div className="d-lg-none d-sm-block">
                                 <a className="nav-link nav-dark-button p-0 nav-dark-button mr-2 position-relative">
-                                    <svg onClick={() => setOpenProfileDropMenu(!openProfileDropMenu)} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                    <svg onClick={() => setOpenProfileDropMenu(!openProfileDropMenu)} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
                                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                                     </svg>
                                     {
@@ -288,6 +288,15 @@ const Navbar = (props) => {
                                 </li>
 
                                 <li className="nav-item " onClick={() => props.executeScroll}>
+                                    <Link to="OurTeam" 
+                                        smooth={true} 
+                                        duration={500} 
+                                        className="nav-link">
+                                            Team
+                                    </Link>
+                                </li>
+
+                                <li className="nav-item " onClick={() => props.executeScroll}>
                                 <Link to="Community" 
                                         smooth={true} 
                                         duration={500} 
@@ -301,7 +310,7 @@ const Navbar = (props) => {
                         <div className="new-header-right-btn">
                             <ul className="d-flex">
                                 <li className="nav-item d-sm-none d-lg-block p-0 d-flex align-items-center">
-                                    <a href={pdf} target="_blank" className="nav-link p-0">
+                                    <a href="https://drive.google.com/file/d/1-1Raiy9enIrYYhCQruUxJlgHnmWJO6za/view" target="_blank" className="nav-link p-0">
                                         <button className="btn btn-primary-outline">Whitepaper</button>
                                     </a>
                                 </li>
