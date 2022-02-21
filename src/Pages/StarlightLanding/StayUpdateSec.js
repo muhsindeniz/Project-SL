@@ -4,6 +4,7 @@ import Discord from '../../assets/img/icons/custom/Discord.svg';
 import TwitterIcon from '../../assets/img/icons/custom/Twitter.svg';
 import TelegramIcon from '../../assets/img/icons/custom/Telegram.svg';
 import RedditIcon from '../../assets/img/icons/custom/Reddit.svg';
+import Instagram from '../../assets/img/icons/custom/instagram.png'
 
 
 const StayUpdateSec = () => {
@@ -40,6 +41,13 @@ return (
                                 Telegram
                             </a>
                         </li>
+                        <li>
+                            <a href="https://www.instagram.com/starlightmeta/" target="_blank">
+                                <img src={Instagram} />
+                                Instagram
+                            </a>
+                        </li>
+
                         <li>
                             <a href="https://www.reddit.com/r/starlightmeta/" target="_blank">
                                 <img src={RedditIcon} />
