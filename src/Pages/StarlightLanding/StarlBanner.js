@@ -22,7 +22,7 @@ utility of the world’s most sought-after digital assets.</p>
                 <div className="new-header-right-btn">
                     <ul className="d-flex justify-content-center">
                         <li className="nav-item p-0 d-flex align-items-center">
-                        <a href={pdf} target="_blank" className="nav-link p-0">
+                        <a href="https://drive.google.com/file/d/1-1Raiy9enIrYYhCQruUxJlgHnmWJO6za/view" target="_blank" className="nav-link p-0">
                                 <button className="btn btn-primary-outline">Whitepaper</button>
                             </a>
                         </li>

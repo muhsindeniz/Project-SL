@@ -20,7 +20,7 @@ const Footer = (props) => {
                             </div>
 
                             <ul className="footer-menu">
-                                <li><span className="color-gray">A community-led NFT platform that powers metaverses, enables next-gen discovery and trading of digital assets and is rewarding for users.</span></li>
+                                <li><span className="color-gray">A next-generation NFT Marketplace that enables the utility of the world’s most sought-after digital assets.</span></li>
                             </ul>
                         </div>
 
@@ -136,6 +136,7 @@ const Footer = (props) => {
                             <div>
                                <a href="https://www.reddit.com/r/starlightmeta/" target="_blank" > <i className="fab fa-reddit-alien"></i></a>
                             </div>
+                            <div> <a href="https://instagram.com/starlightmeta/" target="_blank"><i className="fab fa-instagram"></i></a></div>
                             <div>
                             <a href="https://t.me/starlightmeta" target="_blank"><i className="fab fa-telegram-plane"></i></a>
                             </div>
@@ -143,7 +144,7 @@ const Footer = (props) => {
                             
                         </div>
 
-                        <div className="d-web-none"><small>© 2021, All Rights Reserved.</small></div>
+                        <div className="d-web-none"><small>© 2022, All Rights Reserved.</small></div>
                     </div>
                 </div>
             </section>
