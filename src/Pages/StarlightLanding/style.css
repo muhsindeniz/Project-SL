@@ -713,8 +713,9 @@ span.game-well-img .mobile {
     justify-content: center;
     padding-right: 110px;
 }
-.partnership-img:last-child {
-    vertical-align: baseline;
+.partnership-container:last-child .partnership-img:last-child {
+    top:-8px;
+    position: relative;
 }
 .climeworks-right-block h3{
     font-size: 24px;

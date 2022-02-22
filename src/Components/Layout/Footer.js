@@ -120,7 +120,7 @@ const Footer = (props) => {
 
                     <div className="d-flex justify-content-between d-mobile-flex-column">
                         <div className="d-flex justify-content-between" style={{ fontSize: "12px" }}>
-                            <div className="d-mobile-none">© 2021, All Rights Reserved.</div>
+                            <div className="d-mobile-none">© 2022, All Rights Reserved.</div>
                             {/* <div className="margin-mobile-left">Privacy Policy</div>
                             <div className="ml-3">Terms of Service</div> */}
                             <div className="d-sm-block d-lg-none">Language: English</div>
