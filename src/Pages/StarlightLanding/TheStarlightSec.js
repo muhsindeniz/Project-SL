@@ -15,6 +15,11 @@ return (
                     <div className="hard-camp-block">
                         <ul className="hard-camp-left-list">
                             <li>
+                                <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span>
+                                <span className="camp-show-btn">0.5%: Pre-seed</span>
+                                <span className="camp-show-btn-label">500,000 NEUM</span>
+                            </li>
+                            <li>
                                 {/* <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span> */}
                                 <span className="camp-show-btn">25%: Public</span>
                                 <span className="camp-show-btn-label">25,000,000 NEUM</span>
@@ -29,17 +34,14 @@ return (
                             </li>
                         </ul>
                         <div className="hard-cap-main-box">
-                        <ul className="hard-camp-center-list">
-                            <li>
-                                <span className="completed-status"> <span><img src={CheckFillClr} /></span> Completed</span>
-                                <span className="camp-show-btn">2%: Seed</span>
-                                <span className="camp-show-btn-label">2,000,000 NEUM</span>
-                            </li>
-                        </ul>
                             <h6>Hard Cap:</h6>
                             <a href="#0" className="btn btn-fill">100,000,000 NEUM</a>
                         </div>
                         <ul className="hard-camp-right-list">
+                            <li>
+                                <span className="camp-show-btn">1.5%: Seed</span>
+                                <span className="camp-show-btn-label">1,500,000 NEUM</span>
+                            </li>
                             <li>
                                 <span className="camp-show-btn">15%: Liquidity</span>
                                 <span className="camp-show-btn-label">15,000,000 NEUM</span>

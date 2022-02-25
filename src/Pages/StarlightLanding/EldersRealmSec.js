@@ -11,7 +11,7 @@ return (
             <div className="container">
                 <div className="elders-realm-right-block">
                     <span className="elderslog-img-info">
-                        <img src={EldersLog} />
+                        <a href="https://www.sevenrealms.io/" target="_blank"><img src={EldersLog} /></a>
                         <p>Exclusive metaverse game collaboration</p>
                         <div className="elders-realm-left-block">
                             <p className="text">Introducing Starlight's exclusive collaboration with Seven Realms 3D. A gaming experience where you'll have to navigate, negotiate and battle your way up to the throne of the universe. Use your NEUM token to trade unique characters and accessories in the metaverse.</p>
@@ -24,8 +24,8 @@ return (
         <div className="elders-bg">
             <div className="container">
                 <span className="game-well-img">
-                    <img className="desktop" src={GameWellImg} />
-                    <img className="mobile" src={mobileGameWellImg} />
+                    <a href="https://www.sevenrealms.io/" target="_blank"><img className="desktop" src={GameWellImg} /></a>
+                    <a href="https://www.sevenrealms.io/" target="_blank"><img className="mobile" src={mobileGameWellImg} /></a>
                 </span>
             </div>
         </div>
