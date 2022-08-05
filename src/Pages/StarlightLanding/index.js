@@ -56,7 +56,7 @@ const StarlightLanding = (props) => {
                   <OurTeam 
                     image={team1}
                     name="Ash"
-                    position="Managing Director & Founder"
+                    position="Director of Product"
                     bio="Creative entrepreneur, innovator and blockchain enthusiast. Founder of five established companies in multiple sectors."
                     social="https://www.linkedin.com/in/ash-stephenson/"
                   />
